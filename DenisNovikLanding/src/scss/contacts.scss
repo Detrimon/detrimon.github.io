@@ -1,0 +1,73 @@
+.contacts {
+  &__content {
+    text-align: center;
+
+    padding-top: 107px;
+    padding-bottom: 126px;
+
+    @media (max-width: toPixels($md4)) {
+      padding-top: 84px;
+      padding-bottom: 114px;
+    }
+  }
+
+  &__header {
+    padding-bottom: 25px;
+  }
+
+  &__welcome-text {
+    padding-bottom: 33px;
+    line-height: 22px;
+  }
+
+  &__btn {
+    border: none;
+    border-radius: 21px;
+
+    background: #070707;
+
+    padding: 10px 30px;
+    margin-bottom: 86px;
+
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 22px;
+    color: #fff;
+
+    box-shadow: 6px 6px 20px rgba(7, 7, 7, 0.2);
+
+    transition: background-color $t_time linear;
+
+    cursor: pointer;
+
+    @media (max-width: toPixels($md4)) {
+      width: 100%;
+    }
+
+    @media (min-width: toPixels($md4)) {
+      &:hover {
+        background-color: #313131;
+      }
+    }
+  }
+
+  &__socials {
+    margin: 0 auto 42px;
+    max-width: 342px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__social-item {
+    display: block;
+    font-size: 40px;
+    cursor: pointer;
+    height: 40px;
+  }
+
+  &__addition-text {
+    font-size: 14px;
+    line-height: 17px;
+    color: #828282;
+  }
+}

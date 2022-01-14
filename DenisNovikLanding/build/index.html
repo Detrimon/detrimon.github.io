@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.min.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header">
+  <div class="header__content _container">
+    <div class="header__menu menu">
+      <input id="menu__toggle" type="checkbox" />
+      <label
+        class="menu__btn"
+        for="menu__toggle"
+        onclick="burgerOnClickHandler()"
+      >
+        <span></span>
+      </label>
+
+      <nav class="menu__body">
+        <ul class="menu__list">
+          <li><a href="#Home" class="menu__link">Home</a></li>
+          <li><a href="#About" class="menu__link">About me</a></li>
+          <li><a href="#Skills" class="menu__link">Skills</a></li>
+          <li><a href="#Portfolio" class="menu__link">Portfolio</a></li>
+          <li><a href="#Contacts" class="menu__link">Contacts</a></li>
+        </ul>
+
+        <div class="languages">
+          <span class="languages__wrapper">
+            <a href="" class="languages__title">RU</a>
+            <span class="languages__delimiter">|</span>
+            <a href="" class="languages__title languages__title_active">ENG</a>
+          </span>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+
+    <div class="wrapper">
+      <main class="page"><section class="greeting _container">
+  <div class="greeting__container">
+    <div class="greeting__main-text">
+      <h1 class="greeting__my-name">Denis<br />Novik</h1>
+      <span>UX|UI designer<br />24 years old, Minsk</span>
+    </div>
+  </div>
+  <picture>
+    <source srcset="../img/Portraitmobile.webp" class="greeting__portrait" media="(max-width: 479.98px)" />
+    <img src="../img/Portraitwide.webp" class="greeting__portrait" alt="My Photo" />
+  </picture>
+</section>
+ <section class="about-me">
+  <div class="about-me__container _container">
+    <div class="about-me__content">
+      <h2 class="about-me__header _header">About me</h2>
+      <p class="about-me__text">Hi, I'm Denis - UX/UI designer from Minsk. <br class="_br" />I'm interested in design and everything connected with it.</p>
+      <p class="about-me__text">I'm studying at courses "Web and mobile design interfaces" in IT-Academy.</p>
+      <p class="about-me__text">Ready to implement excellent projects <br />with wonderful people.</p>
+    </div>
+  </div>
+</section>
+ <section class="skills _container">
+  <div class="skills__container">
+    <div class="skills__content">
+      <h2 class="skills__header _header">Skills</h2>
+      <p class="skills__text">I work in such programs as</p>
+      <div class="skills__items">
+        <!-- Item 1 -->
+        <div class="skill-item__container">
+          <picture class="skill-item__image">
+            <source srcset="../img/icons/PS.webp" type="image/webp" />
+            <img src="../img/icons/PS.png" />
+          </picture>
+          <p class="skill-item__title">Adobe<br />Photoshop</p>
+          <ul class="skill-item__rate">
+            <li class="skill-item__star ">
+  <span class="ico_star-star"></span>
+</li>
+ <li class="skill-item__star ">
+  <span class="ico_star-star"></span>
+</li>
+ <li class="skill-item__star ">
+  <span class="ico_star-star"></span>
+</li>
+ <li class="skill-item__star ">
+  <span class="ico_star-star"></span>
+</li>
+ <li class="skill-item__star skill-item__star_not-active">
+  <span class="ico_star-star"></span>
+</li>
+
+          </ul>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="skill-item__container">
+          <picture class="skill-item__image">
+            <source srcset="../img/icons/AI.webp" type="image/webp" />
+            <img src="../img/icons/AI.png" />
+          </picture>
+          <p class="skill-item__title">Adobe<br />Illustrator</p>
+          <ul class="skill-item__rate">
+            <li class="skill-item__star ">
+  <span class="ico_star-star"></span>
+</li>
+ <li class="skill-item__star ">
+  <span class="ico_star-star"></span>
+</li>
+ <li class="skill-item__star ">
+  <span class="ico_star-star"></span>
+</li>
+ <li class="skill-item__star skill-item__star_not-active">
+  <span class="ico_star-star"></span>
+</li>
+ <li class="skill-item__star skill-item__star_not-active">
+  <span class="ico_star-star"></span>
+</li>
+
+          </ul>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="skill-item__container">
+          <picture class="skill-item__image">
+            <source srcset="../img/icons/AE.webp" type="image/webp" />
+            <img src="../img/icons/AE.png" />
+          </picture>
+          <p class="skill-item__title">Adobe<br />After Effects</p>
+          <ul class="skill-item__rate">
+            <li class="skill-item__star ">
+  <span class="ico_star-star"></span>
+</li>
+ <li class="skill-item__star ">
+  <span class="ico_star-star"></span>
+</li>
+ <li class="skill-item__star ">
+  <span class="ico_star-star"></span>
+</li>
+ <li class="skill-item__star ">
+  <span class="ico_star-star"></span>
+</li>
+ <li class="skill-item__star skill-item__star_not-active">
+  <span class="ico_star-star"></span>
+</li>
+
+          </ul>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="skill-item__container">
+          <picture class="skill-item__image">
+            <source srcset="../img/icons/Figma.webp" type="image/webp" />
+            <img src="../img/icons/Figma.png" />
+          </picture>
+          <p class="skill-item__title">Figma</p>
+          <ul class="skill-item__rate">
+            <li class="skill-item__star ">
+  <span class="ico_star-star"></span>
+</li>
+ <li class="skill-item__star ">
+  <span class="ico_star-star"></span>
+</li>
+ <li class="skill-item__star ">
+  <span class="ico_star-star"></span>
+</li>
+ <li class="skill-item__star ">
+  <span class="ico_star-star"></span>
+</li>
+ <li class="skill-item__star skill-item__star_not-active">
+  <span class="ico_star-star"></span>
+</li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ <section class="portfolio">
+  <div class="portfolio__container _container">
+    <div class="portfolio__content">
+      <h2 class="portfolio__header _header">Portfolio</h2>
+
+      <!-- Portfolio 1 -->
+      <div class="portfolio-item">
+        <img src="../img/Portfolio_1.webp" alt="Portfolio 1" class="portfolio-item__image" />
+        <a href="#fashionStore" class="portfolio-item__link">Online fashion store - Homepage</a>
+      </div>
+
+      <!-- Portfolio 2 -->
+
+      <div class="portfolio-item">
+        <img src="../img/Portfolio_2.webp" alt="Portfolio 2" class="portfolio-item__image" />
+        <a href="#fashionStore" class="portfolio-item__link">Reebok Store - Concept</a>
+      </div>
+
+      <!-- Portfolio 3 -->
+
+      <div class="portfolio-item">
+        <img src="../img/Portfolio_3.webp" alt="Portfolio 3" class="portfolio-item__image" />
+        <a href="#fashionStore" class="portfolio-item__link">Braun Landing Page - Concept</a>
+      </div>
+    </div>
+  </div>
+</section>
+ <footer class="contacts _container">
+  <div class="contacts__content">
+    <h2 class="_header contacts__header">Contacts</h2>
+    <p class="contacts__welcome-text">Want to know more or just chat?<br />You are welcome!</p>
+    <button class="contacts__btn">Send message</button>
+    <div class="contacts__socials">
+      <span class="icon-linked-in contacts__social-item"></span>
+      <span class="icon-instagram contacts__social-item"></span>
+      <span class="icon-behance contacts__social-item"></span>
+      <span class="icon-dribbble contacts__social-item"></span>
+    </div>
+    <p class="contacts__addition-text">
+      Like me on <br />
+      LinkedIn, Instagram, Behance, Dribble
+    </p>
+  </div>
+</footer>
+</main>
+    </div>
+    <div class="makeup__inner">
+  <p class="makeup__text">Вёрстка</p>
+</div>
+;
+    <script src="js/index.min.js"></script>
+  </body>
+</html>

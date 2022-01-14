@@ -1,0 +1,56 @@
+.greeting {
+  &__container {
+    position: relative;
+    height: 135px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 54px;
+
+    @media (max-width: toPixels($md4)) {
+      height: auto;
+      display: block;
+      margin-bottom: 37px;
+    }
+  }
+
+  &__main-text {
+    line-height: 22px;
+  }
+
+  &__my-name {
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+
+    font-size: 2.63rem;
+    font-weight: 700;
+    line-height: 59px;
+
+    @media (max-width: toPixels($md3)) {
+      font-size: 2.3rem;
+      line-height: 53px;
+    }
+
+    @media (max-width: toPixels($md4)) {
+      position: relative;
+      bottom: auto;
+      left: auto;
+      font-size: 2.61rem;
+      padding-bottom: 23px;
+    }
+  }
+
+  &__portrait {
+    width: 100%;
+    height: 387px;
+    object-fit: cover;
+    object-position: 50% 5%;
+    margin-bottom: 104px;
+
+    @media (max-width: toPixels($md4)) {
+      height: auto;
+      margin-bottom: 83px;
+    }
+  }
+}

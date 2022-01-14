@@ -1,0 +1,31 @@
+.about-me {
+  background: #f6f6f6;
+
+  &__content {
+    padding-top: 113px;
+    padding-bottom: 107px;
+
+    @media (max-width: toPixels($md4)) {
+      padding-top: 75px;
+      padding-bottom: 76px;
+    }
+
+    max-width: 485.34px;
+    margin: 0 auto;
+
+    text-align: center;
+  }
+
+  &__header {
+    padding-bottom: 22px;
+  }
+
+  &__text {
+    line-height: 22px;
+    padding-bottom: 42px;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+}

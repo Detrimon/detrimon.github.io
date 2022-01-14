@@ -1,0 +1,28 @@
+.section-title {
+  font-size: 1.375rem;
+  line-height: 60px;
+  @media (max-width: toPixels($md3)) {
+    font-size: 1.25rem;
+    text-align: center;
+  }
+
+  @media (max-width: toPixels($md4)) {
+    font-size: 1.125rem;
+  }
+}
+
+.text {
+  line-height: 23px;
+}
+
+._header {
+  font-weight: 700;
+  font-size: 1.89rem;
+  line-height: 42px;
+}
+
+._br {
+  @media (max-width: toPixels($md4)) {
+    display: none;
+  }
+}
