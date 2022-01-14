@@ -6,7 +6,7 @@
   left: -200px;
   transform: rotateZ(-45deg);
   padding: 20px 200px;
-  background: #c7375bce;
+  background: #c7375b2a;
 }
 
 .makeup__text {
@@ -551,7 +551,6 @@ a {
 @media (max-width: 1320px) {
   .makeup__inner {
     padding: 10px 200px;
-    background: #c7375b2a;
   }
 
   .makeup__text {
