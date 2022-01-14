@@ -128,6 +128,7 @@ function images() {
         optimizationLevel: 3,
       })
     )
+    .pipe(dest(path.build.img))
     .pipe(browsersync.stream());
 }
 
