@@ -1,0 +1,171 @@
+@import "./functions";
+@import "./fonts";
+
+$maxWidthContainer: 950;
+
+$md1: toPixels($maxWidthContainer + 30);
+$md2: 900;
+$md3: 767.98;
+$md4: 479.98;
+
+$baseImgWidth: 400;
+$baseImgHeight: 232;
+$ratio: 1.3;
+
+html:root {
+  font-size: 16px;
+}
+
+body,
+p,
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Gilroy";
+  font-weight: 400;
+}
+/*# sourceMappingURL=styles.css.map */
+
+._container {
+  max-width: 950px;
+  min-width: 350px;
+
+  padding: 0 30px;
+
+  margin: 0 auto;
+}
+
+.works {
+  padding: 40px 0;
+}
+
+.work-item {
+  &__container {
+    // border: 1px solid lightgray;
+    border-radius: 6px;
+    box-shadow: 7px 7px 20px 1px #18181844;
+
+    transition: background-color 0.25s ease;
+
+    &:hover {
+      background-color: rgb(251, 251, 251);
+    }
+  }
+
+  &__content {
+    display: flex;
+    padding: 12px;
+
+    @media (max-width: toPixels($md3)) {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  &__image {
+    flex: 0 0 toPixels($baseImgWidth);
+    height: toPixels($baseImgHeight);
+
+    object-fit: cover;
+
+    border: 1px solid lightgray;
+    border-radius: 6px;
+
+    @media (max-width: toPixels($md2)) {
+      flex: 0 0 toPixels($baseImgWidth / $ratio);
+      height: toPixels($baseImgHeight / $ratio);
+    }
+
+    @media (max-width: toPixels($md3)) {
+      width: toPixels($baseImgWidth / $ratio);
+      height: toPixels($baseImgHeight / $ratio);
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: toPixels($md4)) {
+      width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__text-content {
+    position: relative;
+    width: 100%;
+    height: toPixels($baseImgHeight);
+    padding: 0 25px;
+
+    overflow: hidden;
+
+    @media (max-width: toPixels($md2)) {
+      height: toPixels($baseImgHeight / $ratio);
+    }
+
+    @media (max-width: toPixels($md3)) {
+      width: toPixels($baseImgWidth / $ratio);
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    @media (max-width: toPixels($md4)) {
+      width: 100%;
+      // margin-left: -20px;
+      text-align: left;
+      height: auto;
+      padding: 0 10px;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+
+    padding-bottom: 2px;
+  }
+
+  &__short-description {
+    display: inline-block;
+    margin-bottom: 15px;
+    color: #181818;
+  }
+
+  &__link {
+    transition: color 0.25s linear;
+    color: #181818;
+
+    &:visited {
+      color: #181818;
+    }
+
+    &:hover {
+      color: #777373;
+    }
+  }
+
+  &__date {
+    position: absolute;
+    bottom: 0px;
+    right: 10px;
+
+    color: #949393;
+
+    @media (max-width: toPixels($md4)) {
+      display: none;
+    }
+  }
+
+  &__techniques {
+  }
+
+  &__techniques-description {
+    padding-left: 10px;
+    margin-bottom: 15px;
+    color: #181818;
+
+    transition: color 0.25s linear;
+  }
+}
