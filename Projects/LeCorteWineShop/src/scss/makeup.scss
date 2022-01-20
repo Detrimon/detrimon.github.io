@@ -1,0 +1,27 @@
+$md_tech: 1320px;
+
+.makeup {
+  &__inner {
+    position: fixed;
+    top: 40px;
+    left: -200px;
+    transform: rotateZ(-45deg);
+
+    padding: 20px 200px;
+
+    background: #c7375b2a;
+
+    @media (max-width: $md_tech) {
+      padding: 10px 200px;
+    }
+  }
+
+  &__text {
+    font-size: 40px;
+    color: #fff;
+
+    @media (max-width: $md_tech) {
+      font-size: 25px;
+    }
+  }
+}

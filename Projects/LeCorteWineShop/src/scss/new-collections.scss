@@ -1,0 +1,140 @@
+.new-collection {
+  background: #e6e3c4;
+  &__inner-container {
+    padding: 60px 0;
+
+    @include media-breakpoint-down(md) {
+      padding: 30px 0;
+    }
+  }
+
+  &__line-top {
+    padding-top: 80px;
+    border-bottom: 1px solid #998431;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    @include media-breakpoint-down(md) {
+      padding-top: 60px;
+    }
+  }
+
+  &__line-bottom {
+    padding-bottom: 80px;
+    border-top: 1px solid #998431;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    @include media-breakpoint-down(md) {
+      padding-bottom: 60px;
+    }
+  }
+
+  &__content {
+  }
+
+  &__right-content {
+  }
+}
+
+.collection-text {
+  &__pre-title {
+    font-size: 1.143rem;
+    line-height: 24px;
+    padding-bottom: 30px;
+
+    @include media-breakpoint-down(md) {
+      padding-bottom: 20px;
+    }
+  }
+
+  &__title {
+    font-family: $fontFamilyAdditional;
+    font-size: 2.571rem;
+    line-height: 54px;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 2rem;
+      line-height: 45px;
+    }
+  }
+
+  &__delimiter {
+    margin: 30px 15px;
+    height: 1px;
+    background: #282828;
+  }
+
+  &__text {
+    line-height: 21px;
+    padding-bottom: 30px;
+  }
+}
+
+.collection-history {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: stretch;
+
+  padding-bottom: 30px;
+
+  &__year-item {
+    flex: 0 0 1px;
+    line-height: 21px;
+    padding: 31px 24px 26px 19px;
+    border-width: 1px;
+    border-color: $color_black;
+
+    @include media-breakpoint-down(lg) {
+      padding: 31px 24px 26px 70px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding: 31px 24px 26px 19px;
+    }
+  }
+
+  &__description-item {
+    flex: 1 0 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // align-self: center;
+    padding-left: 30px;
+
+    border-width: 1px;
+    border-color: $color_black;
+
+    @include media-breakpoint-down(sm) {
+      flex: 1 0 74%;
+    }
+  }
+
+  &__desc-title {
+    font-size: 1.286rem;
+    line-height: 27px;
+    font-family: $fontFamilyAdditional;
+  }
+
+  &__desc-text {
+    line-height: 21px;
+  }
+}
+
+.collection-images {
+  &__content {
+    row-gap: 30px;
+  }
+
+  &__image-container {
+  }
+
+  &__main-image {
+    width: 100%;
+  }
+
+  &__add-image {
+    width: 100%;
+  }
+}

@@ -1,0 +1,142 @@
+@import "./humburger-menu";
+
+.header {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../img/bgc.png");
+  background-position: calc(50% + 18px) bottom;
+  max-height: 900px;
+  min-height: 400px;
+  height: 100vh;
+  color: #fff;
+
+  &__content {
+    height: 100%;
+  }
+
+  &__top-contacts {
+    padding-top: 30px;
+  }
+
+  &__contact-text {
+    line-height: 19.5px;
+    padding-bottom: 20px;
+  }
+}
+
+.menu {
+  &__body {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  &__fixed-background {
+    @include media-breakpoint-down(sm) {
+      position: fixed;
+      top: 0;
+      left: -100vw;
+      right: 100vw;
+      bottom: 0;
+
+      background: #ffffffde;
+
+      z-index: 5;
+
+      transition: $t_time linear;
+
+      &.active {
+        left: 0;
+        right: 0;
+      }
+    }
+  }
+
+  &__list {
+    text-align: center;
+
+    @include media-breakpoint-down(sm) {
+      position: fixed;
+      top: 0;
+      left: -100vw;
+      right: 100vw;
+      bottom: 0;
+
+      margin-top: 15%;
+
+      z-index: 10;
+
+      transition: $t_time linear;
+
+      &.active {
+        left: 0;
+        right: 0;
+      }
+    }
+
+    li {
+      border-width: 1px 0 1px 1px;
+      border-style: solid;
+      border-color: #fff;
+
+      @include media-breakpoint-down(sm) {
+        border: none;
+      }
+
+      &:first-child {
+        border-left: none;
+      }
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    line-height: 21px;
+    padding: 13px 0;
+
+    @include media-breakpoint-down(sm) {
+      color: $color_black;
+      font-size: 26px;
+      padding: 40px 0;
+      font-weight: 400;
+
+      &:visited {
+        color: $color_black;
+      }
+
+      &:hover {
+        color: #6b5757;
+      }
+    }
+  }
+}
+
+.header-delimiter {
+  height: calc(77.8% - 118px);
+}
+
+.header-btn {
+  &__container {
+    text-align: center;
+
+    @include media-breakpoint-down(sm) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      row-gap: 20px;
+    }
+    // height: 100%;
+  }
+
+  &__btn-item {
+    margin-left: 30px;
+
+    @include media-breakpoint-down(sm) {
+      width: 86%;
+      margin: 0 auto;
+    }
+
+    &:first-child {
+      margin-left: none;
+    }
+  }
+}

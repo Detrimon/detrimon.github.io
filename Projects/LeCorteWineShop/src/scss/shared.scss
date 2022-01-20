@@ -1,0 +1,48 @@
+.btn {
+  background: #99862a;
+
+  font-family: $fontFamily;
+
+  color: #fff;
+  text-transform: uppercase;
+  // font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 20px;
+  letter-spacing: 0.05em;
+  text-align: center;
+
+  padding: 15px 30px;
+  border: none;
+  box-shadow: none;
+
+  cursor: pointer;
+
+  transition: $t_time linear;
+
+  &:hover {
+    background: #83783a;
+    color: rgb(228, 228, 228);
+  }
+}
+
+.border-top {
+  border-top-style: solid;
+}
+
+.border-right {
+  border-right-style: solid;
+}
+
+.border-bottom {
+  border-bottom-style: solid;
+}
+
+.border-left {
+  border-left-style: solid;
+}
+
+.flex-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
