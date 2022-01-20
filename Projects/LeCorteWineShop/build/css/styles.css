@@ -963,7 +963,7 @@
   align-items: center;
   /* центрируем содержимое кнопки */
   position: absolute;
-  top: 20px;
+  top: 27px;
   right: 20px;
   width: 33px;
   height: 33px;
@@ -1241,6 +1241,9 @@
   border-bottom: 1px solid #fff;
   background: none;
   outline: none;
+  outline-width: 0;
+  border-radius: 0;
+  -webkit-appearance: none;
   width: 100%;
   height: 30px;
   font-family: "Montserrat", sans-serif;
@@ -1514,6 +1517,20 @@ a:hover {
 
 ul {
   list-style: none;
+}
+
+.makeup__inner {
+  position: fixed;
+  top: 40px;
+  left: -200px;
+  transform: rotateZ(-45deg);
+  padding: 20px 200px;
+  background: #c7375b2a;
+}
+
+.makeup__text {
+  font-size: 40px;
+  color: #fff;
 }
 
 .btn {
@@ -4846,6 +4863,16 @@ ul {
 
   .ps-xl-5 {
     padding-left: 3rem !important;
+  }
+}
+
+@media (max-width: 1320px) {
+  .makeup__inner {
+    padding: 10px 200px;
+  }
+
+  .makeup__text {
+    font-size: 25px;
   }
 }
 
