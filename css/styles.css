@@ -64,6 +64,10 @@ h3 {
   margin-bottom: 20px;
 }
 
+.work-item__container:last-child {
+  margin-bottom: 0;
+}
+
 .work-item__container:hover {
   background-color: #fbfbfb;
 }
