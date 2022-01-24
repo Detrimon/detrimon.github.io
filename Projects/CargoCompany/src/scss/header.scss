@@ -20,13 +20,6 @@
   &__menu-content {
     padding: 25px 0;
     row-gap: 20px;
-
-    // @include media-breakpoint-down(md) {
-    //   justify-content: center;
-    //   flex-basis: auto;
-    //   flex-grow: 1;
-    //   justify-content: center;
-    // }
   }
 }
 
@@ -115,7 +108,7 @@
       position: absolute;
       top: 118px;
       right: 18px;
-      background: rgba(255, 255, 255, 0.863);
+      background: rgba(255, 255, 255, 0.925);
 
       overflow: hidden;
 
@@ -157,7 +150,15 @@
     text-transform: uppercase;
     letter-spacing: 0.05em;
 
-    &:visited {
+    a {
+      @include media-breakpoint-down(sm) {
+        color: $color_dark_add;
+      }
+    }
+
+    &:visited,
+    &:focus,
+    &:active {
       @include media-breakpoint-down(sm) {
         color: $color_dark_add;
       }
