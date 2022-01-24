@@ -1297,11 +1297,15 @@
   background: transparent;
 }
 
-.service-tile:hover {
+.service-tile:hover,
+.service-tile:focus,
+.service-tile:active {
   background: #2f343a;
 }
 
-.service-tile:hover div {
+.service-tile:hover div,
+.service-tile:focus div,
+.service-tile:active div {
   background: #ffffff;
   color: #2f343a;
 }
@@ -4844,8 +4848,8 @@ ul {
   }
 
   .trucking__content {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 90px;
+    padding-bottom: 90px;
   }
 
   .trucking__text {
@@ -4889,8 +4893,8 @@ ul {
   }
 
   .trucking__content {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 
   .trucking__text {
@@ -4974,7 +4978,7 @@ ul {
     position: absolute;
     top: 118px;
     right: 18px;
-    background: rgba(255, 255, 255, 0.863);
+    background: rgba(255, 255, 255, 0.925);
     overflow: hidden;
     height: 0px;
     transition: 0.25s ease-out;
@@ -4994,7 +4998,13 @@ ul {
     flex-direction: column;
   }
 
-  .menu-block__item:visited {
+  .menu-block__item a {
+    color: #393f47;
+  }
+
+  .menu-block__item:visited,
+  .menu-block__item:focus,
+  .menu-block__item:active {
     color: #393f47;
   }
 
@@ -5032,7 +5042,7 @@ ul {
   }
 
   .about__content {
-    padding-top: 40px;
+    padding-top: 0;
     padding-bottom: 40px;
   }
 }
