@@ -1,0 +1,166 @@
+@import "./humburger-menu";
+
+.header {
+  &__top-container {
+    background: $color_gold;
+  }
+
+  &__top-content {
+    display: flex;
+    align-items: center;
+
+    height: 49px;
+    overflow: hidden;
+  }
+
+  &__menu-container {
+    background: $color_dark_add;
+  }
+
+  &__menu-content {
+    padding: 25px 0;
+    row-gap: 20px;
+
+    // @include media-breakpoint-down(md) {
+    //   justify-content: center;
+    //   flex-basis: auto;
+    //   flex-grow: 1;
+    //   justify-content: center;
+    // }
+  }
+}
+
+.top-content {
+  &__languages {
+    display: flex;
+
+    li {
+      padding-right: 10px;
+    }
+
+    li:last-child {
+      padding-right: 0;
+    }
+  }
+
+  &__text {
+    font-size: 0.857rem; // 12px;
+    line-height: 1.167; // 14px
+  }
+
+  &__lang-item {
+    text-transform: uppercase;
+    opacity: 0.5;
+
+    &.lang-active {
+      opacity: 1;
+      color: $color_white;
+      cursor: default;
+    }
+  }
+}
+
+.menu-content {
+  &__info {
+    display: flex;
+    align-items: center;
+    height: auto;
+  }
+
+  &__info-item {
+    height: auto;
+    padding: 0 30px;
+    border-right: 1px solid $color_lightgrey;
+
+    display: flex;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+      border-right: none;
+    }
+
+    @include media-breakpoint-down(sm) {
+      border: none;
+      padding: 0;
+
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+
+  &__logo {
+  }
+
+  &__placeholder {
+    font-size: 25px;
+    line-height: 25px;
+  }
+
+  &__our-offices {
+    padding-left: 10px;
+    line-height: 25px;
+    letter-spacing: 0.05em;
+  }
+
+  &__menu-block {
+    display: flex;
+    align-items: center;
+
+    @include media-breakpoint-down(sm) {
+      position: absolute;
+      top: 118px;
+      right: 18px;
+      background: rgba(255, 255, 255, 0.863);
+
+      overflow: hidden;
+
+      // width: 10px;
+      height: 0px;
+
+      transition: $t_time ease-out;
+    }
+
+    &.menu-active {
+      @include media-breakpoint-down(sm) {
+        height: 150px;
+      }
+    }
+  }
+}
+
+.menu-block {
+  height: 100%;
+
+  &__content {
+    display: flex;
+    li {
+      padding-left: 30px;
+
+      @include media-breakpoint-down(sm) {
+        padding-left: 0;
+        padding-bottom: 7px;
+        padding-top: 7px;
+      }
+    }
+
+    @include media-breakpoint-down(sm) {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+
+    &:visited {
+      @include media-breakpoint-down(sm) {
+        color: $color_dark_add;
+      }
+    }
+  }
+}

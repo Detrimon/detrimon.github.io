@@ -1,0 +1,40 @@
+$fontFamily: "Roboto", sans-serif;
+$fontBaseSize: 14;
+
+// $fontFamilyAdditional: "Playfair Display", serif;
+
+$minWidth: 340;
+
+$maxWidthContent: 1110; // ширина контейнера в Figma.
+$content_side_indent: 15; // зазор справа и слева от контента до края экрана, чтобы содержимое не прилипало к краю viewport
+$breakpoints_indent: 15; // дополнительный зазор для breakpoint'а, чтобы переключение на меньший размер происходило немного раньше.
+
+$t_time: 0.25s;
+
+$color_black: #000000;
+$color_dark: #2f343a;
+$color_dark_add: #393f47;
+$color_white: #ffffff;
+$color_gold: #c8a35f;
+$color_lightgrey: #f2f2f2;
+
+// breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl:
+    toPixels(
+      $maxWidthContent + (2 * $content_side_indent) + (2 * $breakpoints_indent)
+    ),
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: toPixels($maxWidthContent + (2 * $content_side_indent)),
+);
+
+$grid-gutter-width: toPixels(2 * $content_side_indent);

@@ -1,0 +1,78 @@
+@mixin title {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.ws-title-h1 {
+  @include title;
+  font-size: 4.571rem; // 64px;
+  line-height: 75px;
+  // font-stretch: 50%;
+
+  @include media-breakpoint-down(xl) {
+    font-size: 56px;
+  }
+
+  @include media-breakpoint-down(lg) {
+    font-size: 45px;
+  }
+
+  @include media-breakpoint-down(md) {
+    font-size: 33px;
+    line-height: 50px;
+  }
+}
+
+.ws-title-h2 {
+  @include title;
+  font-size: 36px; // 40px
+  line-height: 49px;
+  padding-top: 40px;
+
+  @include media-breakpoint-down(xl) {
+    font-size: 31px;
+  }
+
+  @include media-breakpoint-down(lg) {
+    font-size: 24px;
+    line-height: 38px;
+  }
+
+  @include media-breakpoint-down(md) {
+    font-size: 17px;
+    line-height: 28px;
+  }
+}
+
+.ws-h-short-delimiter {
+  width: 90px;
+  height: 6px;
+  background: $color_gold;
+}
+
+.ws-btn {
+  padding: 18px 48px;
+  background: $color_gold;
+  border: none;
+
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.143rem;
+  letter-spacing: 0.1em;
+  line-height: 1.562;
+
+  color: $color_white;
+
+  transition: $t_time linear;
+
+  &:hover {
+    cursor: pointer;
+    background: #eac361;
+  }
+
+  @include media-breakpoint-down(md) {
+    font-size: 14px;
+    padding: 16px 32px;
+  }
+}

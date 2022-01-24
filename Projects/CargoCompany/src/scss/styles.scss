@@ -1,0 +1,75 @@
+@import "./functions";
+@import "./variables";
+
+@import "./fonts";
+
+@import "../../node_modules/bootstrap/scss/bootstrap-grid.scss";
+@import "./header";
+@import "./welcome";
+@import "./delimiter";
+@import "./trucking";
+@import "./service";
+@import "./about";
+@import "./map";
+@import "./contacts";
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
+  padding-inline-end: 0;
+}
+
+.min-container {
+  min-width: toPixels($minWidth);
+}
+
+html:root {
+  font-size: 14px;
+}
+
+body,
+a,
+p,
+li {
+  font-family: $fontFamily;
+  font-weight: 400;
+  color: $color_white;
+}
+
+body {
+  margin: 0;
+  background: $color_dark;
+
+  &.active {
+    overflow: hidden;
+  }
+}
+
+a {
+  color: $color_white;
+  transition: color 0.25s linear;
+  text-decoration: none;
+}
+
+a:active,
+a:visited {
+  color: $color_white;
+}
+
+a:focus {
+  color: $color_lightgrey;
+}
+
+a:hover {
+  color: $color_lightgrey;
+}
+
+ul {
+  list-style: none;
+}
+
+@import "./shared";

@@ -1,0 +1,48 @@
+.welcome {
+  background-image: url("../img/background_truck.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  max-height: 620px;
+  min-height: 400px;
+  height: calc(100vw / 3);
+
+  &__container {
+    display: flex;
+    height: 100%;
+    align-items: center;
+  }
+
+  &__bordered-item {
+    margin: 20px auto;
+    padding: 45px 71px;
+    border: 1px solid $color_gold;
+
+    text-align: center;
+
+    @include media-breakpoint-down(md) {
+      padding: 40px 55px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding: 30px 30px;
+    }
+  }
+
+  &__text {
+    max-width: 777px;
+    margin: 0 auto;
+    font-size: 1.286rem;
+    line-height: 1.555; //28px
+    padding-top: 30px;
+    // text-align: center;
+
+    @include media-breakpoint-down(md) {
+      font-size: 16px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      font-size: 14px;
+    }
+  }
+}

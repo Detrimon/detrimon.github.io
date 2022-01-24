@@ -1,0 +1,66 @@
+.service {
+  &__tiles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1px;
+
+    padding-top: 60px;
+
+    &::after {
+      @include media-breakpoint-down(md) {
+        content: "";
+        flex: 1 0 170px;
+      }
+    }
+  }
+}
+
+.service-tile {
+  flex: 1 0 24%;
+  text-align: center;
+  background: $color_dark_add;
+  cursor: pointer;
+
+  padding: 55px 10px 35px;
+
+  transition: 0.35s linear;
+
+  @include media-breakpoint-down(lg) {
+    padding: 40px 10px 30px;
+  }
+
+  @include media-breakpoint-down(md) {
+    flex: 1 0 170px;
+  }
+
+  div {
+    color: $color_white;
+    transition: background 0.35s linear;
+
+    background: transparent;
+  }
+
+  &:hover {
+    background: $color_dark;
+    div {
+      background: $color_white;
+      color: $color_dark;
+    }
+  }
+
+  &__icon-container {
+    width: fit-content;
+    border-radius: 50px;
+    margin: 0 auto 23px;
+  }
+  &__icon {
+    display: inline-block;
+    text-align: center;
+    font-size: 30px;
+    padding: 20px;
+    // padding-bottom: 43px;
+  }
+
+  &__text {
+  }
+}
