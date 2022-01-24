@@ -40,7 +40,9 @@
     background: transparent;
   }
 
-  &:hover {
+  &:hover,
+  &:focus,
+  &:active {
     background: $color_dark;
     div {
       background: $color_white;
