@@ -1126,7 +1126,7 @@
 }
 
 .welcome {
-  background-image: url("../img/background_truck.png");
+  background-image: url("../img/background_truck.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -5088,5 +5088,3 @@ ul {
     display: none !important;
   }
 }
-
-.webp .welcome{ background-image: url(../img/background_truck.webp); }
