@@ -48,7 +48,7 @@ $switch_transition_time: 0.25s;
 
   transition: opacity $switch_transition_time linear;
 
-  @media screen {
+  @media screen and (min-width: toPixels(map.get($breakpoints, "lg"))) {
     &:hover {
       opacity: 0.7;
     }
