@@ -728,10 +728,6 @@ body {
   transition: opacity 0.25s linear;
 }
 
-.switch:hover {
-  opacity: 0.7;
-}
-
 .switch input {
   display: none;
 }
@@ -914,9 +910,9 @@ body {
   position: fixed;
   display: none;
   top: 0;
-  width: 100vw;
+  width: 100%;
   bottom: 0;
-  left: 100vw;
+  left: calc(100% + 100px);
   background: var(--color-primary);
   opacity: 0.98;
   z-index: 40;
@@ -1107,14 +1103,15 @@ a:hover {
   }
 
   .text-menu__container {
-    position: absolute;
+    position: fixed;
     flex-direction: column;
     top: 0;
     transition: left 0.25s linear, right 0.25s linear;
     padding-top: 40px;
     text-align: left;
     z-index: 45;
-    left: 100vw;
+    left: calc(100% + 100px);
+    padding-left: 15px;
   }
 
   .text-menu__container > li {
@@ -1124,14 +1121,15 @@ a:hover {
   }
 
   .text-menu__additional {
-    position: absolute;
+    position: fixed;
     flex-direction: column;
     top: 0;
     transition: left 0.25s linear, right 0.25s linear;
     padding-top: 40px;
     text-align: right;
-    right: -100vw;
+    right: calc(-100vw - 100px);
     width: auto;
+    padding-right: 15px;
     z-index: 45;
   }
 
@@ -1169,5 +1167,11 @@ a:hover {
     width: 100%;
     padding-left: 15px;
     padding-right: 15px;
+  }
+}
+
+@media screen {
+  .switch:hover {
+    opacity: 0.7;
   }
 }
