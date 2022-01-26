@@ -1,0 +1,16 @@
+@mixin title {
+}
+
+.ws-title-h1 {
+  @include title;
+}
+
+.ws-title-h2 {
+  @include title;
+}
+
+.ws-h-short-delimiter {
+}
+
+.ws-btn {
+}

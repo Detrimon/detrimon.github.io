@@ -1,0 +1,79 @@
+@use "sass:map";
+
+// Variables
+
+$minWidth: 320;
+$breakpoints: (
+  "top": 1919.98,
+  "xxl": 1399.98,
+  "xl": 1199.98,
+  "lg": 991.98,
+  "md": 767.98,
+  "sm": 575.98,
+);
+$baseContentIndent: 100; // зазор справа и слева от контента до края экрана, чтобы содержимое не прилипало к краю viewport
+
+// Mixins
+
+@mixin container($breakpoint) {
+  $indent: calc(
+    ($breakpoint * $baseContentIndent) / map.get($breakpoints, "top")
+  );
+  max-width: toPixels($breakpoint);
+  padding-left: toPixels($indent);
+  padding-right: toPixels($indent);
+}
+
+// Classes
+
+.min-container {
+  min-width: toPixels($minWidth);
+}
+
+.container {
+  margin: 0 auto;
+
+  @media (min-width: toPixels(
+    map.get($breakpoints, "top")
+  )) {
+    @include container(map.get($breakpoints, "top"));
+  }
+
+  @media (min-width: toPixels(
+    map.get($breakpoints, "xxl")
+  )) {
+    @include container(map.get($breakpoints, "xxl"));
+  }
+
+  @media (min-width: toPixels(
+    map.get($breakpoints, "xl")
+  )) {
+    @include container(map.get($breakpoints, "xl"));
+  }
+
+  @media (min-width: toPixels(
+    map.get($breakpoints, "lg")
+  )) {
+    @include container(map.get($breakpoints, "lg"));
+  }
+
+  @media (min-width: toPixels(
+    map.get($breakpoints, "md")
+  )) {
+    @include container(map.get($breakpoints, "md"));
+  }
+
+  @media (min-width: toPixels(
+    map.get($breakpoints, "sm")
+  )) {
+    @include container(map.get($breakpoints, "sm"));
+  }
+
+  @media (max-width: toPixels(
+    map.get($breakpoints, "sm") - 0.02
+  )) {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}

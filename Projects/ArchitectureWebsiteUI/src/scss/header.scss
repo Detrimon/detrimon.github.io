@@ -1,0 +1,204 @@
+@use "sass:map";
+
+@import "./switch";
+@import "./humburger-menu";
+
+@mixin menu-substrate() {
+  position: absolute;
+  flex-direction: column;
+  top: 0;
+  transition: left $t_time linear, right $t_time linear;
+
+  padding-top: 40px;
+
+  @media (max-width: toPixels(map.get($breakpoints, "sm"))) {
+    padding-top: 70px;
+  }
+
+  > li {
+    padding-right: 0;
+    margin-top: 40px;
+    font-size: 1.5em;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  width: 100%;
+
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-color: var(--color-delimiter-primary);
+
+  font-size: $fontSizeRelBase_18;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0.04em;
+  text-transform: lowercase;
+
+  transition: border-color $switch_transition_time linear;
+
+  &__logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-family: $fontFamilyAdditional;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 0.04em;
+
+    @media (max-width: toPixels(map.get($breakpoints, "md"))) {
+      position: relative;
+      left: auto;
+      transform: none;
+      flex: 1 0 auto;
+    }
+  }
+
+  li {
+    padding-right: 100px;
+
+    @media (max-width: toPixels(map.get($breakpoints, "top"))) {
+      padding-right: 60px;
+    }
+
+    @media (max-width: toPixels(map.get($breakpoints, "xxl"))) {
+      padding-right: 40px;
+    }
+
+    @media (max-width: toPixels(map.get($breakpoints, "xl"))) {
+      padding-right: 30px;
+    }
+
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      padding-right: 14px;
+    }
+  }
+
+  &.active {
+    .text-menu__container {
+      left: 0;
+    }
+
+    .text-menu__additional {
+      right: 0;
+    }
+
+    .menu-background {
+      left: 0;
+    }
+  }
+}
+
+.text-menu {
+  &__container {
+    flex: 1 0 20px;
+    display: flex;
+
+    @media (max-width: toPixels(map.get($breakpoints, "md"))) {
+      @include menu-substrate;
+      text-align: left;
+      z-index: 45;
+      left: 100vw;
+    }
+
+    > li:last-child {
+      padding-right: 0;
+    }
+  }
+
+  &__additional {
+    display: flex;
+    margin-left: auto;
+
+    @media (max-width: toPixels(map.get($breakpoints, "md"))) {
+      @include menu-substrate;
+      text-align: right;
+      right: -100vw;
+      width: auto;
+      z-index: 45;
+    }
+  }
+}
+
+.right-panel__container {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+
+  font-size: $fontSizeRelBase_18;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0.04em;
+
+  > li {
+    @media (max-width: toPixels(map.get($breakpoints, "md"))) {
+      padding-right: 30px;
+    }
+
+    &:last-child {
+      @media (min-width: toPixels(map.get($breakpoints, "md"))) {
+        padding-right: 0;
+      }
+    }
+  }
+}
+
+.settings-btn {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  opacity: 1;
+  transition: opacity $t_time linear;
+
+  color: var(--color-secondary);
+
+  &:hover {
+    opacity: $hover_opacity;
+  }
+}
+
+.menu-background {
+  position: fixed;
+  display: none;
+  top: 0;
+  width: 100vw;
+  bottom: 0;
+  left: 100vw;
+
+  // &.active {
+  //   left: 0;
+  // }
+
+  background: var(--color-primary);
+  opacity: 0.98;
+  z-index: 40;
+
+  transition: background $t_time linear, left $t_time linear;
+
+  @media (max-width: toPixels(map.get($breakpoints, "md"))) {
+    display: block;
+  }
+}
+
+.button-close {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 60;
+  padding-top: 15px;
+  font-size: 60px;
+  color: var(--color-secondary);
+  cursor: pointer;
+
+  &:hover {
+    opacity: $switch_transition_time;
+  }
+}

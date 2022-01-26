@@ -1,0 +1,114 @@
+$switch_border: 2;
+$switch_transition_time: 0.25s;
+
+.switch {
+  --base-height: 38px;
+  --base-font-size: 24px;
+
+  --switch-height: var(--base-height);
+  --switch-font-size: var(--base-font-size);
+
+  @media (max-width: toPixels(map.get($breakpoints, "top"))) {
+    --switch-height: calc(var(--base-height) * 0.9);
+    --switch-font-size: calc(var(--base-font-size) * 0.9);
+  }
+
+  @media (max-width: toPixels(map.get($breakpoints, "xxl"))) {
+    --switch-height: calc(var(--base-height) * 0.8);
+    --switch-font-size: calc(var(--base-font-size) * 0.8);
+  }
+
+  @media (max-width: toPixels(map.get($breakpoints, "xl"))) {
+    --switch-height: calc(var(--base-height) * 0.7);
+    --switch-font-size: calc(var(--base-font-size) * 0.7);
+  }
+
+  @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+    --switch-height: calc(var(--base-height) * 0.6);
+    --switch-font-size: calc(var(--base-font-size) * 0.6);
+  }
+
+  @media (max-width: toPixels(map.get($breakpoints, "md"))) {
+    --switch-height: calc(var(--base-height) * 0.7);
+    --switch-font-size: calc(var(--base-font-size) * 0.7);
+  }
+
+  --switch-width: calc(var(--switch-height) * 2);
+
+  font-size: var(--switch-font-size);
+
+  position: relative;
+  display: block;
+  height: var(--switch-height);
+  width: var(--switch-width);
+
+  border: toPixels($switch_border) solid var(--color-secondary);
+  border-radius: calc(var(--switch-height) / 2);
+  opacity: 1;
+
+  transition: opacity $switch_transition_time linear;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  input {
+    display: none;
+  }
+
+  &.active > &__slider {
+    margin-left: calc(var(--switch-width) / 2);
+  }
+
+  &.active > &__sun {
+    color: var(--color-secondary);
+  }
+
+  &.active > &__moon {
+    color: var(--color-primary);
+  }
+
+  &__slider {
+    display: block;
+    position: absolute;
+    top: toPixels(-$switch_border);
+    left: toPixels(-$switch_border);
+    width: calc(var(--switch-width) / 2);
+    height: var(--switch-height);
+    border-radius: 50%;
+
+    background: var(--color-secondary);
+    border: toPixels($switch_border) solid var(--color-secondary);
+
+    transition: $switch_transition_time linear;
+  }
+
+  &__round {
+  }
+
+  &__sun {
+    position: absolute;
+    left: calc(var(--switch-width) / 4 - 2px);
+    top: calc(var(--switch-height) / 2 - 2px);
+    transform: translate(-50%, -50%);
+    z-index: 30;
+
+    font-size: 1em;
+    color: var(--color-primary);
+
+    transition: color $switch_transition_time linear;
+  }
+
+  &__moon {
+    position: absolute;
+    left: calc(var(--switch-width) * 3 / 4 - 2px);
+    top: calc(var(--switch-height) / 2 - 2px);
+    transform: translate(-50%, -50%);
+    z-index: 30;
+
+    font-size: 0.74em;
+    color: var(--color-secondary);
+
+    transition: color $switch_transition_time linear;
+  }
+}
