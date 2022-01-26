@@ -7,20 +7,21 @@
 @import "./fonts";
 
 @import "./header";
+@import "./slogan";
 
 html:root {
-  font-size: 24px;
+  font-size: toPixels($fontBaseSize); // 24px
 
   @media (max-width: toPixels(map.get($breakpoints, "top"))) {
-    font-size: 20px;
+    font-size: 21px;
   }
 
   @media (max-width: toPixels(map.get($breakpoints, "xxl"))) {
-    font-size: 18px;
+    font-size: 19px;
   }
 
   @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
-    font-size: 16px;
+    font-size: 17px;
   }
 
   @media (max-width: toPixels(map.get($breakpoints, "md"))) {

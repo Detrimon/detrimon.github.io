@@ -1,0 +1,151 @@
+@mixin rect-media($breakpoint, $ratio) {
+  @media (max-width: toPixels(map.get($breakpoints, $breakpoint))) {
+    height: toPixels(
+      425 * map.get($scaleRatio, $ratio) + $slogan_border *
+        map.get($scaleRatio, $ratio) * 2
+    );
+
+    > span {
+      border-width: toPixels(10 * map.get($scaleRatio, $ratio));
+    }
+
+    &__rect-small {
+      flex: 1 0 toPixels(135 * map.get($scaleRatio, $ratio));
+    }
+
+    &__rect-big {
+      flex: 0 0 toPixels(290 * map.get($scaleRatio, $ratio));
+    }
+  }
+}
+
+@mixin slogan-paddings($breakpoint, $ratio) {
+  @media (max-width: toPixels(map.get($breakpoints, $breakpoint))) {
+    padding-top: toPixels(100 * map.get($scaleRatio, $ratio));
+
+    h3 {
+      padding-bottom: toPixels(95 * map.get($scaleRatio, $ratio));
+    }
+
+    &__bottom-border {
+      padding-bottom: toPixels(90 * map.get($scaleRatio, $ratio));
+    }
+  }
+}
+
+.slogan {
+  padding-top: 100px;
+
+  @include slogan-paddings("top", "xxl");
+  @include slogan-paddings("xxl", "xl");
+  @include slogan-paddings("xl", "lg");
+  @include slogan-paddings("lg", "md");
+  @include slogan-paddings("md", "sm");
+
+  h3 {
+    max-width: 100vw;
+    position: relative;
+    overflow: hidden;
+
+    padding-bottom: 95px;
+
+    > span {
+      display: inline-block;
+      width: 10000px;
+      position: relative;
+      text-align: center;
+      left: calc(50% - 5000px);
+      font-family: $fontFamilyAdditional;
+      font-size: $fontSizeRelBase_72;
+      letter-spacing: 0.04em;
+
+      color: var(--color-secondary);
+      -webkit-text-fill-color: var(
+        --color-primary
+      ); /* Will override color (regardless of order) */
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: var(--color-secondary);
+
+      transition: all $t_time linear;
+
+      @media (max-width: toPixels(map.get($breakpoints, "md"))) {
+        font-size: 30px;
+      }
+
+      > span {
+        display: inline-block;
+        padding-left: 15px;
+
+        &:first-child {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+
+  &__accent-text {
+    -webkit-text-fill-color: initial;
+    -webkit-text-stroke-width: initial;
+    -webkit-text-stroke-color: initial;
+    color: var(--color-secondary);
+
+    transition: $t_time linear;
+  }
+
+  &__bottom-border {
+    padding-bottom: 90px;
+
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-color: var(--color-delimiter-primary);
+
+    transition: border-color $t_time linear;
+  }
+}
+
+$slogan_border: 10;
+
+.rectangles {
+  box-sizing: content-box;
+  margin-left: -8px;
+  width: calc(100% + 16px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-direction: column;
+
+  height: toPixels(425 * map.get($scaleRatio, "top") + $slogan_border * 2);
+
+  &__rect-small {
+    flex: 1 0 toPixels(135 * map.get($scaleRatio, "top"));
+  }
+
+  &__rect-big {
+    flex: 0 0 toPixels(290 * map.get($scaleRatio, "top"));
+  }
+
+  @include rect-media("top", "xxl");
+  @include rect-media("xxl", "xl");
+  @include rect-media("xl", "lg");
+  @include rect-media("lg", "md");
+  @include rect-media("md", "sm");
+
+  background: url("../img/Slogan-bg.png") no-repeat center center;
+  overflow: hidden;
+
+  background-size: cover;
+  > span {
+    border-width: 10px;
+    border-style: solid;
+    border-color: var(--color-primary);
+    overflow: hidden;
+
+    transition: border-color $t_time linear, background-color $t_time linear;
+    margin: -2px;
+  }
+
+  &__bg-fill {
+    background-color: var(--color-primary);
+  }
+}

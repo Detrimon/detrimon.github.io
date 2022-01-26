@@ -934,6 +934,95 @@ body {
   opacity: 0.25s;
 }
 
+.slogan {
+  padding-top: 100px;
+}
+
+.slogan h3 {
+  max-width: 100vw;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 95px;
+}
+
+.slogan h3 > span {
+  display: inline-block;
+  width: 10000px;
+  position: relative;
+  text-align: center;
+  left: calc(50% - 5000px);
+  font-family: "Syncopate", sans-serif;
+  font-size: 3rem;
+  letter-spacing: 0.04em;
+  color: var(--color-secondary);
+  -webkit-text-fill-color: var(--color-primary);
+  /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--color-secondary);
+  transition: all 0.25s linear;
+}
+
+.slogan h3 > span > span {
+  display: inline-block;
+  padding-left: 15px;
+}
+
+.slogan h3 > span > span:first-child {
+  padding-left: 0;
+}
+
+.slogan__accent-text {
+  -webkit-text-fill-color: initial;
+  -webkit-text-stroke-width: initial;
+  -webkit-text-stroke-color: initial;
+  color: var(--color-secondary);
+  transition: 0.25s linear;
+}
+
+.slogan__bottom-border {
+  padding-bottom: 90px;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-color: var(--color-delimiter-primary);
+  transition: border-color 0.25s linear;
+}
+
+.rectangles {
+  box-sizing: content-box;
+  margin-left: -8px;
+  width: calc(100% + 16px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-direction: column;
+  height: 445px;
+  background: url("../img/Slogan-bg.png") no-repeat center center;
+  overflow: hidden;
+  background-size: cover;
+}
+
+.rectangles__rect-small {
+  flex: 1 0 135px;
+}
+
+.rectangles__rect-big {
+  flex: 0 0 290px;
+}
+
+.rectangles > span {
+  border-width: 10px;
+  border-style: solid;
+  border-color: var(--color-primary);
+  overflow: hidden;
+  transition: border-color 0.25s linear, background-color 0.25s linear;
+  margin: -2px;
+}
+
+.rectangles__bg-fill {
+  background-color: var(--color-primary);
+}
+
 html:root {
   font-size: 24px;
 }
@@ -1045,8 +1134,36 @@ a:hover {
     padding-right: 60px;
   }
 
+  .slogan {
+    padding-top: 73px;
+  }
+
+  .slogan h3 {
+    padding-bottom: 69.35px;
+  }
+
+  .slogan__bottom-border {
+    padding-bottom: 65.7px;
+  }
+
+  .rectangles {
+    height: 324.85px;
+  }
+
+  .rectangles > span {
+    border-width: 7.3px;
+  }
+
+  .rectangles__rect-small {
+    flex: 1 0 98.55px;
+  }
+
+  .rectangles__rect-big {
+    flex: 0 0 211.7px;
+  }
+
   html:root {
-    font-size: 20px;
+    font-size: 21px;
   }
 }
 
@@ -1060,8 +1177,36 @@ a:hover {
     padding-right: 40px;
   }
 
+  .slogan {
+    padding-top: 62px;
+  }
+
+  .slogan h3 {
+    padding-bottom: 58.9px;
+  }
+
+  .slogan__bottom-border {
+    padding-bottom: 55.8px;
+  }
+
+  .rectangles {
+    height: 275.9px;
+  }
+
+  .rectangles > span {
+    border-width: 6.2px;
+  }
+
+  .rectangles__rect-small {
+    flex: 1 0 83.7px;
+  }
+
+  .rectangles__rect-big {
+    flex: 0 0 179.8px;
+  }
+
   html:root {
-    font-size: 18px;
+    font-size: 19px;
   }
 }
 
@@ -1073,6 +1218,34 @@ a:hover {
 
   .header li {
     padding-right: 30px;
+  }
+
+  .slogan {
+    padding-top: 52px;
+  }
+
+  .slogan h3 {
+    padding-bottom: 49.4px;
+  }
+
+  .slogan__bottom-border {
+    padding-bottom: 46.8px;
+  }
+
+  .rectangles {
+    height: 231.4px;
+  }
+
+  .rectangles > span {
+    border-width: 5.2px;
+  }
+
+  .rectangles__rect-small {
+    flex: 1 0 70.2px;
+  }
+
+  .rectangles__rect-big {
+    flex: 0 0 150.8px;
   }
 }
 
@@ -1086,8 +1259,36 @@ a:hover {
     padding-right: 14px;
   }
 
+  .slogan {
+    padding-top: 40px;
+  }
+
+  .slogan h3 {
+    padding-bottom: 38px;
+  }
+
+  .slogan__bottom-border {
+    padding-bottom: 36px;
+  }
+
+  .rectangles {
+    height: 178px;
+  }
+
+  .rectangles > span {
+    border-width: 4px;
+  }
+
+  .rectangles__rect-small {
+    flex: 1 0 54px;
+  }
+
+  .rectangles__rect-big {
+    flex: 0 0 116px;
+  }
+
   html:root {
-    font-size: 16px;
+    font-size: 17px;
   }
 }
 
@@ -1153,6 +1354,38 @@ a:hover {
     display: block;
   }
 
+  .slogan {
+    padding-top: 30px;
+  }
+
+  .slogan h3 {
+    padding-bottom: 28.5px;
+  }
+
+  .slogan__bottom-border {
+    padding-bottom: 27px;
+  }
+
+  .slogan h3 > span {
+    font-size: 30px;
+  }
+
+  .rectangles {
+    height: 133.5px;
+  }
+
+  .rectangles > span {
+    border-width: 3px;
+  }
+
+  .rectangles__rect-small {
+    flex: 1 0 40.5px;
+  }
+
+  .rectangles__rect-big {
+    flex: 0 0 87px;
+  }
+
   html:root {
     font-size: 18px;
   }
@@ -1187,3 +1420,5 @@ a:hover {
     font-size: 0.76em;
   }
 }
+
+.webp .rectangles{ background: url(../img/Slogan-bg.webp) no-repeat center center; }
