@@ -1,18 +1,23 @@
 function burgerOnClickHandler(e) {
   const burgerContainer = document.querySelector(".menu__btn");
-  const closeButton = document.querySelector("#idCloseMenu");
   const headerElement = document.querySelector("#idHeader");
-  // const body = document.body;
+  const body = document.body;
 
   burgerContainer.classList.toggle("active");
   headerElement.classList.toggle("active");
+
+  body.style.overflow = hidden;
 }
 
 function closeMenuHandler(e) {
   const burgerContainer = document.querySelector(".menu__btn");
   const headerElement = document.querySelector("#idHeader");
+  const body = document.body;
+
   burgerContainer.classList.toggle("active");
   headerElement.classList.toggle("active");
+
+  body.style.overflow = none;
 }
 
 function switchTheme(e) {
