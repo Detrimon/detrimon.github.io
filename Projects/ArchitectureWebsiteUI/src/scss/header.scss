@@ -60,6 +60,10 @@
       transform: none;
       flex: 1 0 auto;
     }
+
+    @media (max-width: 375px) {
+      font-size: 0.76em;
+    }
   }
 
   li {
@@ -143,6 +147,10 @@
   > li {
     @media (max-width: toPixels(map.get($breakpoints, "md"))) {
       padding-right: 30px;
+    }
+
+    @media (max-width: toPixels(map.get($breakpoints, "sm"))) {
+      padding-right: 20px;
     }
 
     &:last-child {
