@@ -21,14 +21,14 @@
 
 @mixin slogan-paddings($breakpoint, $ratio) {
   @media (max-width: toPixels(map.get($breakpoints, $breakpoint))) {
-    padding-top: toPixels(100 * map.get($scaleRatio, $ratio));
+    // padding-top: toPixels(100 * map.get($scaleRatio, $ratio));
 
     h3 {
       padding-bottom: toPixels(95 * map.get($scaleRatio, $ratio));
     }
 
     &__bottom-border {
-      padding-bottom: toPixels(90 * map.get($scaleRatio, $ratio));
+      // padding-bottom: toPixels(90 * map.get($scaleRatio, $ratio));
     }
   }
 }
