@@ -35,6 +35,13 @@ function switchTheme(e) {
     document.body
   ).getPropertyValue("--color-delimiter-secondary");
 
+  const primaryBgColor = getComputedStyle(document.body).getPropertyValue(
+    "--color-bg-primary"
+  );
+  const secondaryBgColor = getComputedStyle(document.body).getPropertyValue(
+    "--color-bg-secondary"
+  );
+
   document.body.style.setProperty("--color-primary", secondaryColor);
   document.body.style.setProperty("--color-secondary", primaryColor);
   document.body.style.setProperty(
@@ -45,6 +52,8 @@ function switchTheme(e) {
     "--color-delimiter-secondary",
     primaryDelimiterColor
   );
+  document.body.style.setProperty("--color-bg-primary", secondaryBgColor);
+  document.body.style.setProperty("--color-bg-secondary", primaryBgColor);
 
   if (switcher.classList.contains("active")) {
     switcher.classList.remove("active");

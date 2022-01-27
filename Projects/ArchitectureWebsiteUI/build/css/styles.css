@@ -646,6 +646,8 @@ body {
   --color-secondary: #000;
   --color-delimiter-primary: #eceff1;
   --color-delimiter-secondary: #212121;
+  --color-bg-primary: #fafafa;
+  --color-bg-secondary: #1f1f1f;
 }
 
 @font-face {
@@ -1078,6 +1080,7 @@ body {
   line-height: 50px;
   text-transform: uppercase;
   color: #e5e5e5;
+  color: var(--color-delimiter-primary);
 }
 
 .slider__item {
@@ -1086,7 +1089,7 @@ body {
 }
 
 .slider__item.active {
-  color: #000000;
+  color: var(--color-delimiter-secondary);
 }
 
 .slider__item:first-child {
@@ -1182,6 +1185,50 @@ body {
   line-height: 29px;
   letter-spacing: 0.04em;
   text-align: center;
+}
+
+.about {
+  position: relative;
+  background-color: var(--color-bg-primary);
+  padding-top: 100px;
+  padding-bottom: 100px;
+  text-align: center;
+}
+
+.about__text {
+  position: relative;
+  width: 4000px;
+  left: calc(50% - 2000px);
+  padding-bottom: 95px;
+}
+
+.about__text p {
+  font-family: "Syncopate", sans-serif;
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 100px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding-bottom: 50px;
+}
+
+.about__text p:last-child {
+  padding-bottom: 0;
+}
+
+.about__default-text {
+  color: var(--color-secondary);
+  -webkit-text-fill-color: transparent;
+  /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--color-secondary);
+}
+
+.about__accent-text {
+  color: var(--color-secondary);
+  -webkit-text-fill-color: initial;
+  -webkit-text-stroke-width: initial;
+  -webkit-text-stroke-color: initial;
 }
 
 html:root {
@@ -1375,6 +1422,18 @@ a:hover {
     padding-top: 73px;
   }
 
+  .about__text {
+    padding-bottom: 69.35px;
+  }
+
+  .about__text p {
+    padding-bottom: 36.5px;
+  }
+
+  .about__text p {
+    font-size: 90px;
+  }
+
   html:root {
     font-size: 21px;
   }
@@ -1464,6 +1523,18 @@ a:hover {
 
   .gallery__link {
     padding-top: 62px;
+  }
+
+  .about__text {
+    padding-bottom: 58.9px;
+  }
+
+  .about__text p {
+    padding-bottom: 31px;
+  }
+
+  .about__text p {
+    font-size: 85px;
   }
 
   html:root {
@@ -1556,6 +1627,19 @@ a:hover {
   .gallery__link {
     padding-top: 52px;
   }
+
+  .about__text {
+    padding-bottom: 49.4px;
+  }
+
+  .about__text p {
+    padding-bottom: 26px;
+  }
+
+  .about__text p {
+    font-size: 80px;
+    line-height: 92px;
+  }
 }
 
 @media (max-width: 991.98px) {
@@ -1642,6 +1726,19 @@ a:hover {
 
   .gallery__link {
     padding-top: 40px;
+  }
+
+  .about__text {
+    padding-bottom: 38px;
+  }
+
+  .about__text p {
+    padding-bottom: 20px;
+  }
+
+  .about__text p {
+    font-size: 70px;
+    line-height: 89px;
   }
 
   html:root {
@@ -1786,6 +1883,19 @@ a:hover {
     padding-top: 30px;
   }
 
+  .about__text {
+    padding-bottom: 28.5px;
+  }
+
+  .about__text p {
+    padding-bottom: 15px;
+  }
+
+  .about__text p {
+    font-size: 60px;
+    line-height: 78px;
+  }
+
   html:root {
     font-size: 18px;
   }
@@ -1826,6 +1936,11 @@ a:hover {
   .welcome__slogan {
     font-size: 34px;
     line-height: 50px;
+  }
+
+  .about__text p {
+    font-size: 52px;
+    line-height: 72px;
   }
 }
 

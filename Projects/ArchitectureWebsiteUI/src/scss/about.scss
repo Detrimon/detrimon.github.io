@@ -1,0 +1,95 @@
+@mixin about-paddings($breakpoint, $ratio) {
+  @media (max-width: toPixels(map.get($breakpoints, $breakpoint))) {
+    &__text {
+      padding-bottom: toPixels(95 * map.get($scaleRatio, $ratio));
+
+      p {
+        padding-bottom: toPixels(50 * map.get($scaleRatio, $ratio));
+      }
+    }
+  }
+}
+
+.about {
+  position: relative;
+  background-color: var(--color-bg-primary);
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  text-align: center;
+
+  @include about-paddings("top", "xxl");
+  @include about-paddings("xxl", "xl");
+  @include about-paddings("xl", "lg");
+  @include about-paddings("lg", "md");
+  @include about-paddings("md", "sm");
+
+  &__text {
+    position: relative;
+    width: 4000px;
+    left: calc(50% - 2000px);
+
+    padding-bottom: 95px;
+
+    p {
+      font-family: $fontFamilyAdditional;
+      font-weight: 700;
+      font-size: $fontSizeRelBase_96;
+      line-height: 100px;
+      letter-spacing: 0.04em;
+
+      text-transform: uppercase;
+
+      padding-bottom: 50px;
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+
+      @media (max-width: toPixels(map.get($breakpoints, "top"))) {
+        font-size: 90px;
+      }
+
+      @media (max-width: toPixels(map.get($breakpoints, "xxl"))) {
+        font-size: 85px;
+      }
+
+      @media (max-width: toPixels(map.get($breakpoints, "xl"))) {
+        font-size: 80px;
+        line-height: 92px;
+      }
+
+      @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+        font-size: 70px;
+        line-height: 89px;
+      }
+
+      @media (max-width: toPixels(map.get($breakpoints, "md"))) {
+        font-size: 60px;
+        line-height: 78px;
+      }
+
+      @media (max-width: toPixels(map.get($breakpoints, "sm"))) {
+        font-size: 52px;
+        line-height: 72px;
+      }
+    }
+  }
+
+  &__default-text {
+    color: var(--color-secondary);
+    -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--color-secondary);
+  }
+
+  &__accent-text {
+    color: var(--color-secondary);
+    -webkit-text-fill-color: initial;
+    -webkit-text-stroke-width: initial;
+    -webkit-text-stroke-color: initial;
+  }
+
+  &__link-text {
+  }
+}

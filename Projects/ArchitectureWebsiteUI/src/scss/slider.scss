@@ -90,6 +90,8 @@
       line-height: 50px;
       text-transform: uppercase;
       color: $color_text_grey;
+
+      color: var(--color-delimiter-primary);
     }
   }
 
@@ -98,7 +100,7 @@
     margin: 0 25px; // TODO: уменьшаем
 
     &.active {
-      color: $color_black;
+      color: var(--color-delimiter-secondary);
     }
 
     &:first-child {

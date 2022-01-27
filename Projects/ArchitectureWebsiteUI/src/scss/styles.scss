@@ -11,6 +11,8 @@
 @import "./slider";
 @import "./welcome";
 @import "./gallery";
+@import "./about";
+@import "./contacts";
 
 html:root {
   font-size: toPixels($fontBaseSize); // 24px
