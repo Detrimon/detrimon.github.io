@@ -1,0 +1,97 @@
+@mixin welcome-paddings($breakpoint, $ratio) {
+  @media (max-width: toPixels(map.get($breakpoints, $breakpoint))) {
+    &__slogan {
+      padding-top: toPixels(100 * map.get($scaleRatio, $ratio));
+    }
+
+    &__name {
+      padding-top: toPixels(100 * map.get($scaleRatio, $ratio));
+    }
+
+    &__description {
+      padding-top: toPixels(25 * map.get($scaleRatio, $ratio));
+    }
+
+    &__reviews {
+      padding-top: toPixels(100 * map.get($scaleRatio, $ratio));
+    }
+  }
+}
+
+.welcome {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  text-align: center;
+
+  @include welcome-paddings("top", "xxl");
+  @include welcome-paddings("xxl", "xl");
+  @include welcome-paddings("xl", "lg");
+  @include welcome-paddings("lg", "md");
+  @include welcome-paddings("md", "sm");
+
+  &__avatar {
+    width: 270px; //TODO: уменьшить
+    height: 270px; //TODO: уменьшить
+
+    @media (max-width: toPixels(map.get($breakpoints, "sm"))) {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__slogan {
+    padding-top: 100px; //TODO: уменьшить
+    font-size: $fontSizeRelBase_72;
+    line-height: 88px;
+    letter-spacing: 0.04em;
+
+    @media (max-width: toPixels(map.get($breakpoints, "top"))) {
+      font-size: 60px;
+      line-height: 76px;
+    }
+
+    @media (max-width: toPixels(map.get($breakpoints, "xxl"))) {
+      font-size: 52px;
+      line-height: 70px;
+    }
+
+    @media (max-width: toPixels(map.get($breakpoints, "xl"))) {
+      font-size: 46px;
+      line-height: 60px;
+    }
+
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      font-size: 38px;
+      line-height: 57px;
+    }
+
+    @media (max-width: toPixels(map.get($breakpoints, "sm"))) {
+      font-size: 34px;
+      line-height: 50px;
+    }
+  }
+
+  &__name {
+    padding-top: 100px; //TODO: уменьшить
+
+    font-family: $fontFamilyAdditional;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  &__description {
+    padding-top: 25px; //TODO: уменьшить
+    line-height: 29px;
+    letter-spacing: 0.04em;
+    color: $color_lightgrey;
+  }
+
+  &__reviews {
+    padding-top: 100px; //TODO: уменьшить
+    font-weight: 500;
+    line-height: 29px;
+    letter-spacing: 0.04em;
+  }
+}
