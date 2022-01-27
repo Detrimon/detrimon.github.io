@@ -72,6 +72,10 @@
         font-size: 30px;
       }
 
+      @media (max-width: toPixels(map.get($breakpoints, "sm"))) {
+        font-size: 22px;
+      }
+
       > span {
         display: inline-block;
         padding-left: 15px;

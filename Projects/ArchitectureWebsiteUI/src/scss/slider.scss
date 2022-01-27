@@ -1,0 +1,155 @@
+@mixin slider-paddings($breakpoint, $ratio) {
+  @media (max-width: toPixels(map.get($breakpoints, $breakpoint))) {
+    padding-top: toPixels(100 * map.get($scaleRatio, $ratio));
+    &__image-container {
+      width: toPixels(1320 * map.get($scaleRatio, $ratio));
+      height: toPixels(701 * map.get($scaleRatio, $ratio));
+      margin: 0 toPixels(50 * map.get($scaleRatio, $ratio));
+    }
+
+    &__items {
+      padding-top: toPixels(92 * map.get($scaleRatio, $ratio));
+
+      li {
+        font-size: toPixels(48 * map.get($scaleRatio, $ratio));
+        line-height: toPixels(50 * map.get($scaleRatio, $ratio));
+      }
+    }
+
+    &__item {
+      margin: 0 toPixels(25 * map.get($scaleRatio, $ratio));
+    }
+
+    &__projects-link {
+      padding-top: toPixels(103 * map.get($scaleRatio, $ratio));
+    }
+
+    &__bottom-border {
+      padding-bottom: toPixels(90 * map.get($scaleRatio, $ratio));
+    }
+  }
+}
+
+.slider {
+  // position: relative;
+  padding-top: 100px; // TODO: уменьшаем
+
+  @include slider-paddings("top", "xxl");
+  @include slider-paddings("xxl", "xl");
+  @include slider-paddings("xl", "lg");
+  @include slider-paddings("lg", "md");
+  @include slider-paddings("md", "sm");
+
+  &__images {
+    display: block;
+    position: relative;
+    width: 20000px;
+    left: calc(50% - 10000px);
+    text-align: center;
+  }
+
+  &__image-container {
+    display: inline-block;
+    position: relative;
+    // flex: 0 0 1320px;
+    width: 1320px; // TODO: уменьшаем
+    height: 701px; // TODO: уменьшаем
+    margin: 0 50px; // TODO: уменьшаем
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    img {
+      position: absolute;
+      object-fit: cover;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__items {
+    padding-top: 92px; // TODO: уменьшаем
+    display: block;
+    position: relative;
+    width: 20000px;
+    left: calc(50% - 10000px);
+    text-align: center;
+
+    li {
+      font-family: $fontFamilyAdditional;
+      font-weight: 700;
+      font-size: $fontSizeRelBase_48;
+      letter-spacing: 0.04em;
+      line-height: 50px;
+      text-transform: uppercase;
+      color: $color_text_grey;
+    }
+  }
+
+  &__item {
+    display: inline-block;
+    margin: 0 25px; // TODO: уменьшаем
+
+    &.active {
+      color: $color_black;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__projects-link {
+    font-weight: 500;
+    line-height: 29px;
+    letter-spacing: 0.04em;
+    text-align: center;
+
+    text-transform: lowercase;
+
+    padding-top: 103px; // TODO: уменьшаем
+
+    @media (max-width: toPixels(map.get($breakpoints, "top"))) {
+      font-size: 22px;
+    }
+
+    @media (max-width: toPixels(map.get($breakpoints, "xxl"))) {
+      font-size: 20px;
+    }
+
+    @media (max-width: toPixels(map.get($breakpoints, "xl"))) {
+      font-size: 19px;
+    }
+
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      font-size: 18px;
+    }
+
+    @media (max-width: toPixels(map.get($breakpoints, "md"))) {
+      font-size: 17px;
+    }
+    // @media (max-width: toPixels(map.get($breakpoints, "sm"))) {
+    //   font-size: 16px;
+    // }
+  }
+
+  &__bottom-border {
+    padding-bottom: 90px; // TODO: уменьшаем
+
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-color: var(--color-delimiter-primary);
+
+    transition: border-color $t_time linear;
+  }
+}
