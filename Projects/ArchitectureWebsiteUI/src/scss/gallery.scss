@@ -1,0 +1,48 @@
+@mixin gallery-paddings($breakpoint, $ratio) {
+  @media (max-width: toPixels(map.get($breakpoints, $breakpoint))) {
+    // padding-top: toPixels(879 * map.get($scaleRatio, $ratio));
+
+    &__image-container {
+      height: toPixels(879 * map.get($scaleRatio, $ratio));
+    }
+
+    &__link {
+      padding-top: toPixels(100 * map.get($scaleRatio, $ratio));
+    }
+  }
+}
+
+.gallery {
+  width: 100%;
+  padding-bottom: 100px;
+
+  @include gallery-paddings("top", "xxl");
+  @include gallery-paddings("xxl", "xl");
+  @include gallery-paddings("xl", "lg");
+  @include gallery-paddings("lg", "md");
+  @include gallery-paddings("md", "sm");
+
+  &__image-container {
+    position: relative;
+    width: 100%;
+    height: 879px;
+  }
+
+  &__image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__link {
+    padding-top: 100px;
+
+    font-weight: 500;
+    line-height: 29px;
+    letter-spacing: 0.04em;
+    text-align: center;
+  }
+}

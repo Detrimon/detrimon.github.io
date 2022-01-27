@@ -1155,6 +1155,35 @@ body {
   letter-spacing: 0.04em;
 }
 
+.gallery {
+  width: 100%;
+  padding-bottom: 100px;
+}
+
+.gallery__image-container {
+  position: relative;
+  width: 100%;
+  height: 879px;
+}
+
+.gallery__image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.gallery__link {
+  padding-top: 100px;
+  font-weight: 500;
+  line-height: 29px;
+  letter-spacing: 0.04em;
+  text-align: center;
+}
+
 html:root {
   font-size: 24px;
 }
@@ -1338,6 +1367,14 @@ a:hover {
     line-height: 76px;
   }
 
+  .gallery__image-container {
+    height: 641.67px;
+  }
+
+  .gallery__link {
+    padding-top: 73px;
+  }
+
   html:root {
     font-size: 21px;
   }
@@ -1419,6 +1456,14 @@ a:hover {
   .welcome__slogan {
     font-size: 52px;
     line-height: 70px;
+  }
+
+  .gallery__image-container {
+    height: 544.98px;
+  }
+
+  .gallery__link {
+    padding-top: 62px;
   }
 
   html:root {
@@ -1503,6 +1548,14 @@ a:hover {
     font-size: 46px;
     line-height: 60px;
   }
+
+  .gallery__image-container {
+    height: 457.08px;
+  }
+
+  .gallery__link {
+    padding-top: 52px;
+  }
 }
 
 @media (max-width: 991.98px) {
@@ -1581,6 +1634,14 @@ a:hover {
   .welcome__slogan {
     font-size: 38px;
     line-height: 57px;
+  }
+
+  .gallery__image-container {
+    height: 351.6px;
+  }
+
+  .gallery__link {
+    padding-top: 40px;
   }
 
   html:root {
@@ -1714,6 +1775,14 @@ a:hover {
   }
 
   .welcome__reviews {
+    padding-top: 30px;
+  }
+
+  .gallery__image-container {
+    height: 263.7px;
+  }
+
+  .gallery__link {
     padding-top: 30px;
   }
 
