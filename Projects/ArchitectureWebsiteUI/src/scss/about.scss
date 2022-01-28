@@ -16,6 +16,9 @@
   padding-top: 100px;
   padding-bottom: 100px;
 
+  width: 100%;
+  overflow: hidden;
+
   text-align: center;
 
   @include about-paddings("top", "xxl");

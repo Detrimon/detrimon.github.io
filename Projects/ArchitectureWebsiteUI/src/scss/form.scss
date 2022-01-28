@@ -1,0 +1,56 @@
+@mixin form-paddings($breakpoint, $ratio) {
+  @media (max-width: toPixels(map.get($breakpoints, $breakpoint))) {
+    &__input {
+      // height: toPixels(51 * map.get($scaleRatio, $ratio));
+      margin-bottom: toPixels(50 * map.get($scaleRatio, $ratio));
+      padding-bottom: toPixels(13 * map.get($scaleRatio, $ratio));
+    }
+  }
+}
+
+.form {
+  &__input {
+    position: relative;
+    border: none;
+    border-bottom: 2px solid var(--color-secondary);
+    background: none;
+    outline: none;
+    outline-width: 0;
+    resize: none;
+    border-radius: 0;
+    -webkit-appearance: none;
+
+    width: 75.6%;
+    height: 51px;
+
+    margin-bottom: 50px;
+    padding-bottom: 13px;
+
+    @media (max-width: toPixels(map.get($breakpoints, "xxl"))) {
+      width: 80%;
+    }
+
+    @media (max-width: toPixels(map.get($breakpoints, "xl"))) {
+      width: 85%;
+      margin-bottom: 40px;
+      padding-bottom: 5px;
+    }
+
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      width: 100%;
+    }
+
+    &::placeholder {
+      color: $color_lightgrey;
+      transition: $t_time linear;
+      letter-spacing: 0.04em;
+    }
+  }
+
+  &__submit {
+    display: block;
+    font-weight: 500;
+    line-height: 29px;
+    letter-spacing: 0.04em;
+  }
+}

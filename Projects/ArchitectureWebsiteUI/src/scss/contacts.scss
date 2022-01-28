@@ -1,1 +1,144 @@
 @import "./form";
+
+@mixin contacts-paddings($breakpoint, $ratio) {
+  @media (max-width: toPixels(map.get($breakpoints, $breakpoint))) {
+    &__title {
+      padding-bottom: toPixels(50 * map.get($scaleRatio, $ratio));
+    }
+
+    &__text {
+      padding-bottom: toPixels(100 * map.get($scaleRatio, $ratio));
+    }
+
+    &__item {
+      padding-bottom: toPixels(50 * map.get($scaleRatio, $ratio));
+
+      > h5 {
+        padding-bottom: toPixels(10 * map.get($scaleRatio, $ratio));
+      }
+    }
+  }
+}
+
+.contacts {
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-color: var(--color-delimiter-primary);
+
+  transition: border-color $t_time linear;
+
+  @include contacts-paddings("top", "xxl");
+  @include contacts-paddings("xxl", "xl");
+  @include contacts-paddings("xl", "lg");
+  @include contacts-paddings("lg", "md");
+  @include contacts-paddings("md", "sm");
+
+  &__title {
+    font-family: $fontFamilyAdditional;
+    font-weight: 700;
+    font-size: $fontSizeRelBase_48;
+    line-height: 50px;
+    letter-spacing: 0.04em;
+
+    text-transform: lowercase;
+
+    padding-bottom: 50px;
+  }
+
+  &__text-container {
+    display: flex;
+  }
+
+  &__text {
+    flex: 0 0 58.33%;
+    font-size: $fontSizeRelBase_36;
+    line-height: 44px;
+    letter-spacing: 0.04em;
+
+    padding-bottom: 100px;
+
+    @media (max-width: toPixels(map.get($breakpoints, "xxl"))) {
+      flex: 0 0 66.66%;
+    }
+
+    @media (max-width: toPixels(map.get($breakpoints, "xl"))) {
+      flex: 0 0 75%;
+    }
+
+    @media (max-width: toPixels(map.get($breakpoints, "md"))) {
+      flex: 1 0 auto;
+    }
+  }
+
+  &__main {
+    display: flex;
+    flex-wrap: nowrap;
+
+    > * {
+      flex: 0 0 50%;
+    }
+
+    &:last-child {
+      border-right: none;
+    }
+
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      flex-direction: column;
+      row-gap: 100px;
+    }
+  }
+
+  &__form {
+    border-right: 2px $color_grey_border solid;
+
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      border-right: none;
+    }
+  }
+  &__content {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      // justify-content: space-between;
+    }
+
+    > div {
+      flex: 0 0 75%;
+
+      @media (max-width: toPixels(map.get($breakpoints, "xxl"))) {
+        flex: 0 0 80%;
+      }
+
+      @media (max-width: toPixels(map.get($breakpoints, "xl"))) {
+        flex: 0 0 85%;
+      }
+
+      @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+        flex: 0 0 auto;
+      }
+    }
+  }
+
+  &__item {
+    padding-bottom: 50px;
+    line-height: 29px;
+    letter-spacing: 0.04em;
+
+    > h5 {
+      padding-bottom: 10px;
+    }
+
+    > p {
+      color: $color_lightgrey;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+}

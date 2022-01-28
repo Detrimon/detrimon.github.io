@@ -33,6 +33,8 @@
 .slider {
   // position: relative;
   padding-top: 100px; // TODO: уменьшаем
+  width: 100%;
+  overflow: hidden;
 
   @include slider-paddings("top", "xxl");
   @include slider-paddings("xxl", "xl");
