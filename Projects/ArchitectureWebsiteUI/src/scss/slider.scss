@@ -20,7 +20,7 @@
       margin: 0 toPixels(25 * map.get($scaleRatio, $ratio));
     }
 
-    &__projects-link {
+    &__link-container {
       padding-top: toPixels(103 * map.get($scaleRatio, $ratio));
     }
 
@@ -48,6 +48,7 @@
     width: 20000px;
     left: calc(50% - 10000px);
     text-align: center;
+    font-size: 0;
   }
 
   &__image-container {
@@ -80,9 +81,10 @@
     padding-top: 92px; // TODO: уменьшаем
     display: block;
     position: relative;
-    width: 20000px;
-    left: calc(50% - 10000px);
+    width: 4160px;
+    left: calc(50% - 2080px - 33px);
     text-align: center;
+    font-size: 0;
 
     li {
       font-family: $fontFamilyAdditional;
@@ -90,7 +92,7 @@
       font-size: $fontSizeRelBase_48;
       letter-spacing: 0.04em;
       line-height: 50px;
-      text-transform: uppercase;
+      text-transform: lowercase;
       color: $color_text_grey;
 
       color: var(--color-delimiter-primary);
@@ -99,7 +101,7 @@
 
   &__item {
     display: inline-block;
-    margin: 0 25px; // TODO: уменьшаем
+    margin: 0 24px; // TODO: уменьшаем
 
     &.active {
       color: var(--color-delimiter-secondary);
@@ -113,35 +115,36 @@
     }
   }
 
-  &__projects-link {
-    font-weight: 500;
-    line-height: 29px;
-    letter-spacing: 0.04em;
-    text-align: center;
+  &__link-container {
+    // position: relative;
+    // font-weight: 500;
+    // line-height: 29px;
+    // letter-spacing: 0.04em;
+    // text-align: center;
 
-    text-transform: lowercase;
+    // text-transform: lowercase;
 
     padding-top: 103px; // TODO: уменьшаем
 
-    @media (max-width: toPixels(map.get($breakpoints, "top"))) {
-      font-size: 22px;
-    }
+    // @media (max-width: toPixels(map.get($breakpoints, "top"))) {
+    //   font-size: 22px;
+    // }
 
-    @media (max-width: toPixels(map.get($breakpoints, "xxl"))) {
-      font-size: 20px;
-    }
+    // @media (max-width: toPixels(map.get($breakpoints, "xxl"))) {
+    //   font-size: 20px;
+    // }
 
-    @media (max-width: toPixels(map.get($breakpoints, "xl"))) {
-      font-size: 19px;
-    }
+    // @media (max-width: toPixels(map.get($breakpoints, "xl"))) {
+    //   font-size: 19px;
+    // }
 
-    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
-      font-size: 18px;
-    }
+    // @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+    //   font-size: 18px;
+    // }
 
-    @media (max-width: toPixels(map.get($breakpoints, "md"))) {
-      font-size: 17px;
-    }
+    // @media (max-width: toPixels(map.get($breakpoints, "md"))) {
+    //   font-size: 17px;
+    // }
     // @media (max-width: toPixels(map.get($breakpoints, "sm"))) {
     //   font-size: 16px;
     // }

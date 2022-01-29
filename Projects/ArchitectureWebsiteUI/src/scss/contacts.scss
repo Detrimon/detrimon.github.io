@@ -23,13 +23,6 @@
 .contacts {
   width: 100%;
   padding-top: 100px;
-  padding-bottom: 100px;
-
-  border-bottom-width: 2px;
-  border-bottom-style: solid;
-  border-color: var(--color-delimiter-primary);
-
-  transition: border-color $t_time linear;
 
   @include contacts-paddings("top", "xxl");
   @include contacts-paddings("xxl", "xl");
@@ -81,9 +74,9 @@
     display: flex;
     flex-wrap: nowrap;
 
-    > * {
-      flex: 0 0 50%;
-    }
+    // > * {
+    //   flex: 0 0 50%;
+    // }
 
     &:last-child {
       border-right: none;
@@ -96,6 +89,7 @@
   }
 
   &__form {
+    flex: 0 0 54.25%;
     border-right: 2px $color_grey_border solid;
 
     @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
@@ -103,6 +97,7 @@
     }
   }
   &__content {
+    flex: 1 0 auto;
     display: flex;
     justify-content: right;
     align-items: center;
@@ -112,7 +107,7 @@
     }
 
     > div {
-      flex: 0 0 75%;
+      flex: 0 0 71%;
 
       @media (max-width: toPixels(map.get($breakpoints, "xxl"))) {
         flex: 0 0 80%;
@@ -144,5 +139,15 @@
     &:last-child {
       padding-bottom: 0;
     }
+  }
+
+  &__bottom-border {
+    padding-bottom: 100px;
+
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-color: var(--color-delimiter-primary);
+
+    transition: border-color $t_time linear;
   }
 }

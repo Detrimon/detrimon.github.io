@@ -12,7 +12,7 @@
       padding-top: toPixels(25 * map.get($scaleRatio, $ratio));
     }
 
-    &__reviews {
+    &__link-container {
       padding-top: toPixels(100 * map.get($scaleRatio, $ratio));
     }
   }
@@ -88,10 +88,7 @@
     color: $color_lightgrey;
   }
 
-  &__reviews {
+  &__link-container {
     padding-top: 100px; //TODO: уменьшить
-    font-weight: 500;
-    line-height: 29px;
-    letter-spacing: 0.04em;
   }
 }

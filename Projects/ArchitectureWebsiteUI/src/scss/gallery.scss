@@ -6,7 +6,7 @@
       height: toPixels(879 * map.get($scaleRatio, $ratio));
     }
 
-    &__link {
+    &__link-container {
       padding-top: toPixels(100 * map.get($scaleRatio, $ratio));
     }
   }
@@ -37,12 +37,7 @@
     height: 100%;
   }
 
-  &__link {
+  &__link-container {
     padding-top: 100px;
-
-    font-weight: 500;
-    line-height: 29px;
-    letter-spacing: 0.04em;
-    text-align: center;
   }
 }

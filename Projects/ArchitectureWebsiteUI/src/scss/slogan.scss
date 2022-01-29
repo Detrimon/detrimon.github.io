@@ -58,6 +58,7 @@
       font-family: $fontFamilyAdditional;
       font-size: $fontSizeRelBase_72;
       letter-spacing: 0.04em;
+      word-spacing: -1px;
 
       color: var(--color-secondary);
       -webkit-text-fill-color: var(
@@ -140,7 +141,7 @@ $slogan_border: 10;
 
   background-size: cover;
   > span {
-    border-width: 10px;
+    border-width: 12px;
     border-style: solid;
     border-color: var(--color-primary);
     overflow: hidden;
