@@ -1268,6 +1268,7 @@ body {
 }
 
 .form__submit {
+  color: var(--color-secondary);
   display: block;
   font-weight: 500;
   line-height: 29px;
@@ -1398,6 +1399,7 @@ body {
 
 .top-footer__min-menu a {
   font-size: 0.8rem;
+  color: var(--color-secondary);
 }
 
 .top-footer__min-menu span {
@@ -2342,6 +2344,14 @@ a:hover {
 
   .top-footer__menu > li:last-child {
     padding-bottom: 0;
+  }
+
+  .top-footer__socials > span {
+    padding-right: 50px;
+  }
+
+  .top-footer__socials > span:before {
+    font-size: 1.5rem;
   }
 
   .top-footer__min-menu {

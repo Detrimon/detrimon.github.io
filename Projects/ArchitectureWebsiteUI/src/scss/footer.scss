@@ -114,6 +114,15 @@
         padding-right: 14px;
       }
     }
+
+    @media (max-width: toPixels(map.get($breakpoints, "sm"))) {
+      > span {
+        padding-right: 50px;
+        &:before {
+          font-size: 1.5rem;
+        }
+      }
+    }
   }
 
   &__min-menu {
@@ -122,6 +131,7 @@
 
     a {
       font-size: 0.8rem;
+      color: var(--color-secondary);
     }
 
     span {
