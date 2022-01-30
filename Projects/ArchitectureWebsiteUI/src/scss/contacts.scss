@@ -40,6 +40,10 @@
     text-transform: lowercase;
 
     padding-bottom: 50px;
+
+    @media (max-width: toPixels(map.get($breakpoints, "sm"))) {
+      font-size: $fontSizeRelBase_36;
+    }
   }
 
   &__text-container {
@@ -67,6 +71,10 @@
 
     @media (max-width: toPixels(map.get($breakpoints, "md"))) {
       line-height: 40px;
+    }
+
+    @media (max-width: toPixels(map.get($breakpoints, "sm"))) {
+      font-size: 1.25rem;
     }
   }
 

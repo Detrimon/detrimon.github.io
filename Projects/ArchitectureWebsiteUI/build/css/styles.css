@@ -1720,6 +1720,10 @@ a:hover {
     padding-top: 63.86px;
   }
 
+  .slider__items {
+    left: calc(50% - 2080px - 9px);
+  }
+
   .welcome__slogan {
     padding-top: 62px;
   }
@@ -2323,8 +2327,16 @@ a:hover {
   }
 
   .about__text p {
-    font-size: 52px;
-    line-height: 72px;
+    font-size: 37px;
+    line-height: 57px;
+  }
+
+  .contacts__title {
+    font-size: 1.5rem;
+  }
+
+  .contacts__text {
+    font-size: 1.25rem;
   }
 
   .top-footer__menu {
