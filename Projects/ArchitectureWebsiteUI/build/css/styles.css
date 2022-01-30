@@ -634,7 +634,7 @@ template {
 }
 
 .min-container {
-  min-width: 320px;
+  min-width: 305px;
 }
 
 .container {
@@ -711,6 +711,14 @@ body {
 
 .icons-close:before {
   content: "\e909";
+}
+
+.icons-arrow-down:before {
+  content: "\e90a";
+}
+
+.icons-arrow-up:before {
+  content: "\e90b";
 }
 
 .switch {
@@ -1354,6 +1362,7 @@ body {
 
 .top-footer__menu {
   display: flex;
+  transition: height 0.25s linear;
 }
 
 .top-footer__menu > li {
@@ -1380,6 +1389,20 @@ body {
 
 .top-footer__socials > span:last-child {
   padding-right: 0;
+}
+
+.top-footer__min-menu {
+  display: none;
+  position: relative;
+}
+
+.top-footer__min-menu span {
+  position: absolute;
+  transition: transform 0.25s linear;
+}
+
+.top-footer__min-menu.active span {
+  transform: rotateZ(180deg);
 }
 
 .bottom-footer {
@@ -1759,6 +1782,14 @@ a:hover {
     flex: 0 0 80%;
   }
 
+  .top-footer__menu > li {
+    padding-right: 35px;
+  }
+
+  .top-footer__socials > span {
+    padding-right: 32px;
+  }
+
   html:root {
     font-size: 19px;
   }
@@ -1893,6 +1924,14 @@ a:hover {
     flex: 0 0 85%;
   }
 
+  .top-footer__menu > li {
+    padding-right: 14px;
+  }
+
+  .top-footer__socials > span {
+    padding-right: 14px;
+  }
+
   .ws-section-link {
     font-size: 19px;
   }
@@ -2024,6 +2063,31 @@ a:hover {
 
   .contacts__content > div {
     flex: 0 0 auto;
+  }
+
+  .top-footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .top-footer {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .top-footer__logo {
+    display: none;
+  }
+
+  .top-footer__menu {
+    flex: 1 0 100%;
+    justify-content: center;
+  }
+
+  .top-footer__socials {
+    padding-top: 30px;
   }
 
   html:root {
@@ -2255,9 +2319,42 @@ a:hover {
     font-size: 52px;
     line-height: 72px;
   }
+
+  .top-footer__menu {
+    flex-direction: column;
+    align-items: center;
+    height: 0px;
+  }
+
+  .top-footer__menu.active {
+    height: 220px;
+  }
+
+  .top-footer__menu > li {
+    padding-right: 0;
+    padding-bottom: 7px;
+  }
+
+  .top-footer__menu > li:last-child {
+    padding-bottom: 0;
+  }
+
+  .top-footer__min-menu {
+    display: block;
+    text-align: center;
+  }
+
+  .show-max-sm {
+    display: block;
+  }
+
+  .hide-max-sm {
+    height: 0px;
+    overflow: hidden;
+  }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 415px) {
   .ws-logo {
     font-size: 0.76em;
   }

@@ -61,3 +61,13 @@ function switchTheme(e) {
     switcher.classList.add("active");
   }
 }
+
+function openBottomMenu(event) {
+  event.preventDefault();
+
+  const showMore = document.querySelector("#idShowMore");
+  const bottomMenu = document.querySelector("#idBottomMenu");
+
+  showMore.classList.toggle("active");
+  bottomMenu.classList.toggle("active");
+}

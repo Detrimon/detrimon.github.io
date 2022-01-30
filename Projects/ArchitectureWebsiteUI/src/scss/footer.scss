@@ -9,11 +9,45 @@
   justify-content: space-between;
   align-items: center;
 
+  @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+    flex-wrap: wrap;
+    // row-gap: 30px;
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
   &__logo {
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      display: none;
+    }
   }
 
   &__menu {
     display: flex;
+    transition: height 0.25s linear;
+
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      flex: 1 0 100%;
+      justify-content: center;
+    }
+
+    @media (max-width: toPixels(map.get($breakpoints, "sm"))) {
+      flex-direction: column;
+      align-items: center;
+      height: 0px;
+    }
+
+    &.active {
+      @media (max-width: toPixels(map.get($breakpoints, "sm"))) {
+        height: 220px;
+      }
+    }
 
     > li {
       padding-right: 50px;
@@ -28,9 +62,36 @@
     > li:last-child {
       padding-right: 0;
     }
+
+    @media (max-width: toPixels(map.get($breakpoints, "xxl"))) {
+      > li {
+        padding-right: 35px;
+      }
+    }
+
+    @media (max-width: toPixels(map.get($breakpoints, "xl"))) {
+      > li {
+        padding-right: 14px;
+      }
+    }
+
+    @media (max-width: toPixels(map.get($breakpoints, "sm"))) {
+      > li {
+        padding-right: 0;
+        padding-bottom: 7px;
+
+        &:last-child {
+          padding-bottom: 0;
+        }
+      }
+    }
   }
 
   &__socials {
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      padding-top: 30px;
+    }
+
     > span {
       display: inline-block;
       &:after {
@@ -40,6 +101,39 @@
       &:last-child {
         padding-right: 0;
       }
+    }
+
+    @media (max-width: toPixels(map.get($breakpoints, "xxl"))) {
+      > span {
+        padding-right: 32px;
+      }
+    }
+
+    @media (max-width: toPixels(map.get($breakpoints, "xl"))) {
+      > span {
+        padding-right: 14px;
+      }
+    }
+  }
+
+  &__min-menu {
+    display: none;
+    position: relative;
+
+    span {
+      position: absolute;
+      transition: transform 0.25s linear;
+    }
+
+    &.active {
+      span {
+        transform: rotateZ(180deg);
+      }
+    }
+
+    @media (max-width: toPixels(map.get($breakpoints, "sm"))) {
+      display: block;
+      text-align: center;
     }
   }
 }
@@ -56,4 +150,18 @@
   text-align: center;
 
   color: $color_lightgrey;
+}
+
+.show-max-sm {
+  @media (max-width: toPixels(map.get($breakpoints, "sm"))) {
+    display: block;
+  }
+}
+
+.hide-max-sm {
+  @media (max-width: toPixels(map.get($breakpoints, "sm"))) {
+    // display: none;
+    height: 0px;
+    overflow: hidden;
+  }
 }
