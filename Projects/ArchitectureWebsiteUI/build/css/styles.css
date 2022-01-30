@@ -1396,8 +1396,13 @@ body {
   position: relative;
 }
 
+.top-footer__min-menu a {
+  font-size: 0.8rem;
+}
+
 .top-footer__min-menu span {
   position: absolute;
+  top: 5px;
   transition: transform 0.25s linear;
 }
 

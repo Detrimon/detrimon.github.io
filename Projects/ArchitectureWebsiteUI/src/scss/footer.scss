@@ -120,8 +120,13 @@
     display: none;
     position: relative;
 
+    a {
+      font-size: 0.8rem;
+    }
+
     span {
       position: absolute;
+      top: 5px;
       transition: transform 0.25s linear;
     }
 
