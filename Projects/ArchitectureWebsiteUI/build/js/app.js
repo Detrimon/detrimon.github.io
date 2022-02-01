@@ -204,9 +204,6 @@ var Slider = function () {
         var activeIndex = parseInt(activeItem.dataset.index);
         var clickedIndex = parseInt(listItem.dataset.index);
 
-        var imageItem = imageContainer.children[clickedIndex];
-        var activeImageItem = imageContainer.querySelector("[data-centered='true']");
-
         var imageLeftMargin = getComputedStyle(listItem).getPropertyValue("margin-left");
         imageLeftMargin = parseInt(imageLeftMargin.slice(0, imageLeftMargin.indexOf("px")));
         var imageRightMargin = getComputedStyle(listItem).getPropertyValue("margin-right");
@@ -290,6 +287,8 @@ var Slider = function () {
 
         delete activeItem.dataset.centered;
         listItem.dataset.centered = "true";
+        activeItem.classList.remove("active");
+        listItem.classList.add("active");
       });
 
       var aImages = Object.keys(imageContainer.children).map(function (key, index) {

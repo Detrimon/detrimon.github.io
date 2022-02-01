@@ -10,7 +10,7 @@
     &__items {
       padding-top: toPixels(92 * map.get($scaleRatio, $ratio));
 
-      li {
+      a {
         font-size: toPixels(48 * map.get($scaleRatio, $ratio));
         line-height: toPixels(50 * map.get($scaleRatio, $ratio));
       }

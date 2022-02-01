@@ -26,11 +26,6 @@ class Slider {
       const activeIndex = parseInt(activeItem.dataset.index);
       const clickedIndex = parseInt(listItem.dataset.index);
 
-      const imageItem = imageContainer.children[clickedIndex];
-      const activeImageItem = imageContainer.querySelector(
-        "[data-centered='true']"
-      );
-
       let imageLeftMargin =
         getComputedStyle(listItem).getPropertyValue("margin-left");
       imageLeftMargin = parseInt(
@@ -143,6 +138,8 @@ class Slider {
 
       delete activeItem.dataset.centered;
       listItem.dataset.centered = "true";
+      activeItem.classList.remove("active");
+      listItem.classList.add("active");
     });
 
     const aImages = Object.keys(imageContainer.children).map((key, index) => ({

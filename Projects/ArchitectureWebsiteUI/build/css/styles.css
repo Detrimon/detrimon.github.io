@@ -1590,7 +1590,7 @@ a:hover {
     padding-top: 67.16px;
   }
 
-  .slider__items li {
+  .slider__items a {
     font-size: 35.04px;
     line-height: 36.5px;
   }
@@ -1709,7 +1709,7 @@ a:hover {
     padding-top: 57.04px;
   }
 
-  .slider__items li {
+  .slider__items a {
     font-size: 29.76px;
     line-height: 31px;
   }
@@ -1852,7 +1852,7 @@ a:hover {
     padding-top: 47.84px;
   }
 
-  .slider__items li {
+  .slider__items a {
     font-size: 24.96px;
     line-height: 26px;
   }
@@ -1990,7 +1990,7 @@ a:hover {
     padding-top: 36.8px;
   }
 
-  .slider__items li {
+  .slider__items a {
     font-size: 19.2px;
     line-height: 20px;
   }
@@ -2208,7 +2208,7 @@ a:hover {
     padding-top: 27.6px;
   }
 
-  .slider__items li {
+  .slider__items a {
     font-size: 14.4px;
     line-height: 15px;
   }
