@@ -5,10 +5,6 @@ class Slider {
   }
 
   initialization() {
-    // Прочесываем контент и ищем элементы с
-    // data-slider = "content"
-    // data-slider = "list"
-
     const imageContainer = document.querySelector("[data-slider='content']");
     const listContainer = document.querySelector("[data-slider='list']");
 
@@ -17,133 +13,90 @@ class Slider {
       imageContainer.children[key].dataset.index = index;
     });
 
-    listContainer.addEventListener("click", function (e) {
-      e.preventDefault();
-      const listItem = e.target.closest("li");
+    listContainer.addEventListener(
+      "click",
+      function (e) {
+        e.preventDefault();
+        const listItem = e.target.closest("li");
 
-      const activeItem = listContainer.querySelector("[data-centered='true']");
-
-      const activeIndex = parseInt(activeItem.dataset.index);
-      const clickedIndex = parseInt(listItem.dataset.index);
-
-      const imageItem = imageContainer.children[clickedIndex];
-
-      let imageLeftMargin =
-        getComputedStyle(imageItem).getPropertyValue("margin-left");
-      imageLeftMargin = parseInt(
-        imageLeftMargin.slice(0, imageLeftMargin.indexOf("px"))
-      );
-      let imageRightMargin =
-        getComputedStyle(imageItem).getPropertyValue("margin-right");
-      imageRightMargin = parseInt(
-        imageRightMargin.slice(0, imageRightMargin.indexOf("px"))
-      );
-
-      let imageMargin = imageLeftMargin || imageRightMargin;
-      console.log("imageMargin: ", imageMargin);
-
-      let listLeftMargin =
-        getComputedStyle(listItem).getPropertyValue("margin-left");
-      listLeftMargin = parseInt(
-        listLeftMargin.slice(0, listLeftMargin.indexOf("px"))
-      );
-      let listRightMargin =
-        getComputedStyle(listItem).getPropertyValue("margin-right");
-      listRightMargin = parseInt(
-        listRightMargin.slice(0, listRightMargin.indexOf("px"))
-      );
-
-      let listMargin = listLeftMargin || listRightMargin;
-
-      let currentImageLeftMargin =
-        getComputedStyle(imageContainer).getPropertyValue("margin-left");
-      currentImageLeftMargin = parseInt(
-        currentImageLeftMargin.slice(0, currentImageLeftMargin.indexOf("px"))
-      );
-
-      let currentLeftMargin =
-        getComputedStyle(listContainer).getPropertyValue("margin-left");
-      currentLeftMargin = parseInt(
-        currentLeftMargin.slice(0, currentLeftMargin.indexOf("px"))
-      );
-
-      if (listItem.dataset.index === activeItem.dataset.index) {
-        return;
-      }
-
-      if (listItem.dataset.index > activeItem.dataset.index) {
-        const multiplier = clickedIndex - activeIndex;
-        console.log(activeIndex, clickedIndex);
-
-        const extraDelta = Math.floor(
-          (listContainer.children[clickedIndex].offsetWidth -
-            listContainer.children[activeIndex].offsetWidth) /
-            2
+        const activeItem = listContainer.querySelector(
+          "[data-centered='true']"
         );
 
-        let deltaImageMargin = 0;
-        for (let i = activeIndex; i < clickedIndex; i++) {
-          let curImageElWidth = imageContainer.children[i].offsetWidth;
-          deltaImageMargin += curImageElWidth;
+        const activeIndex = (this.activeIndex = parseInt(
+          activeItem.dataset.index
+        ));
+        const clickedIndex = (this.clickedIndex = parseInt(
+          listItem.dataset.index
+        ));
+
+        const multiplier = Math.abs(clickedIndex - activeIndex);
+
+        const imageItem = imageContainer.children[clickedIndex];
+
+        const imageMargin = this._getLeftMargin(imageItem);
+        const listMargin = this._getLeftMargin(listItem);
+        const imageContainerMarginLeft = this._getLeftMargin(imageContainer);
+        const listContainerMarginLeft = this._getLeftMargin(listContainer);
+        const listGaps = multiplier * listMargin;
+        const imageGaps = multiplier * imageMargin * 2;
+        const listAlignmentSize = this._getAlignmentSize(listContainer);
+        const deltaImageContainerMargin = this._getDeltaMargin(imageContainer);
+        const deltaListContainerMargin = this._getDeltaMargin(listContainer);
+
+        if (clickedIndex === activeIndex) {
+          return;
         }
 
-        deltaImageMargin += multiplier * imageMargin;
+        if (clickedIndex > activeIndex) {
+          imageContainer.style.marginLeft =
+            imageContainerMarginLeft -
+            (deltaImageContainerMargin + imageGaps) +
+            "px";
 
-        console.log("-----------");
-        console.log("deltaImageMargin: ", deltaImageMargin);
-        console.log("currentImageLeftMargin: ", currentImageLeftMargin);
-        console.log("-----------");
-        imageContainer.style.marginLeft =
-          -deltaImageMargin + currentImageLeftMargin + "px";
-
-        let deltaMargin = 0;
-        for (let i = activeIndex; i < clickedIndex; i++) {
-          let curElWidth = listContainer.children[i].offsetWidth;
-          deltaMargin += curElWidth;
+          listContainer.style.marginLeft =
+            listContainerMarginLeft -
+            (deltaListContainerMargin + listGaps + listAlignmentSize) +
+            "px";
         }
 
-        deltaMargin += multiplier * listMargin;
+        if (clickedIndex < activeIndex) {
+          console.log("imageContainerMarginLeft", imageContainerMarginLeft);
+          console.log("deltaImageContainerMargin", deltaImageContainerMargin);
+          console.log("imageGaps", imageGaps);
+          // let deltaImageMargin = 0;
+          // for (let i = clickedIndex + 1; i <= activeIndex; i++) {
+          //   let curImageElWidth = imageContainer.children[i].offsetWidth;
+          //   deltaImageMargin += curImageElWidth;
+          // }
 
-        listContainer.style.marginLeft =
-          -deltaMargin + currentLeftMargin - extraDelta + "px";
-      }
+          // deltaImageMargin += multiplier * imageMargin * 2;
 
-      if (listItem.dataset.index < activeItem.dataset.index) {
-        const multiplier = activeIndex - clickedIndex;
+          imageContainer.style.marginLeft =
+            imageContainerMarginLeft +
+            (deltaImageContainerMargin + imageGaps) +
+            "px";
 
-        const extraDelta =
-          (listContainer.children[clickedIndex].offsetWidth -
-            listContainer.children[activeIndex].offsetWidth) /
-          2;
+          // let deltaMargin = 0;
+          // for (let i = clickedIndex + 1; i <= activeIndex; i++) {
+          //   let curElWidth = listContainer.children[i].offsetWidth;
+          //   deltaMargin += curElWidth;
+          // }
 
-        let deltaImageMargin = 0;
-        for (let i = clickedIndex + 1; i <= activeIndex; i++) {
-          let curImageElWidth = imageContainer.children[i].offsetWidth;
-          deltaImageMargin += curImageElWidth;
+          // deltaMargin += multiplier * listMargin;
+
+          listContainer.style.marginLeft =
+            listContainerMarginLeft +
+            (deltaListContainerMargin + listGaps - listAlignmentSize) +
+            "px";
         }
 
-        deltaImageMargin += multiplier * imageMargin;
-
-        imageContainer.style.marginLeft =
-          deltaImageMargin + currentImageLeftMargin + "px";
-
-        let deltaMargin = 0;
-        for (let i = clickedIndex + 1; i <= activeIndex; i++) {
-          let curElWidth = listContainer.children[i].offsetWidth;
-          deltaMargin += curElWidth;
-        }
-
-        deltaMargin += multiplier * listMargin;
-
-        listContainer.style.marginLeft =
-          deltaMargin + currentLeftMargin + extraDelta + "px";
-      }
-
-      delete activeItem.dataset.centered;
-      listItem.dataset.centered = "true";
-      activeItem.classList.remove("active");
-      listItem.classList.add("active");
-    });
+        delete activeItem.dataset.centered;
+        listItem.dataset.centered = "true";
+        activeItem.classList.remove("active");
+        listItem.classList.add("active");
+      }.bind(this)
+    );
 
     const aImages = Object.keys(imageContainer.children).map((key, index) => ({
       width: imageContainer.children[key].offsetWidth,
@@ -154,14 +107,45 @@ class Slider {
         width: listContainer.children[key].offsetWidth,
       })
     );
-    // imageContainer.children.
+    // // imageContainer.children.
 
-    this.aImages = aImages;
-    this.aListItems = aListItems;
+    // this.aImages = aImages;
+    // this.aListItems = aListItems;
+  }
 
-    console.log(this);
+  _getLeftMargin(element) {
+    let leftMargin = getComputedStyle(element).getPropertyValue("margin-left");
+    leftMargin = parseInt(leftMargin.slice(0, leftMargin.indexOf("px")));
+    let rightMargin =
+      getComputedStyle(element).getPropertyValue("margin-right");
+    rightMargin = parseInt(rightMargin.slice(0, rightMargin.indexOf("px")));
 
-    console.dir(this.imageContainer);
+    return leftMargin || rightMargin || 0;
+  }
+
+  _getAlignmentSize(element) {
+    return (
+      (element.children[this.clickedIndex].offsetWidth -
+        element.children[this.activeIndex].offsetWidth) /
+      2
+    );
+  }
+
+  _getDeltaMargin(element) {
+    let lowerIndex = this.clickedIndex;
+    let higherIndex = this.activeIndex;
+    if (this.activeIndex < this.clickedIndex) {
+      lowerIndex = this.activeIndex;
+      higherIndex = this.clickedIndex;
+    }
+
+    let deltaMargin = 0;
+
+    for (let i = lowerIndex; i < higherIndex; i++) {
+      let curElWidth = element.children[i].offsetWidth;
+      deltaMargin += curElWidth;
+    }
+    return deltaMargin;
   }
 }
 
