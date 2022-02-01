@@ -26,18 +26,21 @@ class Slider {
       const activeIndex = parseInt(activeItem.dataset.index);
       const clickedIndex = parseInt(listItem.dataset.index);
 
+      const imageItem = imageContainer.children[clickedIndex];
+
       let imageLeftMargin =
-        getComputedStyle(listItem).getPropertyValue("margin-left");
+        getComputedStyle(imageItem).getPropertyValue("margin-left");
       imageLeftMargin = parseInt(
         imageLeftMargin.slice(0, imageLeftMargin.indexOf("px"))
       );
       let imageRightMargin =
-        getComputedStyle(listItem).getPropertyValue("margin-right");
+        getComputedStyle(imageItem).getPropertyValue("margin-right");
       imageRightMargin = parseInt(
         imageRightMargin.slice(0, imageRightMargin.indexOf("px"))
       );
 
       let imageMargin = imageLeftMargin || imageRightMargin;
+      console.log("imageMargin: ", imageMargin);
 
       let listLeftMargin =
         getComputedStyle(listItem).getPropertyValue("margin-left");

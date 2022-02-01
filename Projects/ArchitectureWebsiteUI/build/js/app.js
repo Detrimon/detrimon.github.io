@@ -204,12 +204,15 @@ var Slider = function () {
         var activeIndex = parseInt(activeItem.dataset.index);
         var clickedIndex = parseInt(listItem.dataset.index);
 
-        var imageLeftMargin = getComputedStyle(listItem).getPropertyValue("margin-left");
+        var imageItem = imageContainer.children[clickedIndex];
+
+        var imageLeftMargin = getComputedStyle(imageItem).getPropertyValue("margin-left");
         imageLeftMargin = parseInt(imageLeftMargin.slice(0, imageLeftMargin.indexOf("px")));
-        var imageRightMargin = getComputedStyle(listItem).getPropertyValue("margin-right");
+        var imageRightMargin = getComputedStyle(imageItem).getPropertyValue("margin-right");
         imageRightMargin = parseInt(imageRightMargin.slice(0, imageRightMargin.indexOf("px")));
 
         var imageMargin = imageLeftMargin || imageRightMargin;
+        console.log("imageMargin: ", imageMargin);
 
         var listLeftMargin = getComputedStyle(listItem).getPropertyValue("margin-left");
         listLeftMargin = parseInt(listLeftMargin.slice(0, listLeftMargin.indexOf("px")));
