@@ -92,7 +92,7 @@
       padding-top: 30px;
     }
 
-    > span {
+    > a {
       display: inline-block;
       &:after {
         font-size: 24px;
@@ -104,21 +104,21 @@
     }
 
     @media (max-width: toPixels(map.get($breakpoints, "xxl"))) {
-      > span {
+      > a {
         padding-right: 32px;
       }
     }
 
     @media (max-width: toPixels(map.get($breakpoints, "xl"))) {
-      > span {
+      > a {
         padding-right: 14px;
       }
     }
 
     @media (max-width: toPixels(map.get($breakpoints, "sm"))) {
-      > span {
+      > a {
         padding-right: 50px;
-        &:before {
+        span:before {
           font-size: 1.5rem;
         }
       }

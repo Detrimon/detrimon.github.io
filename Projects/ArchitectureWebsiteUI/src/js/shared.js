@@ -1,3 +1,17 @@
+const elThemeSwitcher = document.querySelector("#idThemeSwitcher");
+elThemeSwitcher.addEventListener("click", switchTheme);
+
+const elCloseMenu = document.querySelector("#idCloseMenu");
+elCloseMenu.addEventListener("click", closeMenuHandler);
+
+const elBurger = document.querySelector("#idBurger");
+elBurger.addEventListener("click", burgerOnClickHandler);
+
+const elBottomMenuOpener = document.querySelector("#idBottomMenuOpener");
+elBottomMenuOpener.addEventListener("click", openBottomMenu);
+
+// Event Handlers ::
+
 function burgerOnClickHandler(e) {
   const burgerContainer = document.querySelector(".menu__btn");
   const headerElement = document.querySelector("#idHeader");
@@ -6,7 +20,7 @@ function burgerOnClickHandler(e) {
   burgerContainer.classList.toggle("active");
   headerElement.classList.toggle("active");
 
-  body.style.overflow = hidden;
+  body.style.overflowY = "hidden";
 }
 
 function closeMenuHandler(e) {
@@ -17,7 +31,7 @@ function closeMenuHandler(e) {
   burgerContainer.classList.toggle("active");
   headerElement.classList.toggle("active");
 
-  body.style.overflow = none;
+  body.style.overflowY = "auto";
 }
 
 function switchTheme(e) {

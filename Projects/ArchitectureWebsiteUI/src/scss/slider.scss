@@ -49,15 +49,16 @@
     left: calc(50% - 10000px);
     text-align: center;
     font-size: 0;
+
+    transition: margin-left 0.25s linear;
   }
 
   &__image-container {
     display: inline-block;
     position: relative;
-    // flex: 0 0 1320px;
-    width: 1320px; // TODO: уменьшаем
-    height: 701px; // TODO: уменьшаем
-    margin: 0 50px; // TODO: уменьшаем
+    width: 1320px;
+    height: 701px;
+    margin: 0 50px;
 
     &:first-child {
       margin-left: 0;
@@ -86,11 +87,13 @@
     text-align: center;
     font-size: 0;
 
+    transition: margin-left 0.25s linear;
+
     @media (max-width: toPixels(map.get($breakpoints, "xxl"))) {
       left: calc(50% - 2080px - 9px);
     }
 
-    li {
+    a {
       font-family: $fontFamilyAdditional;
       font-weight: 700;
       font-size: $fontSizeRelBase_48;
@@ -108,7 +111,9 @@
     margin: 0 24px; // TODO: уменьшаем
 
     &.active {
-      color: var(--color-delimiter-secondary);
+      a {
+        color: var(--color-delimiter-secondary);
+      }
     }
 
     &:first-child {

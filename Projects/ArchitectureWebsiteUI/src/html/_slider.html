@@ -1,15 +1,17 @@
 <section class="slider">
-  <div class="slider__images">
+  <div class="slider__images" data-slider="content">
     <div class="slider__image-container"><img src="./img/slider_left.png" alt="" /></div>
-    <div class="slider__image-container"><img src="./img/slider_main.png" data-centered="true" alt="" /></div>
+    <div class="slider__image-container"><img src="./img/slider_left.png" alt="" /></div>
+    <div class="slider__image-container" data-centered="true"><img src="./img/slider_main.png" alt="" /></div>
+    <div class="slider__image-container"><img src="./img/slider_right.png" alt="" /></div>
     <div class="slider__image-container"><img src="./img/slider_right.png" alt="" /></div>
   </div>
-  <ul class="slider__items">
-    <li class="slider__item">Park urban</li>
-    <li class="slider__item">Uncovered</li>
-    <li class="slider__item active" data-centered="true">Concrete graden</li>
-    <li class="slider__item">City vision</li>
-    <li class="slider__item">Futurama</li>
+  <ul class="slider__items" data-slider="list">
+    <li class="slider__item"><a href="#ParkUrban">Park urban</a></li>
+    <li class="slider__item"><a href="#Uncovered">Uncovered</a></li>
+    <li class="slider__item active" data-centered="true"><a href="#ConcreteGraden">Concrete graden</a></li>
+    <li class="slider__item"><a href="#CityVision">City vision</a></li>
+    <li class="slider__item"><a href="#Futuram">Futurama</a></li>
   </ul>
   <div class="container min-container">
     <div class="slider__link-container">

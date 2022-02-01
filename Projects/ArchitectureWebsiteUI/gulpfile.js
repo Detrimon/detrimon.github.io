@@ -14,7 +14,7 @@ const path = {
   src: {
     html: [`${source_folder}/*.html`, `!${source_folder}/_*.html`],
     css: `${source_folder}/scss/styles.scss`,
-    js: `${source_folder}/js/index.js`,
+    js: `${source_folder}/js/app.js`,
     img: `${source_folder}/img/**/*.{jpg,png,svg,gif,ico,webp}`,
     fonts: `${source_folder}/fonts/*.ttf`,
   },
@@ -29,6 +29,7 @@ const path = {
 
 const { src, dest } = require("gulp");
 const gulp = require("gulp");
+const webpack = require("webpack");
 const browsersync = require("browser-sync").create();
 const fileinclude = require("gulp-file-include");
 const del = require("del");
@@ -46,6 +47,7 @@ const svgSprite = require("gulp-svg-sprite");
 const ttf2woff = require("gulp-ttf2woff");
 const ttf2woff2 = require("gulp-ttf2woff2");
 const fonter = require("gulp-fonter");
+const webpackStream = require("webpack-stream");
 
 function browserSync(params) {
   browsersync.init({
@@ -96,17 +98,38 @@ function css() {
 }
 
 function js() {
-  return src(path.src.js)
-    .pipe(fileinclude())
-    .pipe(dest(path.build.js))
-    .pipe(uglify())
-    .pipe(
-      rename({
-        extname: ".min.js",
-      })
-    )
-    .pipe(dest(path.build.js))
-    .pipe(browsersync.stream());
+  return (
+    src(path.src.js)
+      // .pipe(fileinclude())
+      .pipe(
+        webpackStream({
+          output: {
+            filename: "app.js",
+          },
+          module: {
+            rules: [
+              {
+                test: /\.(js)$/,
+                exclude: /(node_modules)/,
+                loader: "babel-loader",
+                query: {
+                  presets: ["env"],
+                },
+              },
+            ],
+          },
+        })
+      )
+      .pipe(dest(path.build.js))
+      .pipe(uglify())
+      .pipe(
+        rename({
+          extname: ".min.js",
+        })
+      )
+      .pipe(dest(path.build.js))
+      .pipe(browsersync.stream())
+  );
 }
 
 function images() {
