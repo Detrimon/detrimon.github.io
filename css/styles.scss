@@ -102,13 +102,13 @@ h3 {
   &__text-content {
     position: relative;
     width: 100%;
-    height: toPixels($baseImgHeight);
+    min-height: toPixels($baseImgHeight);
     padding: 0 25px;
 
     overflow: hidden;
 
     @media (max-width: toPixels($md2)) {
-      height: toPixels($baseImgHeight / $ratio);
+      min-height: toPixels($baseImgHeight / $ratio);
     }
 
     @media (max-width: toPixels($md3)) {
@@ -149,6 +149,11 @@ h3 {
   &__link {
     transition: color 0.25s linear;
     color: #181818;
+    padding-bottom: 35px;
+
+    @media (max-width: toPixels($md4)) {
+      padding-bottom: 0;
+    }
 
     &:visited {
       color: #181818;
