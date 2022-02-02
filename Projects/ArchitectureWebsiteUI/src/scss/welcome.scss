@@ -12,9 +12,9 @@
       padding-top: toPixels(25 * map.get($scaleRatio, $ratio));
     }
 
-    &__link-container {
-      padding-top: toPixels(100 * map.get($scaleRatio, $ratio));
-    }
+    // &__link-container {
+    //   padding-top: toPixels(100 * map.get($scaleRatio, $ratio));
+    // }
   }
 }
 

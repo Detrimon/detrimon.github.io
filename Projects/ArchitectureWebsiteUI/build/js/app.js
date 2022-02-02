@@ -175,9 +175,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 var Slider = function () {
   function Slider() {
     _classCallCheck(this, Slider);
-
-    this.imageContainer = null;
-    this.listContainer = null;
   }
 
   _createClass(Slider, [{
@@ -200,23 +197,26 @@ var Slider = function () {
         var activeIndex = this.activeIndex = parseInt(activeItem.dataset.index);
         var clickedIndex = this.clickedIndex = parseInt(listItem.dataset.index);
 
-        var multiplier = Math.abs(clickedIndex - activeIndex);
+        if (clickedIndex === activeIndex) {
+          return;
+        }
 
         var imageItem = imageContainer.children[clickedIndex];
 
         var imageMargin = this._getLeftMargin(imageItem);
         var listMargin = this._getLeftMargin(listItem);
+
         var imageContainerMarginLeft = this._getLeftMargin(imageContainer);
         var listContainerMarginLeft = this._getLeftMargin(listContainer);
+
+        var multiplier = Math.abs(clickedIndex - activeIndex);
         var listGaps = multiplier * listMargin;
         var imageGaps = multiplier * imageMargin * 2;
-        var listAlignmentSize = this._getAlignmentSize(listContainer);
+
         var deltaImageContainerMargin = this._getDeltaMargin(imageContainer);
         var deltaListContainerMargin = this._getDeltaMargin(listContainer);
 
-        if (clickedIndex === activeIndex) {
-          return;
-        }
+        var listAlignmentSize = this._getAlignmentSize(listContainer);
 
         if (clickedIndex > activeIndex) {
           imageContainer.style.marginLeft = imageContainerMarginLeft - (deltaImageContainerMargin + imageGaps) + "px";
@@ -225,26 +225,7 @@ var Slider = function () {
         }
 
         if (clickedIndex < activeIndex) {
-          console.log("imageContainerMarginLeft", imageContainerMarginLeft);
-          console.log("deltaImageContainerMargin", deltaImageContainerMargin);
-          console.log("imageGaps", imageGaps);
-          // let deltaImageMargin = 0;
-          // for (let i = clickedIndex + 1; i <= activeIndex; i++) {
-          //   let curImageElWidth = imageContainer.children[i].offsetWidth;
-          //   deltaImageMargin += curImageElWidth;
-          // }
-
-          // deltaImageMargin += multiplier * imageMargin * 2;
-
           imageContainer.style.marginLeft = imageContainerMarginLeft + (deltaImageContainerMargin + imageGaps) + "px";
-
-          // let deltaMargin = 0;
-          // for (let i = clickedIndex + 1; i <= activeIndex; i++) {
-          //   let curElWidth = listContainer.children[i].offsetWidth;
-          //   deltaMargin += curElWidth;
-          // }
-
-          // deltaMargin += multiplier * listMargin;
 
           listContainer.style.marginLeft = listContainerMarginLeft + (deltaListContainerMargin + listGaps - listAlignmentSize) + "px";
         }
@@ -254,22 +235,6 @@ var Slider = function () {
         activeItem.classList.remove("active");
         listItem.classList.add("active");
       }.bind(this));
-
-      var aImages = Object.keys(imageContainer.children).map(function (key, index) {
-        return {
-          width: imageContainer.children[key].offsetWidth
-        };
-      });
-
-      var aListItems = Object.keys(listContainer.children).map(function (key, index) {
-        return {
-          width: listContainer.children[key].offsetWidth
-        };
-      });
-      // // imageContainer.children.
-
-      // this.aImages = aImages;
-      // this.aListItems = aListItems;
     }
   }, {
     key: "_getLeftMargin",

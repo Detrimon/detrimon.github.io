@@ -1,7 +1,7 @@
 @mixin about-paddings($breakpoint, $ratio) {
   @media (max-width: toPixels(map.get($breakpoints, $breakpoint))) {
     &__text {
-      padding-bottom: toPixels(95 * map.get($scaleRatio, $ratio));
+      // padding-bottom: toPixels(95 * map.get($scaleRatio, $ratio));
 
       p {
         padding-bottom: toPixels(50 * map.get($scaleRatio, $ratio));

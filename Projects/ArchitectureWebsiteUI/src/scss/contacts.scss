@@ -144,6 +144,10 @@
       color: $color_lightgrey;
     }
 
+    a:hover {
+      text-decoration: underline;
+    }
+
     &:last-child {
       padding-bottom: 0;
     }

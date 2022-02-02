@@ -20,9 +20,9 @@
       margin: 0 toPixels(25 * map.get($scaleRatio, $ratio));
     }
 
-    &__link-container {
-      padding-top: toPixels(103 * map.get($scaleRatio, $ratio));
-    }
+    // &__link-container {
+    //   padding-top: toPixels(103 * map.get($scaleRatio, $ratio));
+    // }
 
     &__bottom-border {
       // padding-bottom: toPixels(90 * map.get($scaleRatio, $ratio));
@@ -125,42 +125,11 @@
   }
 
   &__link-container {
-    // position: relative;
-    // font-weight: 500;
-    // line-height: 29px;
-    // letter-spacing: 0.04em;
-    // text-align: center;
-
-    // text-transform: lowercase;
-
-    padding-top: 103px; // TODO: уменьшаем
-
-    // @media (max-width: toPixels(map.get($breakpoints, "top"))) {
-    //   font-size: 22px;
-    // }
-
-    // @media (max-width: toPixels(map.get($breakpoints, "xxl"))) {
-    //   font-size: 20px;
-    // }
-
-    // @media (max-width: toPixels(map.get($breakpoints, "xl"))) {
-    //   font-size: 19px;
-    // }
-
-    // @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
-    //   font-size: 18px;
-    // }
-
-    // @media (max-width: toPixels(map.get($breakpoints, "md"))) {
-    //   font-size: 17px;
-    // }
-    // @media (max-width: toPixels(map.get($breakpoints, "sm"))) {
-    //   font-size: 16px;
-    // }
+    padding-top: 100px;
   }
 
   &__bottom-border {
-    padding-bottom: 90px; // TODO: уменьшаем
+    padding-bottom: 100px;
 
     border-bottom-width: 2px;
     border-bottom-style: solid;

@@ -53,5 +53,11 @@
     font-weight: 500;
     line-height: 29px;
     letter-spacing: 0.04em;
+    word-spacing: 0px;
+    transition: word-spacing $t_time linear;
+
+    &:hover {
+      word-spacing: 10px;
+    }
   }
 }

@@ -56,8 +56,7 @@ body {
 
 a {
   color: var(--color-secondary);
-  transition: color $switch_transition_time linear,
-    opacity $switch_transition_time linear;
+  transition: color $t_time linear, opacity $t_time linear;
   text-decoration: none;
 }
 
@@ -72,6 +71,7 @@ a:focus {
 
 a:hover {
   opacity: $hover_opacity;
+  text-decoration: overline;
 }
 
 @import "./shared";

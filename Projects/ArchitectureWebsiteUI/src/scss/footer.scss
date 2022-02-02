@@ -94,6 +94,9 @@
 
     > a {
       display: inline-block;
+      &:hover {
+        text-decoration: none;
+      }
       &:after {
         font-size: 24px;
       }
@@ -132,6 +135,10 @@
     a {
       font-size: 0.8rem;
       color: var(--color-secondary);
+
+      &:hover {
+        text-decoration: none;
+      }
     }
 
     span {

@@ -6,9 +6,9 @@
       height: toPixels(879 * map.get($scaleRatio, $ratio));
     }
 
-    &__link-container {
-      padding-top: toPixels(100 * map.get($scaleRatio, $ratio));
-    }
+    // &__link-container {
+    //   padding-top: toPixels(100 * map.get($scaleRatio, $ratio));
+    // }
   }
 }
 
