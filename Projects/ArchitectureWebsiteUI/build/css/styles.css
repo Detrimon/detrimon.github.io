@@ -1004,7 +1004,7 @@ body {
   align-items: stretch;
   flex-direction: column;
   height: 445px;
-  background: url("../img/Slogan-bg.webp") no-repeat center center;
+  background: url("../img/Slogan-bg.png") no-repeat center center;
   overflow: hidden;
   background-size: cover;
 }
@@ -1345,7 +1345,7 @@ body {
   padding-bottom: 10px;
 }
 
-.contacts__item > p {
+.contacts__item > p > a {
   color: #9e9e9e;
 }
 
@@ -2345,3 +2345,5 @@ a:hover {
     font-size: 0.76em;
   }
 }
+
+.webp .rectangles{ background: url(../img/Slogan-bg.webp) no-repeat center center; }

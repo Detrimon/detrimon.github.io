@@ -141,7 +141,9 @@
     }
 
     > p {
-      color: $color_lightgrey;
+      > a {
+        color: $color_lightgrey;
+      }
     }
 
     a:hover {
