@@ -1475,10 +1475,12 @@ a {
 a:active,
 a:visited {
   color: var(--color-secondary);
+  text-decoration: none;
 }
 
 a:focus {
   color: var(--color-secondary);
+  text-decoration: none;
 }
 
 a:hover {
