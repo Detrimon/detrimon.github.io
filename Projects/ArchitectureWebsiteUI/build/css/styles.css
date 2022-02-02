@@ -2037,6 +2037,10 @@ a:hover {
     flex: 0 0 auto;
   }
 
+  .contacts__item a:hover {
+    text-decoration: none;
+  }
+
   .top-footer {
     padding-top: 60px;
     padding-bottom: 60px;
@@ -2064,6 +2068,14 @@ a:hover {
 
   html:root {
     font-size: 17px;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  .ws-section-link a:hover {
+    text-decoration: none;
   }
 
   .ws-section-link {

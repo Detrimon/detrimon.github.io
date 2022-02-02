@@ -72,6 +72,10 @@ a:focus {
 a:hover {
   opacity: $hover_opacity;
   text-decoration: overline;
+
+  @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+    text-decoration: none;
+  }
 }
 
 @import "./shared";

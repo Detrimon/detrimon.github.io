@@ -146,6 +146,10 @@
 
     a:hover {
       text-decoration: underline;
+
+      @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+        text-decoration: none;
+      }
     }
 
     &:last-child {
