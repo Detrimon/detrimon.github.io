@@ -136,7 +136,7 @@ $slogan_border: 10;
   @include rect-media("lg", "md");
   @include rect-media("md", "sm");
 
-  background: url("../img/Slogan-bg.png") no-repeat center center;
+  background: url("../img/Slogan-bg.webp") no-repeat center center;
   overflow: hidden;
 
   background-size: cover;
