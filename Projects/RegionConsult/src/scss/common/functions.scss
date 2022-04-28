@@ -1,0 +1,16 @@
+@use "sass:math";
+
+@function toPixels($num) {
+  $result: $num + 0px;
+  @return $result;
+}
+
+@function toSec($num) {
+  $result: $num + 0s;
+  @return $result;
+}
+
+@function rem($px) {
+  $result: math.div($px, $fontBaseSize) + rem;
+  @return $result;
+}

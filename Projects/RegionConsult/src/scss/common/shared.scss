@@ -1,0 +1,93 @@
+@mixin title {
+  color: $color_black;
+}
+
+.ws-title-h1 {
+  @include title;
+  font-family: $fontFamilyAdditional;
+  font-size: $fontSizeRelBase_61;
+  font-weight: 400;
+  line-height: 74px;
+
+  @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+    font-size: $fontSizeRelBase_36;
+    line-height: 43px;
+  }
+}
+
+.ws-title-h2 {
+  @include title;
+  font-size: $fontSizeRelBase_41;
+  font-weight: 700;
+  line-height: 56px;
+
+  @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+    font-size: $fontSizeRelBase_20;
+    line-height: 27px;
+  }
+}
+.ws-accent {
+  color: $color_blue;
+}
+
+.ws-section-top-indent {
+  padding-top: 240px;
+
+  @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+    padding-top: 115px;
+  }
+
+  @media (max-width: toPixels(map.get($breakpoints, "md"))) {
+    padding-top: 105px;
+  }
+}
+
+.ws-nowrap-text {
+  white-space: nowrap;
+}
+
+.ws-strokes {
+  display: block;
+  border-left: 2px solid $color_blue;
+  height: 10px;
+  flex: 0 0 10px;
+}
+
+.ws-slogan-container {
+  display: flex;
+  border-top: 2px solid $color_blue;
+  border-bottom: 2px solid $color_blue;
+  margin-top: 60px;
+
+  @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+    margin-top: 29px;
+  }
+
+  > span {
+    flex: 0 1 50%;
+
+    @media (max-width: toPixels(map.get($breakpoints, "md"))) {
+      flex: 0 1 12%;
+    }
+  }
+
+  > div {
+    flex: 1 0 50%;
+
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      font-size: $fontSizeRelBase_20;
+    }
+
+    > p {
+      font-size: $fontSizeRelBase_26;
+      padding-top: 40px;
+      padding-bottom: 30px;
+
+      @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+        font-size: $fontSizeRelBase_20;
+        padding-top: 20px;
+        padding-bottom: 17px;
+      }
+    }
+  }
+}

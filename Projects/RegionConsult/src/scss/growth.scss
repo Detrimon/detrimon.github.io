@@ -1,0 +1,86 @@
+.logo-bg-growth-left {
+  position: absolute;
+  left: -470px;
+  top: -40px;
+
+  @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+    display: none;
+  }
+}
+
+.logo-bg-growth-right {
+  position: absolute;
+  right: -420px;
+  bottom: -450px;
+
+  @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+    display: none;
+  }
+}
+
+.growth {
+  padding-bottom: 240px;
+  // background-image: url(../img/logo_bg.webp);
+  // background-repeat: no-repeat;
+  // background-position: bottom center;
+  // scroll-behavior: smooth;
+
+  @media (max-width: toPixels(map.get($breakpoints, "xl"))) {
+    padding-bottom: 120px;
+    // background-image: url(../img/logo_bg_1000.webp);
+  }
+}
+
+.evo-years-container {
+  display: flex;
+
+  &_empty {
+    flex: 1 1 20%;
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      display: none;
+    }
+  }
+}
+
+.evo-years {
+  position: relative;
+  flex: 0 0 80%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+    flex: 1 0 80%;
+  }
+
+  &__item-container {
+    flex: 1 0 40%;
+    border-bottom: 2px solid $color_blue;
+    padding-right: 52px;
+    // padding-bottom: 10px;
+    // padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      padding-right: 40px;
+    }
+  }
+
+  &__item-title {
+    padding-top: 80px;
+    font-size: $fontSizeRelBase_61;
+    line-height: 83px;
+    font-weight: 300;
+    color: $color_blue;
+
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      padding-top: 40px;
+    }
+  }
+
+  &__item-text {
+    padding: 5px 5px 10px 5px;
+    flex: 1 1 auto;
+  }
+}

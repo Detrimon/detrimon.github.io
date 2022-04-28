@@ -1,0 +1,68 @@
+.principles {
+  background-color: $color_lightgrey;
+  padding-bottom: 240px;
+
+  @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+    padding-bottom: 115px;
+  }
+
+  &__title {
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      max-width: 330px;
+    }
+  }
+}
+
+.processes {
+  padding-top: 120px;
+  display: flex;
+  justify-content: space-between;
+  row-gap: 40px;
+  column-gap: 30px;
+
+  @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+    flex-wrap: wrap;
+    padding-top: 40px;
+  }
+
+  @media (max-width: toPixels(map.get($breakpoints, "md"))) {
+    column-gap: 25px;
+  }
+
+  &__item-container {
+    flex: 0 1 25%;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      flex: 1 1 40%;
+    }
+  }
+
+  &__item-icon {
+    font-size: 150px;
+    color: $color_blue;
+  }
+
+  &__item-title {
+    padding-top: 20px;
+    font-size: $fontSizeRelBase_26;
+    line-height: 36px;
+    color: $color_blue;
+
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      padding-top: 27px;
+      font-size: $fontSizeRelBase_20;
+    }
+  }
+
+  &__item-text {
+    padding-top: 20px;
+    line-height: 25px;
+
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      padding-top: 0px;
+      font-size: $fontSizeRelBase_16;
+    }
+  }
+}

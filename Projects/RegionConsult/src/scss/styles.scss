@@ -1,0 +1,82 @@
+@use "sass:map";
+@import "../../../../node_modules/scss-reset/_reset.scss";
+@import "./common/variables";
+@import "./common/functions";
+
+@import "./common/layout";
+
+@import "./common/mixins";
+
+@import "./common/fonts";
+
+@import "./common/shared";
+
+@import "./header";
+@import "./welcome";
+@import "./competence";
+@import "./slogan";
+@import "./principles";
+@import "./growth";
+@import "./career";
+@import "./footer";
+
+html:root {
+  @include adaptiveValue("font-size", $fontBaseSize, 18);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+// Common 'body' styles
+body {
+  position: relative;
+  font-family: $fontFamily;
+  font-weight: 400;
+  font-style: normal;
+  // letter-spacing: 0.04em;
+  color: var(--color-secondary);
+
+  background: var(--color-primary);
+  overflow-x: hidden;
+  transition: background $t_time linear, color $t_time linear;
+
+  &.active {
+    overflow: hidden;
+  }
+}
+
+// Common 'a' styles
+a {
+  color: $color_black;
+  transition: color $t_time linear, opacity $t_time linear;
+  text-decoration: none;
+
+  &.active {
+    color: $color_blue;
+  }
+}
+
+// a:visited {
+//   color: $color_black;
+//   text-decoration: none;
+// }
+
+// a:active {
+//   color: $color_blue;
+//   // font-weight: semibold;
+//   text-decoration: none;
+// }
+
+// a:focus {
+//   color: $color_blue;
+//   text-decoration: none;
+// }
+
+a:hover {
+  color: $color_blue;
+
+  @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+    text-decoration: none;
+  }
+}

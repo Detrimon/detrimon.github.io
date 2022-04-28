@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Временно НЕ индексировать. Заменить content на "index,follow" перед публикацией у Заказчика -->
+    <meta name="robots" content="noindex, nofollow" />
+    <!-- SEO -->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <!-- Cache control -->
+    <meta http-equiv="cache-control" content="public" />
+    <!-- VIEWPORT configuration -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1" />
+    <!-- Подключение шрифтов -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700&family=Russo+One&display=swap" rel="stylesheet" />
+    <!-- Подключение стилей -->
+    <link rel="stylesheet" href="css/styles.min.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <script defer type="text/javascript" src="js/app.min.js"></script>
+
+    <title>РегионКонсалт</title>
+  </head>
+  <body>
+    @@include("./html/_header.html")
+    <div class="wrapper">
+      <main class="page">
+        @@include("./html/_welcome.html") @@include("./html/_competence.html") @@include("./html/_slogan.html")
+        @@include("./html/_principles.html") @@include("./html/_growth.html") @@include("./html/_career.html")
+      </main>
+    </div>
+    @@include("./html/_footer.html")
+  </body>
+</html>

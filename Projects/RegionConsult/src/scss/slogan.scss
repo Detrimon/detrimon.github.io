@@ -1,0 +1,27 @@
+.slogan {
+  background-color: $color_lightgrey;
+
+  &__container {
+    width: 100%;
+    height: 100vh;
+
+    background-image: url("../img/data-technology-bg.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__title {
+    padding-top: 189px;
+    color: $color_lightgrey;
+    max-width: 1109px;
+
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      padding-top: 160px;
+    }
+
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      padding-top: 120px;
+    }
+  }
+}

@@ -1,0 +1,163 @@
+@use "sass:map";
+
+.competence {
+  // scroll-behavior: smooth;
+  background-color: $color_lightgrey;
+  position: relative;
+  &__title-container {
+    display: flex;
+    padding-bottom: 227px;
+    row-gap: 25px;
+
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      padding-bottom: 120px;
+    }
+
+    @media (max-width: toPixels(map.get($breakpoints, "md"))) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__title {
+    flex: 0 0 50%;
+  }
+
+  &__slogan {
+    padding-left: 20px;
+    font-size: $fontSizeRelBase_26;
+
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      font-size: $fontSizeRelBase_20;
+      max-width: 450px;
+    }
+
+    @media (max-width: toPixels(map.get($breakpoints, "md"))) {
+      padding-left: 0;
+    }
+    // line-height: 36px;
+  }
+
+  &__fold {
+    &_container {
+      display: flex;
+    }
+
+    &_empty {
+      flex: 0 1 25%;
+
+      @media (max-width: toPixels(map.get($breakpoints, "md"))) {
+        display: none;
+      }
+    }
+
+    &_main {
+      flex: 1 0 75%;
+
+      border-top: 2px solid $color_blue;
+      border-bottom: 2px solid $color_blue;
+    }
+
+    &_section {
+      border-top: 2px solid $color_blue;
+
+      &:first-child {
+        border-top: none;
+      }
+    }
+
+    &_title-container {
+      display: flex;
+      justify-content: space-between;
+
+      padding-top: 20px;
+      margin-top: 42px;
+      padding-bottom: 3px;
+      cursor: pointer;
+
+      @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+        padding-top: 0px;
+        margin-top: 34px;
+      }
+    }
+
+    &_title-text {
+      font-size: $fontSizeRelBase_41;
+      // line-height: 56px;
+
+      @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+        font-size: $fontSizeRelBase_32;
+      }
+    }
+
+    &_title-arrow {
+      align-self: flex-end;
+      position: relative;
+      bottom: 12px;
+
+      font-size: $fontSizeRelBase_48;
+      color: $color_blue;
+
+      transform: rotate(0deg);
+      transform-origin: 18px 12px;
+      transition: transform 0.25s linear;
+
+      @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+        font-size: $fontSizeRelBase_20;
+        // bottom: 16px;
+        transform-origin: 9px 6px;
+      }
+
+      &.open {
+        transform: rotate(45deg);
+      }
+    }
+
+    &_content-container {
+      overflow: hidden;
+      height: auto;
+      max-height: 0;
+
+      transition: max-height 0.25s ease-in-out;
+
+      padding-left: 35%;
+
+      @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+        padding-left: 14%;
+      }
+
+      > li {
+        font-size: $fontSizeRelBase_26;
+        list-style-type: "—";
+        padding-left: 22px;
+        padding-bottom: 14px;
+
+        @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+          font-size: $fontSizeRelBase_20;
+          padding-left: 9px;
+        }
+
+        &::marker {
+          color: $color_blue;
+        }
+
+        &:first-child {
+          padding-top: 32px;
+
+          @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+            padding-top: 27px;
+          }
+        }
+      }
+
+      @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+        font-size: $fontSizeRelBase_20;
+      }
+
+      &.open {
+        max-height: 500px;
+        // padding-top: 34px;
+        // transition: max-height 0.2s ease-out;
+      }
+    }
+  }
+}

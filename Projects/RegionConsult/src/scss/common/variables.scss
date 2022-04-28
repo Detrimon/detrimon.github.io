@@ -1,0 +1,27 @@
+$fontFamily: "Manrope", sans-serif;
+$fontFamilyAdditional: "Russo One", sans-serif;
+
+$fontBaseSize: 18;
+
+$fontSizeRelBase_14: calc(14 / $fontBaseSize) + rem; // 0.77rem;
+$fontSizeRelBase_16: calc(16 / $fontBaseSize) + rem;
+$fontSizeRelBase_20: calc(20 / $fontBaseSize) + rem; // 1.11rem;
+$fontSizeRelBase_22: calc(22 / $fontBaseSize) + rem; // 1.22rem;
+$fontSizeRelBase_26: calc(26 / $fontBaseSize) + rem; // 1.44rem;
+$fontSizeRelBase_32: calc(32 / $fontBaseSize) + rem; // 1.78rem;
+$fontSizeRelBase_36: calc(36 / $fontBaseSize) + rem; // 2rem;
+$fontSizeRelBase_41: calc(41 / $fontBaseSize) + rem; // 2.28rem;
+$fontSizeRelBase_48: calc(48 / $fontBaseSize) + rem; // 2.67rem;
+$fontSizeRelBase_61: calc(61 / $fontBaseSize) + rem; // 3.39rem;
+
+// $breakpoints_indent: 0; // дополнительный зазор для breakpoint'а, чтобы переключение на меньший размер происходило немного раньше.
+
+$t_time: 0.25s;
+
+$color_blue: #4a90e2;
+// $color_menu: #4a90e2;
+$color_black: #000000;
+$color_white: #ffffff;
+$color_lightgrey: #f2f2f2;
+// $color_grey_border: #eceff1;
+// $color_text_grey: #e5e5e5;

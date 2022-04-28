@@ -1,0 +1,85 @@
+@use "sass:map";
+
+// Variables
+
+$minWidth: 320;
+$maxWidthContainer: 1200;
+$baseContentIndent: 20; // зазор справа и слева от контента до края экрана, чтобы содержимое не прилипало к краю viewport
+
+$breakpoints: (
+  "top": $maxWidthContainer + 2 * 100,
+  "xl": 999.98 + 2 * 100,
+  "lg": 999.98 + 2 * $baseContentIndent,
+  "md": 639.98 + 2 * $baseContentIndent,
+  "sm": 339.98 + 2 * $baseContentIndent,
+);
+// $scaleRatio: (
+//   "top": 1,
+//   "xxl": 0.73,
+//   "xl": 0.62,
+//   "lg": 0.52,
+//   "md": 0.4,
+//   "sm": 0.3,
+// );
+
+// Mixins
+
+// @mixin container($breakpoint) {
+//   $indent: calc(
+//     ($breakpoint * $baseContentIndent) / map.get($breakpoints, "top")
+//   );
+//   max-width: toPixels($breakpoint);
+//   padding-left: toPixels($indent);
+//   padding-right: toPixels($indent);
+// }
+
+// Classes
+
+.min-container {
+  min-width: toPixels($minWidth);
+}
+
+.container {
+  margin: 0 auto;
+
+  @media (min-width: toPixels(
+    map.get($breakpoints, "top")
+  )) {
+    max-width: 1400px;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  @media (min-width: toPixels(
+    map.get($breakpoints, "xl")
+  )) {
+    max-width: none;
+    width: 100%;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  @media (min-width: toPixels(
+    map.get($breakpoints, "lg")
+  )) {
+    max-width: 1040px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @media (min-width: toPixels(
+    map.get($breakpoints, "md")
+  )) {
+    max-width: 680px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @media (max-width: toPixels(
+    map.get($breakpoints, "md") - 0.02
+  )) {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
