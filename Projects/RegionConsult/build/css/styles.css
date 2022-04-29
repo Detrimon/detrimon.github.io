@@ -708,11 +708,11 @@ template {
 }
 
 .ws-accent {
-  color: #4a90e2;
+  color: #186fd4;
 }
 
 .ws-section-top-indent {
-  padding-top: 240px;
+  padding-top: 130px;
 }
 
 .ws-nowrap-text {
@@ -721,15 +721,15 @@ template {
 
 .ws-strokes {
   display: block;
-  border-left: 2px solid #4a90e2;
+  border-left: 2px solid #186fd4;
   height: 10px;
   flex: 0 0 10px;
 }
 
 .ws-slogan-container {
   display: flex;
-  border-top: 2px solid #4a90e2;
-  border-bottom: 2px solid #4a90e2;
+  border-top: 2px solid #186fd4;
+  border-bottom: 2px solid #186fd4;
   margin-top: 60px;
 }
 
@@ -778,7 +778,7 @@ template {
   position: absolute;
   width: 100%;
   height: 2px;
-  background-color: #4a90e2;
+  background-color: #186fd4;
   bottom: 5px;
 }
 
@@ -804,7 +804,7 @@ template {
   position: relative;
   width: 100%;
   padding-top: 36px;
-  border-bottom: 2px solid #4a90e2;
+  border-bottom: 2px solid #186fd4;
   font-size: 18;
   font-weight: 400;
   transition: border-color 0.25s linear;
@@ -832,7 +832,7 @@ template {
 }
 
 .sub-header {
-  height: 15px;
+  height: 30px;
   background-color: #f2f2f2;
   box-shadow: 0px 10px 15px 0px rgba(209, 209, 209, 0.2);
 }
@@ -885,12 +885,12 @@ template {
 
 .competence__fold_main {
   flex: 1 0 75%;
-  border-top: 2px solid #4a90e2;
-  border-bottom: 2px solid #4a90e2;
+  border-top: 2px solid #186fd4;
+  border-bottom: 2px solid #186fd4;
 }
 
 .competence__fold_section {
-  border-top: 2px solid #4a90e2;
+  border-top: 2px solid #186fd4;
 }
 
 .competence__fold_section:first-child {
@@ -901,9 +901,14 @@ template {
   display: flex;
   justify-content: space-between;
   padding-top: 20px;
-  margin-top: 42px;
+  margin-top: 30px;
   padding-bottom: 3px;
   cursor: pointer;
+  transition: color 0.25s linear;
+}
+
+.competence__fold_title-container:hover {
+  color: #186fd4;
 }
 
 .competence__fold_title-text {
@@ -915,7 +920,7 @@ template {
   position: relative;
   bottom: 12px;
   font-size: 2.6666666667rem;
-  color: #4a90e2;
+  color: #186fd4;
   transform: rotate(0deg);
   transform-origin: 18px 12px;
   transition: transform 0.25s linear;
@@ -941,7 +946,7 @@ template {
 }
 
 .competence__fold_content-container > li::marker {
-  color: #4a90e2;
+  color: #186fd4;
 }
 
 .competence__fold_content-container > li:first-child {
@@ -949,7 +954,7 @@ template {
 }
 
 .competence__fold_content-container.open {
-  max-height: 500px;
+  max-height: 750px;
 }
 
 .slogan {
@@ -959,6 +964,7 @@ template {
 .slogan__container {
   width: 100%;
   height: 100vh;
+  max-height: 700px;
   background-image: url("../img/data-technology-bg.webp");
   background-repeat: no-repeat;
   background-position: center;
@@ -993,14 +999,14 @@ template {
 
 .processes__item-icon {
   font-size: 150px;
-  color: #4a90e2;
+  color: #186fd4;
 }
 
 .processes__item-title {
   padding-top: 20px;
   font-size: 1.4444444444rem;
   line-height: 36px;
-  color: #4a90e2;
+  color: #186fd4;
 }
 
 .processes__item-text {
@@ -1017,7 +1023,7 @@ template {
 .logo-bg-growth-right {
   position: absolute;
   right: -420px;
-  bottom: -450px;
+  bottom: -350px;
 }
 
 .growth {
@@ -1042,7 +1048,7 @@ template {
 
 .evo-years__item-container {
   flex: 1 0 40%;
-  border-bottom: 2px solid #4a90e2;
+  border-bottom: 2px solid #186fd4;
   padding-right: 52px;
   display: flex;
   flex-direction: column;
@@ -1053,7 +1059,7 @@ template {
   font-size: 3.3888888889rem;
   line-height: 83px;
   font-weight: 300;
-  color: #4a90e2;
+  color: #186fd4;
 }
 
 .evo-years__item-text {
@@ -1134,28 +1140,29 @@ template {
   padding-bottom: 220px;
 }
 
-.vacancy__items > li {
+.vacancy__items a {
+  display: inline-block;
   padding: 18px 22px;
-  border: 2px solid #4a90e2;
+  border: 2px solid #186fd4;
   border-radius: 68px;
   margin-right: 9px;
   cursor: pointer;
   transition: all 0.25s linear;
 }
 
-.vacancy__items > li:hover {
-  color: #4a90e2;
+.vacancy__items a:hover {
+  color: #186fd4;
 }
 
-.vacancy__items > li:active,
-.vacancy__items li:focus,
-.vacancy__items li:target {
-  background-color: #4a90e2;
+.vacancy__items a:active,
+.vacancy__items a:focus,
+.vacancy__items a:target {
+  background-color: #186fd4;
   color: #ffffff;
 }
 
 .footer-container {
-  background-color: #4a90e2;
+  background-color: #186fd4;
 }
 
 .footer-container__rel {
@@ -1166,7 +1173,7 @@ template {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding-top: 38px;
+  padding-top: 116px;
   border-bottom: 2px solid #ffffff;
   font-size: 18;
   font-weight: 400;
@@ -1318,11 +1325,11 @@ a {
 }
 
 a.active {
-  color: #4a90e2;
+  color: #186fd4;
 }
 
 a:hover {
-  color: #4a90e2;
+  color: #186fd4;
 }
 
 @media (min-width: 679.98px) {
@@ -1401,7 +1408,7 @@ a:hover {
   }
 
   .ws-section-top-indent {
-    padding-top: 115px;
+    padding-top: 110px;
   }
 
   .ws-slogan-container {
@@ -1423,7 +1430,7 @@ a:hover {
   }
 
   .header {
-    padding-top: 50px;
+    padding-top: 30px;
   }
 
   .header__logo-img {
@@ -1467,7 +1474,11 @@ a:hover {
 
   .competence__fold_title-container {
     padding-top: 0px;
-    margin-top: 34px;
+    margin-top: 28px;
+  }
+
+  .competence__fold_title-container:hover {
+    color: #000000;
   }
 
   .competence__fold_title-text {
@@ -1595,13 +1606,13 @@ a:hover {
     padding-bottom: 120px;
   }
 
-  .vacancy__items > li {
+  .vacancy__items a {
     font-size: 0.7777777778rem;
     padding: 18px;
   }
 
-  .footer {
-    padding-top: 116px;
+  .vacancy__items a:hover {
+    color: #000000;
   }
 
   .footer-main__container {
@@ -1671,10 +1682,6 @@ a:hover {
 }
 
 @media (max-width: 679.98px) {
-  .ws-section-top-indent {
-    padding-top: 105px;
-  }
-
   .ws-slogan-container > span {
     flex: 0 1 12%;
   }

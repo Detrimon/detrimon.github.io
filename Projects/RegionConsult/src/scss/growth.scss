@@ -11,7 +11,7 @@
 .logo-bg-growth-right {
   position: absolute;
   right: -420px;
-  bottom: -450px;
+  bottom: -350px;
 
   @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
     display: none;

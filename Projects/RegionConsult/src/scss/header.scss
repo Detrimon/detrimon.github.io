@@ -4,6 +4,7 @@
 .header-container {
   background-color: $color_lightgrey;
   width: 100vw;
+
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
@@ -19,8 +20,10 @@
   position: relative;
 
   width: 100%;
+  // min-height: 70px;
 
   padding-top: 36px;
+
   // padding-bottom: 32px;
   border-bottom: 2px solid $color_blue;
 
@@ -30,7 +33,7 @@
   transition: border-color $t_time linear;
 
   @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
-    padding-top: 50px;
+    padding-top: 30px;
   }
 
   &__logo-img {
@@ -81,7 +84,7 @@
 }
 
 .sub-header {
-  height: 15px;
+  height: 30px;
   background-color: $color_lightgrey;
   -webkit-box-shadow: 0px 10px 15px 0px rgba(209, 209, 209, 0.2);
   -moz-box-shadow: 0px 10px 15px 0px rgba(209, 209, 209, 0.2);

@@ -70,13 +70,23 @@
       justify-content: space-between;
 
       padding-top: 20px;
-      margin-top: 42px;
+      margin-top: 30px;
       padding-bottom: 3px;
       cursor: pointer;
 
+      transition: color $t_time linear;
+
+      &:hover {
+        color: $color_blue;
+      }
+
       @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
         padding-top: 0px;
-        margin-top: 34px;
+        margin-top: 28px;
+
+        &:hover {
+          color: $color_black;
+        }
       }
     }
 
@@ -154,7 +164,7 @@
       }
 
       &.open {
-        max-height: 500px;
+        max-height: 750px;
         // padding-top: 34px;
         // transition: max-height 0.2s ease-out;
       }

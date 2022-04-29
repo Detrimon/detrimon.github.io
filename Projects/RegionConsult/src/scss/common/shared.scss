@@ -31,14 +31,11 @@
 }
 
 .ws-section-top-indent {
-  padding-top: 240px;
+  // padding-top: 240px;
+  padding-top: 130px;
 
   @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
-    padding-top: 115px;
-  }
-
-  @media (max-width: toPixels(map.get($breakpoints, "md"))) {
-    padding-top: 105px;
+    padding-top: 110px;
   }
 }
 
