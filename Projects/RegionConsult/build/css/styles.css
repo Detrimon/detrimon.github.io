@@ -815,7 +815,7 @@ template {
   padding-top: 8px;
 }
 
-.header li {
+.header > ul > li {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -823,11 +823,11 @@ template {
   padding-right: 1px;
 }
 
-.header li > a {
+.header > ul > li > a {
   padding-bottom: 9px;
 }
 
-.header li.nowrap {
+.header > ul > li.nowrap {
   white-space: nowrap;
 }
 
@@ -1333,7 +1333,7 @@ a:hover {
   }
 }
 
-@media (min-width: 1039.98px) {
+@media (min-width: 960.98px) {
   .container {
     max-width: 1040px;
     padding-left: 20px;
@@ -1389,7 +1389,7 @@ a:hover {
   }
 }
 
-@media (max-width: 1039.98px) {
+@media (max-width: 960.98px) {
   .ws-title-h1 {
     font-size: 2rem;
     line-height: 43px;
@@ -1431,6 +1431,15 @@ a:hover {
   }
 
   .header > ul {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    z-index: 200;
+  }
+
+  .header > ul span {
     display: none;
   }
 
