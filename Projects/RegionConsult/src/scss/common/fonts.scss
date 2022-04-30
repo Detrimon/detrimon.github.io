@@ -23,6 +23,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.rcicons-close:before {
+  content: "\e907";
+}
 .rcicons-logo_bottom:before {
   content: "\e900";
 }

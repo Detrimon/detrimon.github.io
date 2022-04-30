@@ -664,6 +664,10 @@ template {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.rcicons-close:before {
+  content: "\e907";
+}
+
 .rcicons-logo_bottom:before {
   content: "\e900";
 }
@@ -846,9 +850,20 @@ template {
   display: flex;
   flex-direction: column;
   height: 100%;
-  justify-content: space-between;
-  padding-top: 50px;
-  padding-bottom: 60px;
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+
+.menu-substrate__container > ul {
+  font-size: 1.1111111111rem;
+}
+
+.menu-substrate__container > ul > li {
+  padding-top: 20px;
+}
+
+.menu-substrate__container > ul > li:first-child {
+  padding-top: 0;
 }
 
 .menu-substrate__icon-close {
@@ -856,6 +871,7 @@ template {
   text-align: right;
   cursor: pointer;
   color: #186fd4;
+  font-size: 45px;
 }
 
 .menu-substrate__foot-sign {
@@ -863,6 +879,7 @@ template {
   flex-direction: column;
   justify-content: flex-end;
   width: 100%;
+  flex: 1 0 auto;
 }
 
 .menu-substrate__image-container {
@@ -873,6 +890,9 @@ template {
 .menu-substrate__contacts-container {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  -moz-column-gap: 60px;
+       column-gap: 60px;
   color: #186fd4;
   font-size: 0.8888888889rem;
 }
@@ -1501,7 +1521,7 @@ a:hover {
   .menu-substrate {
     display: block;
     position: fixed;
-    width: 100%;
+    width: calc(100% + 6px);
     height: 100vh;
     background-color: #f2f2f2;
     transition: left 0.25s linear;
@@ -1510,7 +1530,7 @@ a:hover {
   }
 
   .menu-substrate.open {
-    left: 0;
+    left: -3px;
   }
 
   .welcome__title {
@@ -1788,5 +1808,19 @@ a:hover {
 
   .contacts__container {
     row-gap: 30px;
+  }
+}
+
+@media (max-height: 600px) {
+  .menu-substrate__container > ul {
+    font-size: 0.8888888889rem;
+  }
+
+  .menu-substrate__container > ul > li {
+    padding-top: 14px;
+  }
+
+  .menu-substrate__contacts-container {
+    flex-direction: row;
   }
 }

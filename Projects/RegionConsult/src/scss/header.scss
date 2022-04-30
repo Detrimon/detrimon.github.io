@@ -111,7 +111,7 @@
     display: block;
     position: fixed;
     // left: 0;
-    width: 100%;
+    width: calc(100% + 6px);
     height: 100vh;
     background-color: $color_lightgrey;
     transition: left $t_time linear;
@@ -119,7 +119,7 @@
     z-index: 500;
 
     &.open {
-      left: 0;
+      left: -3px;
       // z-index: 500;
     }
   }
@@ -128,10 +128,30 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    justify-content: space-between;
+    // justify-content: space-between;
 
-    padding-top: 50px;
-    padding-bottom: 60px;
+    padding-top: 30px;
+    padding-bottom: 40px;
+
+    > ul {
+      font-size: $fontSizeRelBase_20;
+
+      @media (max-height: 600px) {
+        font-size: $fontSizeRelBase_16;
+
+        > li {
+          padding-top: 14px;
+        }
+      }
+
+      > li {
+        padding-top: 20px;
+
+        &:first-child {
+          padding-top: 0;
+        }
+      }
+    }
   }
 
   &__icon-close {
@@ -139,6 +159,7 @@
     text-align: right;
     cursor: pointer;
     color: $color_blue;
+    font-size: 45px;
   }
 
   &__foot-sign {
@@ -146,6 +167,8 @@
     flex-direction: column;
     justify-content: flex-end;
     width: 100%;
+
+    flex: 1 0 auto;
   }
 
   &__image-container {
@@ -156,8 +179,14 @@
   &__contacts-container {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+    column-gap: 60px;
     color: $color_blue;
     font-size: $fontSizeRelBase_16;
+
+    @media (max-height: 600px) {
+      flex-direction: row;
+    }
 
     a {
       color: $color_blue;

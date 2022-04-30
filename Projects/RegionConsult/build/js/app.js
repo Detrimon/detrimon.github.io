@@ -99,6 +99,8 @@ function burgerOnClickHandler(e) {
 
   var popupMenuElement = document.querySelector(".menu-substrate");
   popupMenuElement.classList.toggle("open");
+  var body = document.body;
+  body.style.overflowY = "hidden";
 
   // const menuItems = document.querySelector("#idPopupMenu");
   // menuItems.classList.toggle("open");
@@ -126,12 +128,12 @@ function closeMenuHandler(e) {
 
   // const burgerContainer = document.querySelector(".menu__btn");
   // const headerElement = document.querySelector("#idHeader");
-  // const body = document.body;
+  var body = document.body;
 
   // burgerContainer.classList.toggle("active");
   // headerElement.classList.toggle("active");
 
-  // body.style.overflowY = "auto";
+  body.style.overflowY = "auto";
 }
 
 // jQuery(window).scroll(function () {
