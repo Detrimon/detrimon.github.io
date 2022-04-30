@@ -49,22 +49,22 @@
 
     @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
       // background-color: red;
-      // display: none;
-      padding-top: 120px;
-      position: fixed;
-      top: 0;
-      opacity: 0;
-      display: flex;
-      flex-direction: column;
-      z-index: 600;
-      transition: opacity 0.25s ease-in-out;
-      span {
-        display: none;
-      }
+      display: none;
+      // padding-top: 120px;
+      // position: fixed;
+      // top: 0;
+      // opacity: 0;
+      // display: flex;
+      // flex-direction: column;
+      // z-index: 600;
+      // transition: opacity 0.25s ease-in-out;
+      // span {
+      //   display: none;
+      // }
 
-      &.open {
-        opacity: 100%;
-      }
+      // &.open {
+      //   opacity: 100%;
+      // }
     }
 
     > li {
@@ -75,10 +75,10 @@
       padding-left: 77px;
       padding-right: 1px;
 
-      @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
-        padding-left: 0;
-        padding-rigth: 0;
-      }
+      // @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      //   padding-left: 0;
+      //   padding-rigth: 0;
+      // }
 
       > a {
         padding-bottom: 9px;

@@ -87,21 +87,21 @@ burgerContainer.addEventListener("click", burgerOnClickHandler);
 var closeIcon = document.querySelector(".menu-substrate__icon-close");
 closeIcon.addEventListener("click", closeMenuHandler);
 
-var menuItems = document.querySelector("#idMainMenu");
+var menuItems = document.querySelector("#idPopupMenu");
 menuItems.addEventListener("click", closeMenuHandler);
 
 // Event Handlers ::
 
 function burgerOnClickHandler(e) {
   e.preventDefault();
-  var topMenuElement = document.querySelector(".header-container");
-  topMenuElement.classList.toggle("open");
+  // const topMenuElement = document.querySelector(".header-container");
+  // topMenuElement.classList.toggle("open");
 
   var popupMenuElement = document.querySelector(".menu-substrate");
   popupMenuElement.classList.toggle("open");
 
-  var menuItems = document.querySelector("#idMainMenu");
-  menuItems.classList.toggle("open");
+  // const menuItems = document.querySelector("#idPopupMenu");
+  // menuItems.classList.toggle("open");
 }
 
 function closeMenuHandler(e) {
@@ -111,19 +111,18 @@ function closeMenuHandler(e) {
   if (document.documentElement.scrollWidth > 960.98) return;
 
   var toCloseMenu = e.target.querySelector("[data-toclosemenu]");
-  console.log(toCloseMenu);
   if (!e.target.dataset.hasOwnProperty("toclosemenu")) return;
 
-  setTimeout(function () {
-    var topMenuElement = document.querySelector(".header-container");
-    topMenuElement.classList.toggle("open");
-  }, 250);
+  // setTimeout(function () {
+  //   const topMenuElement = document.querySelector(".header-container");
+  //   topMenuElement.classList.toggle("open");
+  // }, 250);
 
   var popupMenuElement = document.querySelector(".menu-substrate");
   popupMenuElement.classList.toggle("open");
 
-  var menuItems = document.querySelector("#idMainMenu");
-  menuItems.classList.toggle("open");
+  // const menuItems = document.querySelector("#idPopupMenu");
+  // menuItems.classList.toggle("open");
 
   // const burgerContainer = document.querySelector(".menu__btn");
   // const headerElement = document.querySelector("#idHeader");
