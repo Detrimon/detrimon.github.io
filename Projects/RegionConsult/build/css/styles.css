@@ -664,19 +664,31 @@ template {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.rcicons-close:before {
-  content: "\e907";
+.rcicons-icon_automate:before {
+  content: "\e908";
+  color: #186fd5;
 }
 
-.rcicons-logo_bottom:before {
-  content: "\e900";
+.rcicons-icon_optimization:before {
+  content: "\e909";
+  color: #186fd5;
 }
 
-.rcicons-img-tech:before {
+.rcicons-icon_team:before {
+  content: "\e90a";
+  color: #186fd5;
+}
+
+.rcicons-icon_tech:before {
+  content: "\e90b";
+  color: #186fd5;
+}
+
+.rcicons-img-pdf:before {
   content: "\e901";
 }
 
-.rcicons-img-team:before {
+.rcicons-img-automate:before {
   content: "\e902";
 }
 
@@ -684,12 +696,20 @@ template {
   content: "\e903";
 }
 
-.rcicons-img-automate:before {
+.rcicons-img-team:before {
   content: "\e904";
 }
 
-.rcicons-arrow-right:before {
+.rcicons-img-tech:before {
   content: "\e905";
+}
+
+.rcicons-img-close:before {
+  content: "\e907";
+}
+
+.rcicons-logo_bottom:before {
+  content: "\e900";
 }
 
 .rcicons-arrow-right-top:before {
@@ -921,7 +941,7 @@ template {
 .welcome__image-container {
   width: 100%;
   height: 906px;
-  background-image: url("../img/welcome.webp");
+  background-image: url("../img/welcome_1920.webp");
   background-repeat: no-repeat;
   background-position: 50% -70px;
   background-size: cover;
@@ -1038,7 +1058,7 @@ template {
   width: 100%;
   height: 100vh;
   max-height: 700px;
-  background-image: url("../img/data-technology-bg.webp");
+  background-image: url("../img/data-technology-bg_1920.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1350,8 +1370,8 @@ template {
 }
 
 .documents__icon {
-  -o-object-fit: contain;
-     object-fit: contain;
+  color: #ffffff;
+  font-size: 47px;
 }
 
 .documents__text {
@@ -1452,7 +1472,12 @@ a:hover {
 
 @media (max-width: 1199.98px) {
   .welcome__image-container {
+    background-image: url("../img/welcome_1200.webp");
     height: 588px;
+  }
+
+  .slogan__container {
+    background-image: url("../img/data-technology-bg_1200.webp");
   }
 
   .growth {
@@ -1769,6 +1794,7 @@ a:hover {
   }
 
   .welcome__image-container {
+    background-image: url("../img/welcome_680.webp");
     background-position: 50% -15px;
   }
 
@@ -1782,6 +1808,10 @@ a:hover {
 
   .competence__fold_empty {
     display: none;
+  }
+
+  .slogan__container {
+    background-image: url("../img/data-technology-bg_680.webp");
   }
 
   .processes {
@@ -1812,6 +1842,16 @@ a:hover {
 
   .contacts__container {
     row-gap: 30px;
+  }
+}
+
+@media (max-width: 379.98px) {
+  .welcome__image-container {
+    background-image: url("../img/welcome_430.webp");
+  }
+
+  .slogan__container {
+    background-image: url("../img/data-technology-bg_430.webp");
   }
 }
 

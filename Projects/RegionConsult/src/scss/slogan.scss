@@ -6,10 +6,22 @@
     height: 100vh;
     max-height: 700px;
 
-    background-image: url("../img/data-technology-bg.webp");
+    background-image: url("../img/data-technology-bg_1920.webp");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+
+    @media (max-width: toPixels(map.get($breakpoints, "xl"))) {
+      background-image: url("../img/data-technology-bg_1200.webp");
+    }
+
+    @media (max-width: toPixels(map.get($breakpoints, "md"))) {
+      background-image: url("../img/data-technology-bg_680.webp");
+    }
+
+    @media (max-width: toPixels(map.get($breakpoints, "sm"))) {
+      background-image: url("../img/data-technology-bg_430.webp");
+    }
   }
 
   &__title {

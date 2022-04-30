@@ -17,12 +17,13 @@
     width: 100%;
     height: 906px;
 
-    background-image: url("../img/welcome.webp");
+    background-image: url("../img/welcome_1920.webp");
     background-repeat: no-repeat;
     background-position: 50% -70px;
     background-size: cover;
 
     @media (max-width: toPixels(map.get($breakpoints, "xl"))) {
+      background-image: url("../img/welcome_1200.webp");
       height: 588px;
     }
 
@@ -31,7 +32,12 @@
     }
 
     @media (max-width: toPixels(map.get($breakpoints, "md"))) {
+      background-image: url("../img/welcome_680.webp");
       background-position: 50% -15px;
+    }
+
+    @media (max-width: toPixels(map.get($breakpoints, "sm"))) {
+      background-image: url("../img/welcome_430.webp");
     }
   }
 }

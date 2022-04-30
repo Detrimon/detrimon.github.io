@@ -208,7 +208,9 @@
   }
 
   &__icon {
-    object-fit: contain;
+    // object-fit: contain;
+    color: $color_white;
+    font-size: 47px;
   }
 
   &__text {
