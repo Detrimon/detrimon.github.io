@@ -29,6 +29,11 @@
     column-gap: 25px;
   }
 
+  @media (max-width: toPixels(map.get($breakpoints, "sm"))) {
+    flex-direction: column;
+    row-gap: 60px;
+  }
+
   &__item-container {
     flex: 0 1 25%;
     display: flex;
@@ -42,6 +47,10 @@
   &__item-icon {
     font-size: 150px;
     color: $color_blue;
+
+    @media (max-width: toPixels(map.get($breakpoints, "sm"))) {
+      margin: 0 auto;
+    }
   }
 
   &__item-title {
@@ -53,6 +62,11 @@
     @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
       padding-top: 27px;
       font-size: $fontSizeRelBase_20;
+    }
+
+    @media (max-width: toPixels(map.get($breakpoints, "sm"))) {
+      padding-top: 18px;
+      text-align: center;
     }
   }
 

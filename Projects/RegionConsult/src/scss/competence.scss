@@ -34,6 +34,10 @@
     @media (max-width: toPixels(map.get($breakpoints, "md"))) {
       padding-left: 0;
     }
+
+    @media (max-width: toPixels(map.get($breakpoints, "sm"))) {
+      font-size: $fontSizeRelBase_18;
+    }
     // line-height: 36px;
   }
 
@@ -97,6 +101,14 @@
       @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
         font-size: $fontSizeRelBase_32;
       }
+
+      @media (max-width: toPixels(map.get($breakpoints, "md"))) {
+        font-size: $fontSizeRelBase_30;
+      }
+
+      @media (max-width: toPixels(map.get($breakpoints, "sm"))) {
+        font-size: $fontSizeRelBase_26;
+      }
     }
 
     &_title-arrow {
@@ -112,7 +124,7 @@
       transition: transform 0.25s linear;
 
       @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
-        font-size: $fontSizeRelBase_20;
+        font-size: $fontSizeRelBase_24;
         // bottom: 16px;
         transform-origin: 9px 6px;
       }
@@ -144,6 +156,11 @@
         @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
           font-size: $fontSizeRelBase_20;
           padding-left: 9px;
+        }
+
+        @media (max-width: toPixels(map.get($breakpoints, "sm"))) {
+          font-size: $fontSizeRelBase_18;
+          padding-left: 7px;
         }
 
         &::marker {

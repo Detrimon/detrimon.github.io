@@ -38,6 +38,7 @@
 
     @media (max-width: toPixels(map.get($breakpoints, "sm"))) {
       background-image: url("../img/welcome_430.webp");
+      height: 300px;
     }
   }
 }

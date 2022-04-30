@@ -21,7 +21,7 @@
   padding-top: 116px;
   border-bottom: 2px solid $color_white;
 
-  font-size: $fontBaseSize;
+  font-size: $fontSizeRelBase_18;
   font-weight: 400;
 
   transition: border-color $t_time linear;
@@ -33,6 +33,10 @@
   &__logo {
     font-size: 42px;
     color: $color_white;
+
+    @media (max-width: toPixels(map.get($breakpoints, "sm"))) {
+      font-size: 36px;
+    }
   }
 
   &__logo-img {

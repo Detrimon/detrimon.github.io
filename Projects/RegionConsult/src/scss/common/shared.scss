@@ -13,6 +13,10 @@
     font-size: $fontSizeRelBase_36;
     line-height: 43px;
   }
+
+  @media (max-width: toPixels(map.get($breakpoints, "sm"))) {
+    font-size: $fontSizeRelBase_30;
+  }
 }
 
 .ws-title-h2 {
@@ -24,6 +28,10 @@
   @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
     font-size: $fontSizeRelBase_20;
     line-height: 27px;
+  }
+
+  @media (max-width: toPixels(map.get($breakpoints, "sm"))) {
+    font-size: $fontSizeRelBase_24;
   }
 }
 .ws-accent {

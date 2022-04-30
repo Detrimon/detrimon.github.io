@@ -163,6 +163,10 @@
           color: $color_black;
         }
       }
+
+      @media (max-width: toPixels(map.get($breakpoints, "sm"))) {
+        padding: 12px 12px;
+      }
     }
 
     // > li > li:active,
