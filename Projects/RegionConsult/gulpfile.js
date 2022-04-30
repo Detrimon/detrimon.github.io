@@ -6,6 +6,7 @@ const fs = require("fs");
 const path = {
   build: {
     html: `${project_folder}/`,
+    favicon: `${project_folder}/`,
     css: `${project_folder}/css/`,
     js: `${project_folder}/js/`,
     img: `${project_folder}/img/`,
@@ -13,6 +14,7 @@ const path = {
   },
   src: {
     html: [`${source_folder}/*.html`, `!${source_folder}/_*.html`],
+    favicon: `${source_folder}/favicon.ico`,
     css: `${source_folder}/scss/styles.scss`,
     js: `${source_folder}/js/app.js`,
     img: `${source_folder}/img/**/*.{jpg,png,svg,gif,ico,webp}`,
@@ -132,6 +134,10 @@ function js() {
   );
 }
 
+function favicon() {
+  return src(path.src.favicon).pipe(dest(path.build.favicon));
+}
+
 function images() {
   return src(path.src.img)
     .pipe(
@@ -222,7 +228,10 @@ function watchFiles(params) {
   gulp.watch([path.watch.img], images);
 }
 
-const build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts));
+const build = gulp.series(
+  clean,
+  gulp.parallel(js, css, html, favicon, images, fonts)
+);
 const watch = gulp.parallel(build, watchFiles, browserSync);
 
 exports.fontsStyle = fontsStyle;
@@ -231,6 +240,7 @@ exports.images = images;
 exports.js = js;
 exports.css = css;
 exports.html = html;
+exports.favicon = favicon;
 exports.build = build;
 exports.watch = watch;
 exports.default = watch;

@@ -6,6 +6,7 @@
   width: 100vw;
 
   position: fixed;
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
   z-index: 100;
@@ -47,15 +48,22 @@
     padding-top: 8px;
 
     @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
-      display: none;
+      // background-color: red;
+      // display: none;
+      padding-top: 120px;
       position: fixed;
       top: 0;
-      left: 0;
-      // display: flex;
+      opacity: 0;
+      display: flex;
       flex-direction: column;
-      z-index: 200;
+      z-index: 600;
+      transition: opacity 0.25s ease-in-out;
       span {
         display: none;
+      }
+
+      &.open {
+        opacity: 100%;
       }
     }
 
@@ -66,6 +74,11 @@
 
       padding-left: 77px;
       padding-right: 1px;
+
+      @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+        padding-left: 0;
+        padding-rigth: 0;
+      }
 
       > a {
         padding-bottom: 9px;
@@ -91,11 +104,71 @@
   box-shadow: 0px 10px 15px 0px rgba(209, 209, 209, 0.2);
 }
 
-// .text-menu {
-//   &__undermenustrokes {
-//     display: block;
-//     border-left: 2px solid $color_blue;
-//     height: 10px;
-//     margin-top: 9px;
-//   }
-// }
+.menu-substrate {
+  display: none;
+
+  @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+    display: block;
+    position: fixed;
+    // left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: $color_lightgrey;
+    transition: left $t_time linear;
+    left: -110%;
+    z-index: 500;
+
+    &.open {
+      left: 0;
+      // z-index: 500;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+
+    padding-top: 50px;
+    padding-bottom: 60px;
+  }
+
+  &__icon-close {
+    display: block;
+    text-align: right;
+    cursor: pointer;
+    color: $color_blue;
+  }
+
+  &__foot-sign {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  &__image-container {
+    color: $color_blue;
+    border-bottom: 2px solid $color_blue;
+  }
+
+  &__contacts-container {
+    display: flex;
+    flex-direction: column;
+    color: $color_blue;
+    font-size: $fontSizeRelBase_16;
+
+    a {
+      color: $color_blue;
+    }
+  }
+
+  &__mailphone-container {
+    padding-top: 20px;
+  }
+
+  &__freephone-container {
+    padding-top: 20px;
+  }
+}

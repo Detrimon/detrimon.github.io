@@ -712,7 +712,7 @@ template {
 }
 
 .ws-section-top-indent {
-  padding-top: 130px;
+  padding-top: 140px;
 }
 
 .ws-nowrap-text {
@@ -793,6 +793,7 @@ template {
   background-color: #f2f2f2;
   width: 100vw;
   position: fixed;
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
   z-index: 100;
@@ -837,8 +838,60 @@ template {
   box-shadow: 0px 10px 15px 0px rgba(209, 209, 209, 0.2);
 }
 
+.menu-substrate {
+  display: none;
+}
+
+.menu-substrate__container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  padding-top: 50px;
+  padding-bottom: 60px;
+}
+
+.menu-substrate__icon-close {
+  display: block;
+  text-align: right;
+  cursor: pointer;
+  color: #186fd4;
+}
+
+.menu-substrate__foot-sign {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.menu-substrate__image-container {
+  color: #186fd4;
+  border-bottom: 2px solid #186fd4;
+}
+
+.menu-substrate__contacts-container {
+  display: flex;
+  flex-direction: column;
+  color: #186fd4;
+  font-size: 0.8888888889rem;
+}
+
+.menu-substrate__contacts-container a {
+  color: #186fd4;
+}
+
+.menu-substrate__mailphone-container {
+  padding-top: 20px;
+}
+
+.menu-substrate__freephone-container {
+  padding-top: 20px;
+}
+
 .welcome {
   background-color: #f2f2f2;
+  padding-top: 20px;
 }
 
 .welcome__title {
@@ -1438,21 +1491,47 @@ a:hover {
   }
 
   .header > ul {
-    display: none;
+    padding-top: 120px;
     position: fixed;
     top: 0;
-    left: 0;
+    opacity: 0;
+    display: flex;
     flex-direction: column;
-    z-index: 200;
+    z-index: 600;
+    transition: opacity 0.25s ease-in-out;
   }
 
   .header > ul span {
     display: none;
   }
 
+  .header > ul.open {
+    opacity: 100%;
+  }
+
+  .header > ul > li {
+    padding-left: 0;
+    padding-rigth: 0;
+  }
+
   .header {
     border-bottom: none;
     align-items: flex-end;
+  }
+
+  .menu-substrate {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #f2f2f2;
+    transition: left 0.25s linear;
+    left: -110%;
+    z-index: 500;
+  }
+
+  .menu-substrate.open {
+    left: 0;
   }
 
   .welcome__title {

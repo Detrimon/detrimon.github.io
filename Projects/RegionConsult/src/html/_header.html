@@ -1,30 +1,52 @@
 <header class="header-container">
+  <div class="menu-substrate">
+    <div class="container min-container menu-substrate__container">
+      <span class="rcicons-arrow-right menu-substrate__icon-close" data-toclosemenu></span>
+      <div class="menu-substrate__foot-sign">
+        <div class="menu-substrate__image-container">
+          <span class="rcicons-logo_bottom"></span>
+        </div>
+        <div class="menu-substrate__contacts-container">
+          <div class="menu-substrate__mailphone-container">
+            <a href="tel:84955454790">+7 (495) 545 47 90</a><br />
+            <a href="mailto:info@regionc.ru">info@regionc.ru</a>
+          </div>
+          <div class="menu-substrate__freephone-container">
+            <a href="tel:88005551179">8 800 555 11 79</a>
+            <br />Звонок по России бесплатный
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <div id="idHeader" class="container min-container">
     <div class="header">
       <div class="header__logo">
         <img class="header__logo-img" src="img/Logo.png" alt="" />
       </div>
-      <ul id="idMainMenu" class="text-menu__container">
+      <!-- <div class="text-menu__container"> -->
+      <ul id="idMainMenu">
         <li class="">
-          <a href="#idCompetence">Наши компетенции</a>
+          <a href="#idCompetence" data-toclosemenu>Наши компетенции</a>
           <span class="ws-strokes"></span>
         </li>
         <li class="nowrap">
-          <a href="#idAbout">О нас</a>
+          <a href="#idAbout" data-toclosemenu>О нас</a>
           <span class="ws-strokes"></span>
         </li>
         <li class="">
-          <a href="#idCareer">Карьера</a>
+          <a href="#idCareer" data-toclosemenu>Карьера</a>
           <span class="ws-strokes"></span>
         </li>
         <li class="">
-          <a href="#idContacts">Контакты</a>
+          <a href="#idContacts" data-toclosemenu>Контакты</a>
           <span class="ws-strokes"></span>
         </li>
       </ul>
+      <!-- </div> -->
 
       <input id="menu__toggle" type="checkbox" />
-      <label class="menu__btn" for="menu__toggle" onclick="burgerOnClickHandler()">
+      <label class="menu__btn" for="menu__toggle">
         <span></span>
       </label>
     </div>

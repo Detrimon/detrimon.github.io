@@ -1,90 +1,56 @@
-// const elThemeSwitcher = document.querySelector("#idThemeSwitcher");
-// elThemeSwitcher.addEventListener("click", switchTheme);
+const burgerContainer = document.querySelector(".menu__btn");
+burgerContainer.addEventListener("click", burgerOnClickHandler);
 
-// const elCloseMenu = document.querySelector("#idCloseMenu");
-// elCloseMenu.addEventListener("click", closeMenuHandler);
+const closeIcon = document.querySelector(".menu-substrate__icon-close");
+closeIcon.addEventListener("click", closeMenuHandler);
 
-// const elBurger = document.querySelector("#idBurger");
-// elBurger.addEventListener("click", burgerOnClickHandler);
+const menuItems = document.querySelector("#idMainMenu");
+menuItems.addEventListener("click", closeMenuHandler);
 
-// const elBottomMenuOpener = document.querySelector("#idBottomMenuOpener");
-// elBottomMenuOpener.addEventListener("click", openBottomMenu);
+// Event Handlers ::
 
-// // Event Handlers ::
+function burgerOnClickHandler(e) {
+  e.preventDefault();
+  const topMenuElement = document.querySelector(".header-container");
+  topMenuElement.classList.toggle("open");
 
-// function burgerOnClickHandler(e) {
-//   const burgerContainer = document.querySelector(".menu__btn");
-//   const headerElement = document.querySelector("#idHeader");
-//   const body = document.body;
+  const popupMenuElement = document.querySelector(".menu-substrate");
+  popupMenuElement.classList.toggle("open");
 
-//   burgerContainer.classList.toggle("active");
-//   headerElement.classList.toggle("active");
+  const menuItems = document.querySelector("#idMainMenu");
+  menuItems.classList.toggle("open");
+}
 
-//   body.style.overflowY = "hidden";
-// }
+function closeMenuHandler(e) {
+  e.preventDefault();
 
-// function closeMenuHandler(e) {
-//   const burgerContainer = document.querySelector(".menu__btn");
-//   const headerElement = document.querySelector("#idHeader");
-//   const body = document.body;
+  // Если ширина экрана больше 961 px, ничего не делать. Это значит, что не должно быть всплывающего меню
+  if (document.documentElement.scrollWidth > 960.98) return;
 
-//   burgerContainer.classList.toggle("active");
-//   headerElement.classList.toggle("active");
+  const toCloseMenu = e.target.querySelector("[data-toclosemenu]");
+  console.log(toCloseMenu);
+  if (!e.target.dataset.hasOwnProperty("toclosemenu")) return;
 
-//   body.style.overflowY = "auto";
-// }
+  setTimeout(function () {
+    const topMenuElement = document.querySelector(".header-container");
+    topMenuElement.classList.toggle("open");
+  }, 250);
 
-// function switchTheme(e) {
-//   const switcher = document.querySelector("#idThemeSwitcher");
-//   const primaryColor = getComputedStyle(document.body).getPropertyValue(
-//     "--color-primary"
-//   );
-//   const secondaryColor = getComputedStyle(document.body).getPropertyValue(
-//     "--color-secondary"
-//   );
-//   const primaryDelimiterColor = getComputedStyle(
-//     document.body
-//   ).getPropertyValue("--color-delimiter-primary");
-//   const secondaryDelimiterColor = getComputedStyle(
-//     document.body
-//   ).getPropertyValue("--color-delimiter-secondary");
+  const popupMenuElement = document.querySelector(".menu-substrate");
+  popupMenuElement.classList.toggle("open");
 
-//   const primaryBgColor = getComputedStyle(document.body).getPropertyValue(
-//     "--color-bg-primary"
-//   );
-//   const secondaryBgColor = getComputedStyle(document.body).getPropertyValue(
-//     "--color-bg-secondary"
-//   );
+  const menuItems = document.querySelector("#idMainMenu");
+  menuItems.classList.toggle("open");
 
-//   document.body.style.setProperty("--color-primary", secondaryColor);
-//   document.body.style.setProperty("--color-secondary", primaryColor);
-//   document.body.style.setProperty(
-//     "--color-delimiter-primary",
-//     secondaryDelimiterColor
-//   );
-//   document.body.style.setProperty(
-//     "--color-delimiter-secondary",
-//     primaryDelimiterColor
-//   );
-//   document.body.style.setProperty("--color-bg-primary", secondaryBgColor);
-//   document.body.style.setProperty("--color-bg-secondary", primaryBgColor);
+  // const burgerContainer = document.querySelector(".menu__btn");
+  // const headerElement = document.querySelector("#idHeader");
+  // const body = document.body;
 
-//   if (switcher.classList.contains("active")) {
-//     switcher.classList.remove("active");
-//   } else {
-//     switcher.classList.add("active");
-//   }
-// }
+  // burgerContainer.classList.toggle("active");
+  // headerElement.classList.toggle("active");
 
-// function openBottomMenu(event) {
-//   event.preventDefault();
-
-//   const showMore = document.querySelector("#idShowMore");
-//   const bottomMenu = document.querySelector("#idBottomMenu");
-
-//   showMore.classList.toggle("active");
-//   bottomMenu.classList.toggle("active");
-// }
+  // body.style.overflowY = "auto";
+}
 
 // jQuery(window).scroll(function () {
 //   debugger;
