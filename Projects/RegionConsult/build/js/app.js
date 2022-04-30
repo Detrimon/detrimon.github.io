@@ -115,6 +115,9 @@ function closeMenuHandler(e) {
   var toCloseMenu = e.target.querySelector("[data-toclosemenu]");
   if (!e.target.dataset.hasOwnProperty("toclosemenu")) return;
 
+  var body = document.body;
+  body.style.overflowY = "auto";
+
   // setTimeout(function () {
   //   const topMenuElement = document.querySelector(".header-container");
   //   topMenuElement.classList.toggle("open");
@@ -128,12 +131,9 @@ function closeMenuHandler(e) {
 
   // const burgerContainer = document.querySelector(".menu__btn");
   // const headerElement = document.querySelector("#idHeader");
-  var body = document.body;
 
   // burgerContainer.classList.toggle("active");
   // headerElement.classList.toggle("active");
-
-  body.style.overflowY = "auto";
 }
 
 // jQuery(window).scroll(function () {
