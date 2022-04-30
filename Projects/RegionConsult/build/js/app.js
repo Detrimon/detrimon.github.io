@@ -100,7 +100,7 @@ function burgerOnClickHandler(e) {
   var popupMenuElement = document.querySelector(".menu-substrate");
   popupMenuElement.classList.toggle("open");
   var body = document.body;
-  body.style.overflowY = "hidden";
+  // body.style.overflowY = "hidden";
 
   // const menuItems = document.querySelector("#idPopupMenu");
   // menuItems.classList.toggle("open");
@@ -116,7 +116,7 @@ function closeMenuHandler(e) {
   if (!e.target.dataset.hasOwnProperty("toclosemenu")) return;
 
   var body = document.body;
-  body.style.overflowY = "auto";
+  // body.style.overflowY = "auto";
 
   // setTimeout(function () {
   //   const topMenuElement = document.querySelector(".header-container");

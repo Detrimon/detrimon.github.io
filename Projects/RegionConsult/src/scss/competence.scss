@@ -1,7 +1,7 @@
 @use "sass:map";
 
 .competence {
-  // scroll-behavior: smooth;
+  scroll-behavior: smooth;
   background-color: $color_lightgrey;
   position: relative;
   &__title-container {
