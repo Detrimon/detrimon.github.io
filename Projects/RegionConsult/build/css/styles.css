@@ -1100,6 +1100,7 @@ template {
 
 .growth {
   padding-bottom: 240px;
+  scroll-behavior: smooth;
 }
 
 .evo-years-container {
@@ -1153,6 +1154,7 @@ template {
 
 .career {
   background-color: #f2f2f2;
+  scroll-behavior: smooth;
 }
 
 .team {
@@ -1235,6 +1237,7 @@ template {
 
 .footer-container {
   background-color: #186fd4;
+  scroll-behavior: smooth;
 }
 
 .footer-container__rel {
@@ -1524,7 +1527,7 @@ a:hover {
     width: calc(100% + 6px);
     height: 100vh;
     background-color: #f2f2f2;
-    transition: left 0.25s linear;
+    transition: left 0.25s ease-in-out;
     left: -110%;
     z-index: 500;
   }

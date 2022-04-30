@@ -23,7 +23,7 @@
   // background-image: url(../img/logo_bg.webp);
   // background-repeat: no-repeat;
   // background-position: bottom center;
-  // scroll-behavior: smooth;
+  scroll-behavior: smooth;
 
   @media (max-width: toPixels(map.get($breakpoints, "xl"))) {
     padding-bottom: 120px;
