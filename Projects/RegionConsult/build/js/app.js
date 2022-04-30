@@ -105,7 +105,7 @@ function burgerOnClickHandler(e) {
 }
 
 function closeMenuHandler(e) {
-  e.preventDefault();
+  // e.preventDefault();
 
   // Если ширина экрана больше 961 px, ничего не делать. Это значит, что не должно быть всплывающего меню
   if (document.documentElement.scrollWidth > 960.98) return;
