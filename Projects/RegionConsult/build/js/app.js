@@ -100,7 +100,9 @@ function burgerOnClickHandler(e) {
   var popupMenuElement = document.querySelector(".menu-substrate");
   popupMenuElement.classList.toggle("open");
   var body = document.body;
-  body.style.overflowY = "hidden";
+  setTimeout(function () {
+    body.style.overflowY = "hidden";
+  }, 230);
 
   // const menuItems = document.querySelector("#idPopupMenu");
   // menuItems.classList.toggle("open");

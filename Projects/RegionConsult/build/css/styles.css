@@ -925,11 +925,9 @@ template {
 
 .header-container {
   background-color: #f2f2f2;
-  width: 100vw;
+  width: 100%;
   position: fixed;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
   z-index: 100;
 }
 
@@ -980,7 +978,7 @@ template {
   display: flex;
   flex-direction: column;
   height: 100%;
-  padding-top: 30px;
+  padding-top: 26px;
   padding-bottom: 40px;
 }
 

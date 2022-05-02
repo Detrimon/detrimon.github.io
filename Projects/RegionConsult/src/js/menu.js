@@ -17,7 +17,9 @@ function burgerOnClickHandler(e) {
   const popupMenuElement = document.querySelector(".menu-substrate");
   popupMenuElement.classList.toggle("open");
   const body = document.body;
-  body.style.overflowY = "hidden";
+  setTimeout(function () {
+    body.style.overflowY = "hidden";
+  }, 230);
 
   // const menuItems = document.querySelector("#idPopupMenu");
   // menuItems.classList.toggle("open");
