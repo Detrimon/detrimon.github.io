@@ -74,6 +74,8 @@ __webpack_require__(1);
 
 __webpack_require__(2);
 
+__webpack_require__(3);
+
 /***/ }),
 /* 1 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -81,94 +83,36 @@ __webpack_require__(2);
 "use strict";
 
 
-var burgerContainer = document.querySelector(".menu__btn");
-burgerContainer.addEventListener("click", burgerOnClickHandler);
+var popupMenuElement = document.querySelector(".menu-substrate");
+var bodyElement = document.body;
 
-var closeIcon = document.querySelector(".menu-substrate__icon-close");
-closeIcon.addEventListener("click", closeMenuHandler);
+var burgerContainerElement = document.querySelector(".menu__btn");
+burgerContainerElement.addEventListener("click", burgerOnClickHandler);
 
-var menuItems = document.querySelector("#idPopupMenu");
-menuItems.addEventListener("click", closeMenuHandler);
+var closeIconElement = document.querySelector(".menu-substrate__icon-close");
+closeIconElement.addEventListener("click", closeMenuHandler);
+
+var menuItemsElement = document.querySelector("#idPopupMenu");
+menuItemsElement.addEventListener("click", closeMenuHandler);
 
 // Event Handlers ::
 
 function burgerOnClickHandler(e) {
   e.preventDefault();
-  // const topMenuElement = document.querySelector(".header-container");
-  // topMenuElement.classList.toggle("open");
 
-  var popupMenuElement = document.querySelector(".menu-substrate");
   popupMenuElement.classList.toggle("open");
-  var body = document.body;
   setTimeout(function () {
-    body.style.overflowY = "hidden";
+    bodyElement.style.overflowY = "hidden";
   }, 230);
-
-  // const menuItems = document.querySelector("#idPopupMenu");
-  // menuItems.classList.toggle("open");
 }
 
 function closeMenuHandler(e) {
-  // e.preventDefault();
-
-  // Если ширина экрана больше 961 px, ничего не делать. Это значит, что не должно быть всплывающего меню
   if (document.documentElement.scrollWidth > 960.98) return;
-
-  var toCloseMenu = e.target.querySelector("[data-toclosemenu]");
   if (!e.target.dataset.hasOwnProperty("toclosemenu")) return;
 
-  var body = document.body;
   body.style.overflowY = "auto";
-
-  // setTimeout(function () {
-  //   const topMenuElement = document.querySelector(".header-container");
-  //   topMenuElement.classList.toggle("open");
-  // }, 250);
-
-  var popupMenuElement = document.querySelector(".menu-substrate");
   popupMenuElement.classList.toggle("open");
-
-  // const menuItems = document.querySelector("#idPopupMenu");
-  // menuItems.classList.toggle("open");
-
-  // const burgerContainer = document.querySelector(".menu__btn");
-  // const headerElement = document.querySelector("#idHeader");
-
-  // burgerContainer.classList.toggle("active");
-  // headerElement.classList.toggle("active");
 }
-
-// jQuery(window).scroll(function () {
-//   debugger;
-//   var $sections = $("section");
-//   $sections.each(function (i, el) {
-//     var top = $(el).offset().top - 600;
-//     var bottom = top + $(el).height();
-//     var scroll = $(window).scrollTop();
-//     var id = $(el).attr("id");
-//     console.log("couter");
-//     if (scroll > top && scroll < bottom) {
-//       $("a.active").removeClass("active");
-//       $('a[href="#' + id + '"]').addClass("active");
-//     }
-//   });
-// });
-
-// $("#idMainMenu").on("click", "a", function (event) {
-//   // исключаем стандартную реакцию браузера
-//   debugger;
-//   event.preventDefault();
-
-//   // получем идентификатор блока из атрибута href
-//   var id = $(this).attr("href");
-//   // находим высоту, на которой расположен блок
-//   let top = $(id).offset().top;
-
-//   // анимируем переход к блоку, время: 500 мс
-//   $("body,html").animate({ scrollTop: top }, 500);
-// });
-
-// $("#idMainMenu").on("click");
 
 /***/ }),
 /* 2 */
@@ -177,22 +121,84 @@ function closeMenuHandler(e) {
 "use strict";
 
 
-var fold = document.getElementById("idFold");
+var foldElement = document.getElementById("idFold");
 
-fold.addEventListener("click", function (e) {
+foldElement.addEventListener("click", function (e) {
   e.preventDefault();
-
-  var target = e.target;
-  var toClickBlock = target.closest("[data-toClick]");
+  var toClickBlock = e.target.closest("[data-toClick]");
 
   if (toClickBlock) {
-    var arrow = toClickBlock.querySelector(".competence__fold_title-arrow");
-    arrow.classList.toggle("open");
-    var textBlock = toClickBlock.parentNode.querySelector("ul");
-    console.log(textBlock);
-    textBlock.classList.toggle("open");
+    var arrowElement = toClickBlock.querySelector(".competence__fold_title-arrow");
+    var textBlockElement = toClickBlock.parentNode.querySelector("ul");
+
+    arrowElement.classList.toggle("open");
+    textBlockElement.classList.toggle("open");
   }
 });
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var aMenuAnchors = document.querySelectorAll("[data-menu_anchor]");
+var nMenuAnchorsLength = aMenuAnchors.length;
+var menuElement = document.getElementById("idMainMenu");
+
+var nOffset = 220; // сдвиг вниз от начала секции, когда считать, что мы попали на новый раздел;
+var scrollTimer = void 0;
+var resizeTimer = void 0;
+
+var aMenuItemsToAnchors = [];
+makeAnchorsArray();
+
+window.addEventListener("resize", makeAnchorsArray);
+
+window.addEventListener("scroll", function (e) {
+  if (scrollTimer) return;
+
+  setTimeout(changeMenuState, 500);
+
+  scrollTimer = setTimeout(function () {
+    scrollTimer = undefined;
+  }, 100);
+});
+
+function makeAnchorsArray() {
+  if (resizeTimer) return;
+  console.log("makeAnchorsArray");
+
+  aMenuAnchors.forEach(function (item) {
+    var itemId = item.id;
+    for (var i = 0, ln = menuElement.children.length; i < ln; i++) {
+      if (menuElement.children[i].firstElementChild.href.split("#")[1] === itemId) {
+        aMenuItemsToAnchors.push(menuElement.children[i].firstElementChild);
+        break;
+      }
+    }
+  });
+
+  resizeTimer = setTimeout(function () {
+    resizeTimer = undefined;
+  }, 100);
+}
+
+function changeMenuState() {
+  var currentScrollBottomPosition = document.documentElement.clientHeight + document.documentElement.scrollTop;
+
+  aMenuAnchors.forEach(function (item, index) {
+    var menuItemYPosition = item.offsetTop + nOffset;
+    var menuNextItemYPosition = aMenuAnchors[index + 1] && aMenuAnchors[index + 1].offsetTop + nOffset;
+
+    if (currentScrollBottomPosition > menuItemYPosition && (currentScrollBottomPosition <= menuNextItemYPosition || index === nMenuAnchorsLength - 1)) {
+      aMenuItemsToAnchors[index].classList.add("active");
+    } else {
+      aMenuItemsToAnchors[index].classList.remove("active");
+    }
+  });
+}
 
 /***/ })
 /******/ ]);

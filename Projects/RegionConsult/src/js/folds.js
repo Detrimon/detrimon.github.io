@@ -1,16 +1,16 @@
-const fold = document.getElementById("idFold");
+const foldElement = document.getElementById("idFold");
 
-fold.addEventListener("click", function (e) {
+foldElement.addEventListener("click", function (e) {
   e.preventDefault();
-
-  const target = e.target;
-  const toClickBlock = target.closest("[data-toClick]");
+  const toClickBlock = e.target.closest("[data-toClick]");
 
   if (toClickBlock) {
-    const arrow = toClickBlock.querySelector(".competence__fold_title-arrow");
-    arrow.classList.toggle("open");
-    const textBlock = toClickBlock.parentNode.querySelector("ul");
-    console.log(textBlock);
-    textBlock.classList.toggle("open");
+    const arrowElement = toClickBlock.querySelector(
+      ".competence__fold_title-arrow"
+    );
+    const textBlockElement = toClickBlock.parentNode.querySelector("ul");
+
+    arrowElement.classList.toggle("open");
+    textBlockElement.classList.toggle("open");
   }
 });
