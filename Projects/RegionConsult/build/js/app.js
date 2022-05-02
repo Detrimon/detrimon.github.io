@@ -110,7 +110,7 @@ function closeMenuHandler(e) {
   if (document.documentElement.scrollWidth > 960.98) return;
   if (!e.target.dataset.hasOwnProperty("toclosemenu")) return;
 
-  body.style.overflowY = "auto";
+  bodyElement.style.overflowY = "auto";
   popupMenuElement.classList.toggle("open");
 }
 
@@ -168,7 +168,6 @@ window.addEventListener("scroll", function (e) {
 
 function makeAnchorsArray() {
   if (resizeTimer) return;
-  console.log("makeAnchorsArray");
 
   aMenuAnchors.forEach(function (item) {
     var itemId = item.id;

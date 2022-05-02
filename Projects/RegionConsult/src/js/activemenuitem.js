@@ -23,7 +23,6 @@ window.addEventListener("scroll", function (e) {
 
 function makeAnchorsArray() {
   if (resizeTimer) return;
-  console.log("makeAnchorsArray");
 
   aMenuAnchors.forEach(function (item) {
     const itemId = item.id;

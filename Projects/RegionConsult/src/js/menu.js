@@ -25,6 +25,6 @@ function closeMenuHandler(e) {
   if (document.documentElement.scrollWidth > 960.98) return;
   if (!e.target.dataset.hasOwnProperty("toclosemenu")) return;
 
-  body.style.overflowY = "auto";
+  bodyElement.style.overflowY = "auto";
   popupMenuElement.classList.toggle("open");
 }
