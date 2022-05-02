@@ -20,14 +20,10 @@
 
 .growth {
   padding-bottom: 240px;
-  // background-image: url(../img/logo_bg.webp);
-  // background-repeat: no-repeat;
-  // background-position: bottom center;
   scroll-behavior: smooth;
 
   @media (max-width: toPixels(map.get($breakpoints, "xl"))) {
     padding-bottom: 120px;
-    // background-image: url(../img/logo_bg_1000.webp);
   }
 }
 
@@ -57,8 +53,6 @@
     flex: 1 0 40%;
     border-bottom: 2px solid $color_blue;
     padding-right: 52px;
-    // padding-bottom: 10px;
-    // padding-top: 80px;
     display: flex;
     flex-direction: column;
 

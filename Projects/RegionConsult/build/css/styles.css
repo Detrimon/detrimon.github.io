@@ -776,22 +776,18 @@ template {
 
 .rcicons-icon_automate:before {
   content: "\e908";
-  color: #186fd5;
 }
 
 .rcicons-icon_optimization:before {
   content: "\e909";
-  color: #186fd5;
 }
 
 .rcicons-icon_team:before {
   content: "\e90a";
-  color: #186fd5;
 }
 
 .rcicons-icon_tech:before {
   content: "\e90b";
-  color: #186fd5;
 }
 
 .rcicons-img-pdf:before {
@@ -941,6 +937,11 @@ template {
   font-size: 1rem;
   font-weight: 400;
   transition: border-color 0.25s linear;
+}
+
+.header__logo-img {
+  width: 213px;
+  height: 34px;
 }
 
 .header > ul {
@@ -1499,10 +1500,6 @@ template {
   row-gap: 10px;
 }
 
-html:root {
-  font-size: 18px;
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -1512,10 +1509,9 @@ body {
   font-family: "Manrope", sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: var(--color-secondary);
-  background: var(--color-primary);
+  color: #000000;
+  background: #ffffff;
   overflow-x: hidden;
-  transition: background 0.25s linear, color 0.25s linear;
 }
 
 body.active {
@@ -1566,15 +1562,6 @@ a:hover {
     max-width: 1400px;
     padding-left: 100px;
     padding-right: 100px;
-  }
-}
-
-@media (max-width: 1200px) {
-  html:root {
-    font-size: calc(
-      18px + 0 *
-        ((100vw - 300px) / 900)
-    );
   }
 }
 
@@ -1643,7 +1630,8 @@ a:hover {
   }
 
   .header__logo-img {
-    max-width: 180px;
+    width: 180px;
+    height: 28.725px;
   }
 
   .header > ul {

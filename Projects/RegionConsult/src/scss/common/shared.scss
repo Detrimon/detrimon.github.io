@@ -39,7 +39,6 @@
 }
 
 .ws-section-top-indent {
-  // padding-top: 240px;
   padding-top: 140px;
 
   @media (max-width: toPixels(map.get($breakpoints, "lg"))) {

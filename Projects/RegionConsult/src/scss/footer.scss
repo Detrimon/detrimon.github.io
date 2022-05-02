@@ -1,5 +1,4 @@
 @use "sass:map";
-// @import "./humburger-menu";
 
 .footer-container {
   background-color: $color_blue;
@@ -14,8 +13,6 @@
   display: flex;
   justify-content: space-between;
 
-  // position: relative;
-
   width: 100%;
 
   padding-top: 116px;
@@ -26,10 +23,6 @@
 
   transition: border-color $t_time linear;
 
-  // @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
-  //   padding-top: 116px;
-  // }
-
   &__logo {
     font-size: 42px;
     color: $color_white;
@@ -37,9 +30,6 @@
     @media (max-width: toPixels(map.get($breakpoints, "sm"))) {
       font-size: 36px;
     }
-  }
-
-  &__logo-img {
   }
 }
 
@@ -110,9 +100,6 @@
 }
 
 .footer-menu {
-  &__container {
-  }
-
   &__undermenustrokes {
     display: block;
     border-left: 2px solid $color_white;
@@ -138,12 +125,10 @@
       flex: 1 1 40%;
       font-size: $fontSizeRelBase_16;
       row-gap: 15px;
-      // padding-left: 20px;
     }
 
     @media (max-width: toPixels(map.get($breakpoints, "md"))) {
       row-gap: 30px;
-      // padding-left: 20px;
     }
 
     a {
@@ -212,7 +197,6 @@
   }
 
   &__icon {
-    // object-fit: contain;
     color: $color_white;
     font-size: 47px;
   }

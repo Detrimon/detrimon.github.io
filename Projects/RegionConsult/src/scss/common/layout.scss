@@ -9,22 +9,10 @@ $baseContentIndent: 20; // зазор справа и слева от конте
 $breakpoints: (
   "top": $maxWidthContainer + 2 * 100,
   "xl": 999.98 + 2 * 100,
-  // "lg": 999.98 + 2 * $baseContentIndent,
   "lg": 920.98 + 2 * $baseContentIndent,
   "md": 639.98 + 2 * $baseContentIndent,
   "sm": 339.98 + 2 * $baseContentIndent,
 );
-
-// Mixins
-
-// @mixin container($breakpoint) {
-//   $indent: calc(
-//     ($breakpoint * $baseContentIndent) / map.get($breakpoints, "top")
-//   );
-//   max-width: toPixels($breakpoint);
-//   padding-left: toPixels($indent);
-//   padding-right: toPixels($indent);
-// }
 
 // Classes
 
