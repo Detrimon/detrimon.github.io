@@ -83,6 +83,11 @@
         color: $color_blue;
       }
 
+      &:focus,
+      &:active {
+        color: $color_black;
+      }
+
       @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
         padding-top: 0px;
         margin-top: 28px;

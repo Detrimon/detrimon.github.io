@@ -1014,6 +1014,7 @@ template {
 }
 
 .menu-substrate__image-container {
+  padding-top: 20px;
   color: #186fd4;
   border-bottom: 2px solid #186fd4;
 }
@@ -1113,6 +1114,11 @@ template {
 
 .competence__fold_title-container:hover {
   color: #186fd4;
+}
+
+.competence__fold_title-container:focus,
+.competence__fold_title-container:active {
+  color: #000000;
 }
 
 .competence__fold_title-text {
