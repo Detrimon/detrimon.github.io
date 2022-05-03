@@ -89,6 +89,11 @@
     left: -110%;
     z-index: 500;
 
+    background-image: url(../img/bgLogoForMenu_lg.webp);
+    background-repeat: no-repeat;
+    background-position: 35vw 5vh;
+    background-size: 65vmin auto;
+
     &.open {
       left: -3px;
     }

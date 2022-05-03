@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -70,14 +70,30 @@
 "use strict";
 
 
-__webpack_require__(1);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var vacancyPath = exports.vacancyPath = "/data/vacancy.json";
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(0);
 
 __webpack_require__(2);
 
 __webpack_require__(3);
 
+__webpack_require__(4);
+
+__webpack_require__(5);
+
 /***/ }),
-/* 1 */
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -115,7 +131,7 @@ function closeMenuHandler(e) {
 }
 
 /***/ }),
-/* 2 */
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -137,7 +153,7 @@ foldElement.addEventListener("click", function (e) {
 });
 
 /***/ }),
-/* 3 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -198,6 +214,47 @@ function changeMenuState() {
     }
   });
 }
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _config = __webpack_require__(0);
+
+var careerItemsElement = document.getElementById("idCareerItems");
+
+var req = new XMLHttpRequest();
+req.responseType = "json";
+req.open("GET", _config.vacancyPath, true);
+req.onload = function () {
+  var jsonResponse = req.response;
+
+  jsonResponse.forEach(function (item) {
+    var li_el = document.createElement("li");
+    var a_el = document.createElement("a");
+    a_el.setAttribute("target", "__blank");
+    a_el.setAttribute("href", item.link);
+    a_el.textContent = item.title;
+
+    li_el.append(a_el);
+    careerItemsElement.append(li_el);
+  });
+};
+req.send(null);
+
+// async function getVacancy() {
+//   let response = await fetch("/data/vacancy.json");
+//   let data = await response.json();
+
+//   return data;
+// }
+
+// getVacancy().then(function (result) {
+//   console.log(result);
+// });
 
 /***/ })
 /******/ ]);

@@ -51,6 +51,8 @@
 }
 
 .ws-strokes {
+  position: relative;
+  bottom: -1px;
   display: block;
   border-left: 2px solid $color_blue;
   height: 10px;
