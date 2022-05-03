@@ -981,8 +981,8 @@ template {
   display: flex;
   flex-direction: column;
   height: 100%;
-  padding-top: 26px;
-  padding-bottom: 40px;
+  padding-top: 40px;
+  padding-bottom: 85px;
 }
 
 .menu-substrate__container > ul {
@@ -2004,6 +2004,11 @@ a:hover {
 }
 
 @media (max-height: 600px) {
+  .menu-substrate__container {
+    padding-top: 26px;
+    padding-bottom: 40px;
+  }
+
   .menu-substrate__container > ul {
     font-size: 0.8888888889rem;
   }
