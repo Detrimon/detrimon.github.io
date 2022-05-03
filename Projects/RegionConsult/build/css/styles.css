@@ -981,8 +981,8 @@ template {
   display: flex;
   flex-direction: column;
   height: 100%;
-  padding-top: 40px;
-  padding-bottom: 85px;
+  padding-top: 45px;
+  padding-bottom: 160px;
 }
 
 .menu-substrate__container > ul {
