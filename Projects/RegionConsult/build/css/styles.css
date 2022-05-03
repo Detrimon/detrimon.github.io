@@ -981,7 +981,7 @@ template {
   display: flex;
   flex-direction: column;
   height: 100%;
-  padding-top: 45px;
+  padding-top: 30px;
   padding-bottom: 160px;
 }
 
@@ -1660,8 +1660,8 @@ a:hover {
     z-index: 500;
     background-image: url(../img/bgLogoForMenu_lg.webp);
     background-repeat: no-repeat;
-    background-position: 35vw 5vh;
-    background-size: 65vmin auto;
+    background-position: 35vw center;
+    background-size: 60vmin auto;
   }
 
   .menu-substrate.open {
