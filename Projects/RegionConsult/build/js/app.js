@@ -73,7 +73,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var vacancyPath = exports.vacancyPath = "/data/vacancy.json";
+var vacancyPath = exports.vacancyPath = "/public/data/vacancy.json";
 
 /***/ }),
 /* 1 */

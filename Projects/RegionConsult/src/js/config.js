@@ -1,1 +1,1 @@
-export const vacancyPath = "/data/vacancy.json";
+export const vacancyPath = "/public/data/vacancy.json";
