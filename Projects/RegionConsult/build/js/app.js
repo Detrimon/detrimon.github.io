@@ -232,7 +232,11 @@ req.open("GET", _config.vacancyPath, true);
 req.onload = function () {
   var jsonResponse = req.response;
 
-  if (jsonResponse.length < 0) return;
+  if (!jsonResponse || jsonResponse.length < 0) {
+    console.log("padding...");
+    careerItemsElement.style.paddingTop = 0;
+    return;
+  }
 
   var vacancySpecialTextElement = document.querySelector("[data-isVacancy]");
   vacancySpecialTextElement.classList.remove("ws-not-display");

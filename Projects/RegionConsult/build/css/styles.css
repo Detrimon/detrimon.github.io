@@ -1351,14 +1351,34 @@ template {
   padding-top: 30px;
 }
 
-.vacancy__text > a,
+.vacancy__text > a {
+  color: #186fd4;
+  display: inline-block;
+  position: relative;
+  transition: all 0.25s linear;
+}
+
+.vacancy__text > a::after {
+  content: "";
+  position: relative;
+  opacity: 0;
+  width: 100%;
+  height: 1px;
+  bottom: 3px;
+  display: block;
+  background: #000000;
+  transition: all 0.25s linear;
+}
+
+.vacancy__text > a:hover::after {
+  width: 100%;
+  background: #186fd4;
+  opacity: 1;
+}
+
 .vacancy__text > a:target,
 .vacancy__text > a:focus {
   color: #186fd4;
-}
-
-.vacancy__text > a:hover {
-  color: #000000;
 }
 
 .vacancy__items {
