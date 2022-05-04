@@ -232,6 +232,11 @@ req.open("GET", _config.vacancyPath, true);
 req.onload = function () {
   var jsonResponse = req.response;
 
+  if (jsonResponse.length < 0) return;
+
+  var vacancySpecialTextElement = document.querySelector("[data-isVacancy]");
+  vacancySpecialTextElement.classList.remove("ws-not-display");
+
   jsonResponse.forEach(function (item) {
     var li_el = document.createElement("li");
     var a_el = document.createElement("a");
@@ -244,17 +249,6 @@ req.onload = function () {
   });
 };
 req.send(null);
-
-// async function getVacancy() {
-//   let response = await fetch("/data/vacancy.json");
-//   let data = await response.json();
-
-//   return data;
-// }
-
-// getVacancy().then(function (result) {
-//   console.log(result);
-// });
 
 /***/ })
 /******/ ]);

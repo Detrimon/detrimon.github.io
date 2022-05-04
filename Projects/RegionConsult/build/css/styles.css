@@ -822,6 +822,10 @@ template {
   content: "\e906";
 }
 
+.ws-not-display {
+  display: none;
+}
+
 .ws-title-h1 {
   color: #000000;
   font-family: "Russo One", sans-serif;
@@ -1282,7 +1286,7 @@ template {
 .logo-bg-career-left {
   position: absolute;
   left: -350px;
-  top: -50px;
+  top: -200px;
 }
 
 .logo-bg-career-right {
@@ -1338,9 +1342,23 @@ template {
 }
 
 .vacancy__slogan {
-  position: relative;
   padding-top: 80px;
-  max-width: 880px;
+  max-width: 775px;
+}
+
+.vacancy__text {
+  position: relative;
+  padding-top: 30px;
+}
+
+.vacancy__text > a,
+.vacancy__text > a:target,
+.vacancy__text > a:focus {
+  color: #186fd4;
+}
+
+.vacancy__text > a:hover {
+  color: #000000;
 }
 
 .vacancy__items {

@@ -2,6 +2,10 @@
   color: $color_black;
 }
 
+.ws-not-display {
+  display: none;
+}
+
 .ws-title-h1 {
   @include title;
   font-family: $fontFamilyAdditional;

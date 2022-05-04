@@ -1,7 +1,7 @@
 .logo-bg-career-left {
   position: absolute;
   left: -350px;
-  top: -50px;
+  top: -200px;
 
   @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
     display: none;
@@ -102,13 +102,27 @@
 
 .vacancy {
   &__slogan {
-    position: relative;
     padding-top: 80px;
-    max-width: 880px;
+    max-width: 775px;
 
     @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
       padding-top: 42px;
       max-width: 360px;
+    }
+  }
+
+  &__text {
+    position: relative;
+    padding-top: 30px;
+
+    > a,
+    > a:target,
+    > a:focus {
+      color: $color_blue;
+    }
+
+    > a:hover {
+      color: $color_black;
     }
   }
 
