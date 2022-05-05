@@ -4,8 +4,20 @@
   position: relative;
   height: 100vh;
 
-  padding-bottom: 120px;
-  padding-top: 200px;
+  &__logo {
+    padding-top: 40px;
+    padding-bottom: 120px;
+  }
+
+  &__logo-img {
+    width: 213px;
+    height: 34px;
+
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      width: 180px;
+      height: 28.725px;
+    }
+  }
 
   &__title-container {
     // display: flex;

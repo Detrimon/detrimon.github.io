@@ -22,14 +22,14 @@
     <link rel="stylesheet" href="css/styles.min.css" />
     <link rel="icon" href="favicon.ico" />
 
-    <script defer type="text/javascript" src="js/app.min.js"></script>
-
     <title>РегионКонсалт / Page Not Found</title>
   </head>
   <body>
-    @@include("./html/_header.html")
     <div class="notFound">
       <div class="container min-container">
+        <div class="notFound__logo">
+          <img class="notFound__logo-img" src="img/Logo.png" alt="" />
+        </div>
         <div class="notFound__title-container">
           <h1 class="ws-title-h1 notFound__title">Страница не найдена<br />Ошибка 404</h1>
         </div>
@@ -38,7 +38,7 @@
           <div id="idFold" class="notFound__fold_main">
             <!-- Раздел "Not Found" -->
             <div class="notFound__fold_section">
-              <a href="/" class="notFound__fold_title-container">
+              <a href="index.html" class="notFound__fold_title-container">
                 <p class="notFound__fold_title-text">Перейти на главную страницу</p>
                 <span class="rcicons-arrow-right-top notFound__fold_title-arrow"></span>
               </a>
@@ -47,6 +47,5 @@
         </div>
       </div>
     </div>
-    @@include("./html/_footer.html")
   </body>
 </html>
