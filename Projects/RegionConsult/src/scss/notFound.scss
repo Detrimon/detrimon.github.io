@@ -2,41 +2,18 @@
   scroll-behavior: smooth;
   background-color: $color_lightgrey;
   position: relative;
-  height: 100vh;
 
-  &__logo {
-    padding-top: 40px;
-    padding-bottom: 120px;
-  }
-
-  &__logo-img {
-    width: 213px;
-    height: 34px;
-
-    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
-      width: 180px;
-      height: 28.725px;
-    }
-  }
+  padding-top: 200px;
+  padding-bottom: 120px;
 
   &__title-container {
-    // display: flex;
     padding-bottom: 30px;
-
-    // row-gap: 25px;
-
-    // @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
-    //   padding-bottom: 120px;
-    // }
-
-    // @media (max-width: toPixels(map.get($breakpoints, "md"))) {
-    //   flex-wrap: wrap;
-    // }
   }
 
   &__fold {
     &_container {
       display: flex;
+      flex-basis: 100%;
     }
 
     &_main {
@@ -45,11 +22,11 @@
       border-top: 2px solid $color_blue;
       border-bottom: 2px solid $color_blue;
 
-      @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
-        padding-left: 40%;
+      @media (max-width: toPixels(map.get($breakpoints, "md"))) {
+        padding-left: 35%;
       }
 
-      @media (max-width: toPixels(map.get($breakpoints, "md"))) {
+      @media (max-width: toPixels(map.get($breakpoints, "sm"))) {
         padding-left: 20%;
       }
     }
@@ -80,8 +57,13 @@
 
       &:focus,
       &:active {
-        color: $color_black;
+        color: $color_blue;
       }
+
+      // @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      //   padding-top: 0px;
+      //   margin-top: 28px;
+      // }
     }
 
     &_title-text {
