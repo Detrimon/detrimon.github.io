@@ -1,0 +1,25 @@
+.fromBottomIn {
+  transition: transform 1.5s ease, opacity 1.5s ease;
+
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+.fromBottomOut {
+  transition: transform 1.5s ease, opacity 1.5s ease;
+
+  transform: translate(0, 20px);
+  opacity: 0;
+}
+
+.visibilityIn {
+  transition: opacity 1.5s ease;
+
+  opacity: 1;
+}
+
+.visibilityOut {
+  transition: opacity 1.5s ease;
+
+  opacity: 0;
+}

@@ -10,12 +10,16 @@
   "author": "Evgeny Turovsky <detrimon@gmail.com> (https://detrimon.github.io)",
   "license": "ISC",
   "dependencies": {
+    "@terwanerik/scrolltrigger": "^1.0.5",
     "sass-loader": "^12.4.0",
     "webp-converter": "2.2.3"
   },
   "devDependencies": {
     "@babel/core": "^7.16.12",
     "@babel/preset-env": "^7.16.11",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
     "browser-sync": "^2.27.7",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
@@ -40,9 +44,6 @@
     "node-notifier": "^10.0.0",
     "node-sass": "^7.0.1",
     "sass": "^1.45.1",
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-preset-env": "^1.6.1",
     "webpack": "^3.11.0",
     "webpack-stream": "^4.0.1"
   }

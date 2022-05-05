@@ -11,6 +11,8 @@
 
 @import "./common/shared";
 
+@import "./common/anim-on-scroll";
+
 @import "./header";
 @import "./welcome";
 @import "./competence";
@@ -21,7 +23,7 @@
 @import "./footer";
 
 html:root {
-  // @include adaptiveValue("font-size", $fontBaseSize, 18);
+  @include adaptiveValue("font-size", $fontBaseSize, 18);
 }
 
 html {

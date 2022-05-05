@@ -103,7 +103,7 @@
 .vacancy {
   &__slogan {
     padding-top: 80px;
-    max-width: 775px;
+    max-width: 821px;
 
     @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
       padding-top: 42px;
