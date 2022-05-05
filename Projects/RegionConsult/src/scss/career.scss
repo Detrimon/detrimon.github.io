@@ -1,7 +1,7 @@
 .logo-bg-career-left {
   position: absolute;
   left: -350px;
-  top: -200px;
+  top: -150px;
 
   @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
     display: none;
