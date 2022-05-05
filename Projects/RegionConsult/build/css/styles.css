@@ -1268,6 +1268,10 @@ template {
   scroll-behavior: smooth;
 }
 
+.growth__slogan {
+  max-width: 310px;
+}
+
 .evo-years-container {
   display: flex;
 }
