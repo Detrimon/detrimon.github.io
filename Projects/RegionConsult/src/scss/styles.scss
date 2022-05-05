@@ -21,6 +21,7 @@
 @import "./growth";
 @import "./career";
 @import "./footer";
+@import "./notFound";
 
 html:root {
   @include adaptiveValue("font-size", $fontBaseSize, 18);

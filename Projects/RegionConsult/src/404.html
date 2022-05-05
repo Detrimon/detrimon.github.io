@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Временно НЕ индексировать. Заменить content на "index,follow" перед публикацией у Заказчика -->
+    <meta name="robots" content="noindex, nofollow" />
+    <!-- SEO -->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <!-- Cache control -->
+    <meta http-equiv="cache-control" content="public" />
+    <!-- VIEWPORT configuration -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1" />
+    <!-- Подключение шрифтов -->
+    <link rel="preload" href="fonts/xn7gYHE41ni1AdIRggOxSvfedN62Zw.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="fonts/xn7gYHE41ni1AdIRggexSvfedN4.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="fonts/Z9XUDmZRWg6M1LvRYsHOy8mJvLuL9BLT.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="fonts/Z9XUDmZRWg6M1LvRYsHOz8mJvLuL9A.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="fonts/rconsult.woff" as="font" type="font/woff" crossorigin />
+    <!-- Подключение стилей -->
+    <link rel="stylesheet" href="css/styles.min.css" />
+    <link rel="icon" href="favicon.ico" />
+
+    <script defer type="text/javascript" src="js/app.min.js"></script>
+
+    <title>РегионКонсалт / Page Not Found</title>
+  </head>
+  <body>
+    @@include("./html/_header.html")
+    <div class="notFound">
+      <div class="container min-container">
+        <div class="notFound__title-container">
+          <h1 class="ws-title-h1 notFound__title">Страница не найдена<br />Ошибка 404</h1>
+        </div>
+
+        <div class="notFound__fold_container">
+          <div id="idFold" class="notFound__fold_main">
+            <!-- Раздел "Not Found" -->
+            <div class="notFound__fold_section">
+              <a href="/" class="notFound__fold_title-container">
+                <p class="notFound__fold_title-text">Перейти на главную страницу</p>
+                <span class="rcicons-arrow-right-top notFound__fold_title-arrow"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    @@include("./html/_footer.html")
+  </body>
+</html>
