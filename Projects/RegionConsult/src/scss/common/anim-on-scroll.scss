@@ -12,14 +12,11 @@
   opacity: 0;
 }
 
-.visibilityIn {
-  transition: opacity 1.5s ease;
-
-  opacity: 1;
-}
-
-.visibilityOut {
-  transition: opacity 1.5s ease;
-
+.visible,
+.invisible {
   opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.visible {
+  opacity: 1;
 }
