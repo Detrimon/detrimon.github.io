@@ -83,7 +83,6 @@ function css() {
     .pipe(group_media())
     .pipe(
       autoprefixer({
-        overrideBrowserlist: ["last 5 versions"],
         cascade: true,
       })
     )
