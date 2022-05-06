@@ -43,6 +43,8 @@
     "gulp-webpcss": "^1.1.1",
     "node-notifier": "^10.0.0",
     "node-sass": "^7.0.1",
+    "postcss": "^8.4.13",
+    "postcss-sorting": "^7.0.1",
     "sass": "^1.45.1",
     "webpack": "^3.11.0",
     "webpack-stream": "^4.0.1"

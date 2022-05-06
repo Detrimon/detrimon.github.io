@@ -2,19 +2,19 @@
 @import "./humburger-menu";
 
 .header-container {
-  background-color: $color_lightgrey;
-  width: 100%;
-
   position: fixed;
-  top: 0;
   z-index: 100;
+  top: 0;
+
+  width: 100%;
+  background-color: $color_lightgrey;
 }
 
 .header {
+  position: relative;
+
   display: flex;
   justify-content: space-between;
-
-  position: relative;
   width: 100%;
   padding-top: 36px;
   border-bottom: 2px solid $color_blue;
@@ -26,6 +26,11 @@
 
   @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
     padding-top: 30px;
+  }
+
+  @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+    align-items: flex-end;
+    border-bottom: none;
   }
 
   &__logo-img {
@@ -50,9 +55,8 @@
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-
-      padding-left: 77px;
       padding-right: 1px;
+      padding-left: 77px;
 
       > a {
         padding-bottom: 9px;
@@ -63,36 +67,33 @@
       }
     }
   }
-
-  @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
-    border-bottom: none;
-    align-items: flex-end;
-  }
 }
 
 .sub-header {
   height: 30px;
-  background-color: $color_lightgrey;
   box-shadow: 0px 10px 15px 0px rgba(209, 209, 209, 0.2);
+  background-color: $color_lightgrey;
 }
 
 .menu-substrate {
   display: none;
 
   @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
-    display: block;
     position: fixed;
+    z-index: 500;
+    left: -110%;
+
+    display: block;
     width: calc(100% + 6px);
     height: 100vh;
-    background-color: $color_lightgrey;
-    transition: left $t_time ease-in-out;
-    left: -110%;
-    z-index: 500;
 
+    background-color: $color_lightgrey;
     background-image: url(../img/bgLogoForMenu_lg.webp);
-    background-repeat: no-repeat;
     background-position: 35vw center;
     background-size: 60vmin auto;
+    background-repeat: no-repeat;
+
+    transition: left $t_time ease-in-out;
 
     &.open {
       left: -3px;
@@ -134,26 +135,28 @@
 
   &__icon-close {
     display: block;
-    text-align: right;
-    cursor: pointer;
-    color: $color_blue;
+
     font-size: 45px;
+    color: $color_blue;
+    text-align: right;
+
+    cursor: pointer;
   }
 
   &__foot-sign {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    width: 100%;
-
     flex: 1 0 auto;
+    width: 100%;
   }
 
   &__image-container {
     padding-top: 20px;
+    border-bottom: 2px solid $color_blue;
+
     font-size: $fontSizeRelBase_22;
     color: $color_blue;
-    border-bottom: 2px solid $color_blue;
   }
 
   &__contacts-container {
@@ -161,8 +164,9 @@
     flex-direction: column;
     flex-wrap: wrap;
     column-gap: 60px;
-    color: $color_blue;
+
     font-size: $fontSizeRelBase_16;
+    color: $color_blue;
 
     @media (max-height: 600px) {
       flex-direction: row;

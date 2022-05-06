@@ -1,10 +1,12 @@
 .notFound {
-  scroll-behavior: smooth;
-  background-color: $color_lightgrey;
   position: relative;
 
   padding-top: 200px;
   padding-bottom: 120px;
+
+  background-color: $color_lightgrey;
+
+  scroll-behavior: smooth;
 
   &__title-container {
     padding-bottom: 30px;
@@ -40,16 +42,18 @@
     }
 
     &_title-container {
+      position: relative;
+
       display: flex;
       justify-content: space-between;
 
       padding-top: 34px;
-      // margin-top: 30px;
       padding-bottom: 14px;
+
+      color: $color_black;
       cursor: pointer;
 
       transition: color $t_time linear;
-      color: $color_blue;
 
       &:hover {
         color: $color_blue;
@@ -59,11 +63,6 @@
       &:active {
         color: $color_blue;
       }
-
-      // @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
-      //   padding-top: 0px;
-      //   margin-top: 28px;
-      // }
     }
 
     &_title-text {
@@ -83,75 +82,17 @@
     }
 
     &_title-arrow {
-      align-self: flex-end;
       position: relative;
+
       bottom: 12px;
+      align-self: flex-end;
 
       font-size: $fontSizeRelBase_48;
       color: $color_blue;
 
-      transform: rotate(0deg);
-      transform-origin: 18px 12px;
-      transition: transform 0.25s linear;
-
       @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
         font-size: $fontSizeRelBase_24;
         transform-origin: 9px 6px;
-      }
-
-      &.open {
-        transform: rotate(45deg);
-      }
-    }
-
-    &_content-container {
-      overflow: hidden;
-      height: auto;
-      max-height: 0;
-
-      transition: max-height 0.25s ease-in-out;
-
-      padding-left: 35%;
-
-      @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
-        padding-left: 14%;
-      }
-
-      > li {
-        font-size: $fontSizeRelBase_26;
-        list-style-type: "—";
-        padding-left: 22px;
-        padding-bottom: 14px;
-
-        @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
-          font-size: $fontSizeRelBase_20;
-          padding-left: 9px;
-        }
-
-        @media (max-width: toPixels(map.get($breakpoints, "sm"))) {
-          font-size: $fontSizeRelBase_18;
-          padding-left: 7px;
-        }
-
-        &::marker {
-          color: $color_blue;
-        }
-
-        &:first-child {
-          padding-top: 32px;
-
-          @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
-            padding-top: 27px;
-          }
-        }
-      }
-
-      @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
-        font-size: $fontSizeRelBase_20;
-      }
-
-      &.open {
-        max-height: 750px;
       }
     }
   }

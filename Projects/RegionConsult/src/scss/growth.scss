@@ -1,7 +1,7 @@
 .logo-bg-growth-left {
   position: absolute;
-  left: -470px;
   top: -40px;
+  left: -470px;
 
   @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
     display: none;
@@ -44,21 +44,21 @@
 
 .evo-years {
   position: relative;
-  flex: 0 0 80%;
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: space-between;
+  flex: 0 0 80%;
 
   @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
     flex: 1 0 80%;
   }
 
   &__item-container {
-    flex: 1 0 40%;
-    border-bottom: 2px solid $color_blue;
-    padding-right: 52px;
     display: flex;
     flex-direction: column;
+    flex: 1 0 40%;
+    padding-right: 52px;
+    border-bottom: 2px solid $color_blue;
 
     @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
       padding-right: 40px;
@@ -68,8 +68,8 @@
   &__item-title {
     padding-top: 80px;
     font-size: $fontSizeRelBase_61;
-    line-height: 83px;
     font-weight: 300;
+    line-height: 83px;
     color: $color_blue;
 
     @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
@@ -78,7 +78,7 @@
   }
 
   &__item-text {
-    padding: 5px 5px 10px 5px;
     flex: 1 1 auto;
+    padding: 5px 5px 10px 5px;
   }
 }

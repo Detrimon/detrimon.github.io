@@ -4,8 +4,8 @@
   background-color: $color_lightgrey;
 
   &__title {
-    padding-bottom: 62px;
     max-width: 960px;
+    padding-bottom: 62px;
 
     @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
       padding-bottom: 40px;
@@ -17,13 +17,13 @@
     height: 906px;
 
     background-image: url("../img/welcome_1920.webp");
-    background-repeat: no-repeat;
     background-position: 50% -70px;
     background-size: cover;
+    background-repeat: no-repeat;
 
     @media (max-width: toPixels(map.get($breakpoints, "xl"))) {
-      background-image: url("../img/welcome_1200.webp");
       height: 588px;
+      background-image: url("../img/welcome_1200.webp");
     }
 
     @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
@@ -36,8 +36,8 @@
     }
 
     @media (max-width: toPixels(map.get($breakpoints, "sm"))) {
-      background-image: url("../img/welcome_430.webp");
       height: 300px;
+      background-image: url("../img/welcome_430.webp");
     }
   }
 }

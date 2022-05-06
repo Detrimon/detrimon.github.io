@@ -7,9 +7,9 @@
     max-height: 700px;
 
     background-image: url("../img/data-technology-bg_1920.webp");
-    background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
 
     @media (max-width: toPixels(map.get($breakpoints, "xl"))) {
       background-image: url("../img/data-technology-bg_1200.webp");
@@ -25,9 +25,9 @@
   }
 
   &__title {
+    max-width: 1109px;
     padding-top: 189px;
     color: $color_lightgrey;
-    max-width: 1109px;
 
     @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
       padding-top: 160px;

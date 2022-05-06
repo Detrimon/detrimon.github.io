@@ -1,13 +1,13 @@
 @use "sass:map";
 
 .competence {
-  scroll-behavior: smooth;
-  background-color: $color_lightgrey;
   position: relative;
+  background-color: $color_lightgrey;
+  scroll-behavior: smooth;
   &__title-container {
     display: flex;
-    padding-bottom: 227px;
     row-gap: 25px;
+    padding-bottom: 227px;
 
     @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
       padding-bottom: 120px;
@@ -27,8 +27,8 @@
     font-size: $fontSizeRelBase_26;
 
     @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
-      font-size: $fontSizeRelBase_20;
       max-width: 450px;
+      font-size: $fontSizeRelBase_20;
     }
 
     @media (max-width: toPixels(map.get($breakpoints, "md"))) {
@@ -73,20 +73,11 @@
       justify-content: space-between;
 
       padding-top: 20px;
-      margin-top: 30px;
       padding-bottom: 3px;
+      margin-top: 30px;
       cursor: pointer;
 
       transition: color $t_time linear;
-
-      &:hover {
-        color: $color_blue;
-      }
-
-      &:focus,
-      &:active {
-        color: $color_black;
-      }
 
       @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
         padding-top: 0px;
@@ -95,6 +86,15 @@
         &:hover {
           color: $color_black;
         }
+      }
+
+      &:hover {
+        color: $color_blue;
+      }
+
+      &:focus,
+      &:active {
+        color: $color_black;
       }
     }
 
@@ -115,9 +115,9 @@
     }
 
     &_title-arrow {
-      align-self: flex-end;
       position: relative;
       bottom: 12px;
+      align-self: flex-end;
 
       font-size: $fontSizeRelBase_48;
       color: $color_blue;
@@ -137,32 +137,36 @@
     }
 
     &_content-container {
-      overflow: hidden;
       height: auto;
       max-height: 0;
 
-      transition: max-height 0.25s ease-in-out;
-
       padding-left: 35%;
+      overflow: hidden;
+
+      transition: max-height 0.25s ease-in-out;
 
       @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
         padding-left: 14%;
       }
 
+      @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+        font-size: $fontSizeRelBase_20;
+      }
+
       > li {
+        padding-bottom: 14px;
+        padding-left: 22px;
         font-size: $fontSizeRelBase_26;
         list-style-type: "—";
-        padding-left: 22px;
-        padding-bottom: 14px;
 
         @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
-          font-size: $fontSizeRelBase_20;
           padding-left: 9px;
+          font-size: $fontSizeRelBase_20;
         }
 
         @media (max-width: toPixels(map.get($breakpoints, "sm"))) {
-          font-size: $fontSizeRelBase_18;
           padding-left: 7px;
+          font-size: $fontSizeRelBase_18;
         }
 
         &::marker {
@@ -176,10 +180,6 @@
             padding-top: 27px;
           }
         }
-      }
-
-      @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
-        font-size: $fontSizeRelBase_20;
       }
 
       &.open {

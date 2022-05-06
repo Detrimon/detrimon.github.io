@@ -7,11 +7,11 @@
 }
 
 .ws-title-h1 {
-  @include title;
   font-family: $fontFamilyAdditional;
   font-size: $fontSizeRelBase_61;
   font-weight: 400;
   line-height: 74px;
+  @include title;
 
   @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
     font-size: $fontSizeRelBase_36;
@@ -24,10 +24,10 @@
 }
 
 .ws-title-h2 {
-  @include title;
   font-size: $fontSizeRelBase_41;
   font-weight: 700;
   line-height: 56px;
+  @include title;
 
   @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
     font-size: $fontSizeRelBase_20;
@@ -58,16 +58,16 @@
   position: relative;
   bottom: -1px;
   display: block;
-  border-left: 2px solid $color_blue;
-  height: 10px;
   flex: 0 0 10px;
+  height: 10px;
+  border-left: 2px solid $color_blue;
 }
 
 .ws-slogan-container {
   display: flex;
+  margin-top: 60px;
   border-top: 2px solid $color_blue;
   border-bottom: 2px solid $color_blue;
-  margin-top: 60px;
 
   @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
     margin-top: 29px;
@@ -89,14 +89,14 @@
     }
 
     > p {
-      font-size: $fontSizeRelBase_26;
       padding-top: 40px;
       padding-bottom: 30px;
+      font-size: $fontSizeRelBase_26;
 
       @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
-        font-size: $fontSizeRelBase_20;
         padding-top: 20px;
         padding-bottom: 17px;
+        font-size: $fontSizeRelBase_20;
       }
     }
   }

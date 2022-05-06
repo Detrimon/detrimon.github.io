@@ -1,0 +1,106 @@
+{
+  "auto-rename-tag.activationOnLanguage": ["*"],
+
+  "postcssSorting.config": {
+    "order": [
+      "custom-properties",
+      "dollar-variables",
+      "declarations",
+      "at-rules",
+      "rules"
+    ],
+    "properties-order": [
+      "content",
+
+      "position",
+      "z-index",
+      "top",
+      "right",
+      "bottom",
+      "left",
+
+      "display",
+      "opacity",
+      "grid-template-columns",
+      "grid-template-rows",
+      "grid-column-start",
+      "grid-column-end",
+      "grid-row-start",
+      "grid-row-end",
+      "flex-direction",
+      "flex-basis",
+      "flex-wrap",
+      "justify-content",
+      "align-items",
+      "justify-self",
+      "align-self",
+      "column-gap",
+      "row-gap",
+      "flex",
+
+      "width",
+      "min-width",
+      "max-width",
+      "height",
+      "min-height",
+      "max-height",
+
+      "padding",
+      "padding-top",
+      "padding-right",
+      "padding-bottom",
+      "padding-left",
+      "margin",
+      "margin-top",
+      "margin-right",
+      "margin-bottom",
+      "margin-left",
+
+      "border",
+      "border-top",
+      "border-right",
+      "border-bottom",
+      "border-left",
+      "border-radius",
+      "box-shadow",
+
+      "overflow",
+      "overflow-x",
+      "overflow-y",
+
+      "background",
+      "background-color",
+      "background-image",
+      "background-position",
+      "background-size",
+      "background-repeat",
+
+      "src",
+      "font-display",
+      "font-family",
+      "font-size",
+      "font-weight",
+      "font-style",
+      "line-height",
+      "color",
+      "white-space",
+      "text-align",
+      "text-decoration",
+      "text-transform",
+
+      "list-style-type",
+
+      "object-position",
+      "object-fit",
+
+      "scroll-behavior",
+      "filter",
+
+      "cursor",
+      "transform",
+      "transform-origin",
+      "transition"
+    ]
+  },
+  "cSpell.customDictionaries": {}
+}
