@@ -1794,7 +1794,8 @@ a:hover {
     left: -110%;
     display: block;
     width: calc(100% + 6px);
-    height: 100vh;
+    bottom: 0;
+    top: 0;
     background-color: #f2f2f2;
     background-image: url(../img/bgLogoForMenu_lg.webp);
     background-position: 35vw center;

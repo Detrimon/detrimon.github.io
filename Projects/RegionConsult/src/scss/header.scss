@@ -85,7 +85,8 @@
 
     display: block;
     width: calc(100% + 6px);
-    height: 100vh;
+    bottom: 0;
+    top: 0;
 
     background-color: $color_lightgrey;
     background-image: url(../img/bgLogoForMenu_lg.webp);
