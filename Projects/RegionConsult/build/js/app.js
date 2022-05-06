@@ -246,6 +246,7 @@ req.onload = function () {
   jsonResponse.forEach(function (item) {
     var li_el = document.createElement("li");
     var a_el = document.createElement("a");
+
     a_el.setAttribute("target", "__blank");
     a_el.setAttribute("href", item.link);
     a_el.textContent = item.title;
