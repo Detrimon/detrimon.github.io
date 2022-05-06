@@ -115,33 +115,29 @@
     position: relative;
     padding-top: 30px;
 
-    > a {
+    a {
       position: relative;
       display: inline-block;
       color: $color_blue;
-      transition: all $t_time linear;
     }
 
-    > a::after {
+    a::after {
       content: "";
       position: relative;
       bottom: 3px;
       display: block;
       opacity: 0;
-      width: 100%;
       height: 1px;
-      background: $color_black;
-      transition: all $t_time linear;
-    }
-
-    > a:hover::after {
-      opacity: 1;
-      width: 100%;
       background: $color_blue;
+      transition: opacity $t_time ease;
     }
 
-    > a:target,
-    > a:focus {
+    a:hover::after {
+      opacity: 1;
+    }
+
+    a:target,
+    a:focus {
       color: $color_blue;
     }
   }
