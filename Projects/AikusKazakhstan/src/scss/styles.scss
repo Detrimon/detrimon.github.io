@@ -1,0 +1,61 @@
+@use "sass:map";
+@import "../../../../node_modules/scss-reset/_reset.scss";
+@import "./common/variables";
+@import "./common/functions";
+
+@import "./common/layout";
+
+@import "./common/mixins";
+
+@import "./common/fonts";
+
+@import "./common/shared";
+
+@import "./header";
+
+html:root {
+  @include adaptiveValue("font-size", $fontBaseSize, 18);
+}
+
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+  height: -webkit-fill-available;
+}
+
+// Common 'body' styles
+body {
+  position: relative;
+  overflow-x: hidden;
+
+  background: $color_white;
+
+  font-family: $fontFamily;
+  font-weight: 400;
+  font-style: normal;
+  color: $color_black;
+
+  &.active {
+    overflow: hidden;
+  }
+}
+
+// Common 'a' styles
+a {
+  color: $color_black;
+  text-decoration: none;
+
+  transition: color $t_time linear, opacity $t_time linear;
+
+  &.active {
+    color: $color_blue;
+  }
+}
+
+a:hover {
+  color: $color_blue;
+
+  @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+    text-decoration: none;
+  }
+}

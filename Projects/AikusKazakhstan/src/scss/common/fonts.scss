@@ -1,0 +1,63 @@
+@import "./googlefonts";
+
+@font-face {
+  src: url("../fonts/rconsult.woff") format("woff"),
+    url("../fonts/rconsult.woff2") format("woff2");
+  font-display: block;
+  font-family: "rconsult";
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="rcicons-"],
+[class*=" rcicons-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "rconsult" !important;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  text-transform: none;
+  speak: never;
+  font-variant: normal;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.rcicons-icon_automate:before {
+  content: "\e908";
+}
+.rcicons-icon_optimization:before {
+  content: "\e909";
+}
+.rcicons-icon_team:before {
+  content: "\e90a";
+}
+.rcicons-icon_tech:before {
+  content: "\e90b";
+}
+.rcicons-img-pdf:before {
+  content: "\e901";
+}
+.rcicons-img-automate:before {
+  content: "\e902";
+}
+.rcicons-img-optimization:before {
+  content: "\e903";
+}
+.rcicons-img-team:before {
+  content: "\e904";
+}
+.rcicons-img-tech:before {
+  content: "\e905";
+}
+.rcicons-img-close:before {
+  content: "\e907";
+}
+.rcicons-logo_bottom:before {
+  content: "\e900";
+}
+.rcicons-arrow-right-top:before {
+  content: "\e906";
+}
