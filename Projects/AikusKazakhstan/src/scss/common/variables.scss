@@ -1,4 +1,4 @@
-$fontFamily: "Comfortaa", cursive;
+$fontFamily: "Manrope", sans-serif;
 $fontFamilyAdditional: "Russo One", sans-serif;
 
 $fontBaseSize: 18;
@@ -14,12 +14,17 @@ $fontSizeRelBase_30: calc(30 / $fontBaseSize) + rem; // 1.67rem
 $fontSizeRelBase_32: calc(32 / $fontBaseSize) + rem; // 1.78rem;
 $fontSizeRelBase_36: calc(36 / $fontBaseSize) + rem; // 2rem;
 $fontSizeRelBase_41: calc(41 / $fontBaseSize) + rem; // 2.28rem;
+$fontSizeRelBase_42: calc(42 / $fontBaseSize) + rem;
 $fontSizeRelBase_48: calc(48 / $fontBaseSize) + rem; // 2.67rem;
-$fontSizeRelBase_61: calc(61 / $fontBaseSize) + rem; // 3.39rem;
+$fontSizeRelBase_61: calc(61 / $fontBaseSize) + rem;
+$fontSizeRelBase_64: calc(64 / $fontBaseSize) + rem;
+$fontSizeRelBase_72: calc(72 / $fontBaseSize) + rem;
 
 $t_time: 0.25s;
 
-$color_blue: #186fd4;
+$color_light: #fcf9ef;
+$color_blue: #0a3880;
 $color_black: #000000;
+$color_dark: #333333;
 $color_white: #ffffff;
-$color_lightgrey: #f2f2f2;
+$color_brown: #9e6a57;

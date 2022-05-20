@@ -1,1 +1,2 @@
-import "./menu";
+import "./menu.js";
+import "./activemenuitem.js";

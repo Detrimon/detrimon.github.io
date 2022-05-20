@@ -1,0 +1,44 @@
+.requisites {
+  &__title {
+    padding-top: 42px;
+  }
+
+  &__content-container {
+    padding-top: 75px;
+    padding-bottom: 200px;
+  }
+
+  &__item-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__item-title-container {
+    flex: 0 1 25%;
+    border-bottom: 1px solid $color_brown;
+    padding: 25px 0 20px;
+    > h5 {
+      text-transform: uppercase;
+      color: $color_brown;
+      font-weight: 700;
+    }
+
+    &.top-border {
+      border-top: 1px solid $color_brown;
+    }
+  }
+
+  &__item-text-container {
+    flex: 0 1 50%;
+    border-bottom: 1px solid $color_brown;
+    padding: 25px 0 20px;
+    > p {
+      padding-left: 20px;
+      color: $color_blue;
+    }
+
+    &.top-border {
+      border-top: 1px solid $color_brown;
+    }
+  }
+}

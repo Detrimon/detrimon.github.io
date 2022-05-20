@@ -1,13 +1,58 @@
-<header class="header">
-  <div class="parent-block">
-    <p class="header__fontTests color1 block1">
-      В современном мире управление на основе данных – это не роскошь, а необходимость. Однако внедрение data-driven управления – это
-      непростой проект, изменяющий управленческие практики организации, бизнес-процессы, технологии, оргструктуру и даже культуру.
-    </p>
-    <p class="header__fontTests color2 block2">
-      В современном мире управление на основе данных – это не роскошь, а необходимость. Однако внедрение data-driven управления – это
-      непростой проект, изменяющий управленческие практики организации, бизнес-процессы, технологии, оргструктуру и даже культуру.
-    </p>
-    <selectmenu></selectmenu>
+<header class="header-container">
+  <div class="menu-substrate">
+    <div class="container min-container menu-substrate__container">
+      <span class="aikus-img-close menu-substrate__icon-close" data-toclosemenu></span>
+      <ul id="idPopupMenu">
+        <li class="">
+          <a href="index.html#About" data-toclosemenu>О нас</a>
+        </li>
+        <li class="nowrap">
+          <a href="index.html#Requisites" data-toclosemenu>Реквизиты для оплаты</a>
+        </li>
+        <li class="">
+          <a href="index.html#Contacts" data-toclosemenu>Обратная связь</a>
+        </li>
+      </ul>
+      <div class="menu-substrate__foot-sign">
+        <div class="menu-substrate__image-container">
+          <span class="rcicons-logo_bottom"></span>
+        </div>
+
+        <div class="menu-substrate__contacts-container">
+          <div class="menu-substrate__mailphone-container">
+            <a href="tel:84955454790">+7 (495) 545 47 90</a><br />
+            <a href="mailto:info@regionc.ru">info@regionc.ru</a>
+          </div>
+          <div class="menu-substrate__freephone-container">
+            <a href="tel:88005551179">8 800 555 11 79</a>
+            <br />Звонок по России бесплатный
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container min-container">
+    <div class="header">
+      <a href="index.html#AikusKZ" class="header__logo ws-logo">AIKUS Kazakhstan</a>
+      <!-- <div class="text-menu__container"> -->
+      <ul id="idMainMenu">
+        <li class="nowrap">
+          <a href="index.html#About" data-toclosemenu>О нас</a>
+        </li>
+        <li class="nowrap">
+          <a href="index.html#Requisites" data-toclosemenu>Реквизиты для оплаты</a>
+        </li>
+        <li class="nowrap">
+          <a href="index.html#Contacts" data-toclosemenu>Обратная связь</a>
+        </li>
+      </ul>
+      <!-- </div> -->
+
+      <input role="button" id="menu__toggle" type="checkbox" />
+      <label class="menu__btn" for="menu__toggle">
+        <span></span>
+      </label>
+    </div>
   </div>
 </header>

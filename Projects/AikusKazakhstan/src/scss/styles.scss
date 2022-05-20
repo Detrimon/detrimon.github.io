@@ -12,6 +12,12 @@
 @import "./common/shared";
 
 @import "./header";
+@import "./welcome";
+@import "./benefits";
+@import "./direction";
+@import "./requisites";
+@import "./contacts";
+@import "./footer";
 
 html:root {
   @include adaptiveValue("font-size", $fontBaseSize, 18);
@@ -33,7 +39,7 @@ body {
   font-family: $fontFamily;
   font-weight: 400;
   font-style: normal;
-  color: $color_black;
+  color: $color_blue;
 
   &.active {
     overflow: hidden;
@@ -42,7 +48,7 @@ body {
 
 // Common 'a' styles
 a {
-  color: $color_black;
+  color: $color_brown;
   text-decoration: none;
 
   transition: color $t_time linear, opacity $t_time linear;

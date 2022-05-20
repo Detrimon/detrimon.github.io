@@ -1,3 +1,5 @@
+console.log("im menu js");
+
 const popupMenuElement = document.querySelector(".menu-substrate");
 const bodyElement = document.body;
 

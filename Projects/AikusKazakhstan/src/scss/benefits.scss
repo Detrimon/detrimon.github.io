@@ -1,0 +1,64 @@
+.benefits {
+  background-color: $color_dark;
+
+  &__content-container {
+    padding-top: 42px;
+    padding-bottom: 200px;
+    display: flex;
+    color: $color_light;
+
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      flex-direction: column;
+      padding-top: 10px;
+      padding-bottom: 120px;
+    }
+  }
+
+  &__title-container {
+    flex: 1 1 50%;
+    padding-right: 40px;
+    > h2 {
+      color: $color_light;
+    }
+  }
+
+  &__items-container {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 40px;
+    row-gap: 60px;
+    flex: 1 1 50%;
+    padding-top: 16px;
+
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      row-gap: 50px;
+      padding-top: 60px;
+    }
+  }
+}
+
+.b-items {
+  &__item {
+    flex: 1 1 40%;
+
+    @media (max-width: toPixels(map.get($breakpoints, "md"))) {
+      flex: 1 1 100%;
+      max-width: 400px;
+    }
+    > h4 {
+      padding-bottom: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+
+      @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+        font-size: $fontSizeRelBase_16;
+      }
+    }
+
+    > p {
+      @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+        font-size: $fontSizeRelBase_16;
+      }
+    }
+  }
+}
