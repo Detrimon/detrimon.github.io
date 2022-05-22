@@ -30,3 +30,8 @@ function closeMenuHandler(e) {
   bodyElement.style.overflowY = "auto";
   popupMenuElement.classList.toggle("open");
 }
+
+window.addEventListener("resize", function () {
+  bodyElement.style.overflowY = "auto";
+  popupMenuElement.classList.remove("open");
+});
