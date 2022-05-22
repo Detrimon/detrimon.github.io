@@ -1,21 +1,21 @@
 .welcome {
-  background-color: $color_light;
-  padding-bottom: 197px;
   position: relative;
+  padding-bottom: 197px;
+  background-color: $color_light;
 
   @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
     padding-bottom: 120px;
   }
   &__container {
-    padding-top: 132px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-end;
-    flex-wrap: wrap;
+    padding-top: 132px;
 
     @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
-      padding-top: 60px;
       align-items: flex-start;
+      padding-top: 60px;
     }
 
     @media (max-width: toPixels(map.get($breakpoints, "md"))) {
@@ -24,11 +24,9 @@
   }
 
   &__image {
+    flex: 0 1 calc(50% + 20px);
     max-height: 363px;
     overflow: hidden;
-    flex: 0 1 calc(50% + 20px);
-
-    // width: 100%;
 
     @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
       flex: 1 1 100%;
@@ -43,26 +41,25 @@
   }
 
   &__slogan {
-    flex: 1 1 30%;
     position: relative;
     bottom: -18px;
+    flex: 1 1 30%;
     padding-left: 125px;
     font-size: $fontSizeRelBase_41;
     color: $color_brown;
 
     @media (max-width: toPixels(map.get($breakpoints, "xl"))) {
-      // bottom: auto;
       padding-top: 80xpx;
       font-size: $fontSizeRelBase_36;
     }
 
     @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
-      padding-left: 0;
-      font-size: $fontSizeRelBase_16;
       bottom: auto;
+      max-width: 447px;
       padding-top: 32px;
       padding-right: 40px;
-      max-width: 447px;
+      padding-left: 0;
+      font-size: $fontSizeRelBase_16;
     }
 
     @media (max-width: toPixels(map.get($breakpoints, "md"))) {

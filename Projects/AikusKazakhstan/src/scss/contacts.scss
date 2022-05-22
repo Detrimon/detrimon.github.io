@@ -6,14 +6,10 @@
     padding-bottom: 200px;
 
     @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      flex-direction: column;
       padding-top: 10px;
       padding-bottom: 120px;
-      flex-direction: column;
     }
-
-    // @media (max-width: toPixels(map.get($breakpoints, "md"))) {
-    //   flex-direction: column;
-    // }
   }
 
   &__contact-data {
@@ -66,10 +62,10 @@
     padding-top: 40px;
 
     @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
-      flex: 1 1 50%;
-      padding-top: 20px;
       position: relative;
       right: 22px;
+      flex: 1 1 50%;
+      padding-top: 20px;
     }
 
     @media (max-width: toPixels(map.get($breakpoints, "md"))) {
@@ -94,9 +90,9 @@
   }
 
   &__icon {
+    position: relative;
     top: 2px;
     display: inline-block;
-    position: relative;
     font-size: $fontSizeRelBase_20;
     color: $color_brown;
   }
@@ -114,8 +110,8 @@
     }
 
     @media (max-width: toPixels(map.get($breakpoints, "md"))) {
-      padding-bottom: 0;
       padding-right: 0;
+      padding-bottom: 0;
     }
   }
 
@@ -141,22 +137,22 @@
   }
 
   &__send-message {
-    color: $color_light;
     display: inline-block;
-    font-size: $fontSizeRelBase_14;
     padding: 20px;
-    background: rgba(10, 56, 128, 1);
-    border-radius: 40px;
-    text-transform: uppercase;
     border: 1px solid $color_blue;
+    border-radius: 40px;
+    background: rgba(10, 56, 128, 1);
+    font-size: $fontSizeRelBase_14;
+    color: $color_light;
+    text-align: center;
+    text-transform: uppercase;
 
     transition: all $t_time linear;
-    text-align: center;
 
     @media (max-width: toPixels(map.get($breakpoints, "md"))) {
       display: block;
-      margin: 0 auto;
       width: 80%;
+      margin: 0 auto;
     }
 
     @media (max-width: toPixels(map.get($breakpoints, "sm"))) {
@@ -164,8 +160,8 @@
     }
 
     &:hover {
-      color: $color_blue;
       background: rgba(10, 56, 128, 0);
+      color: $color_blue;
     }
 
     &:active,

@@ -4,8 +4,8 @@
   color: $color_light;
 
   &__top-part-container {
-    border-bottom: 1px solid $color_brown;
     display: flex;
+    border-bottom: 1px solid $color_brown;
 
     @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
       justify-content: space-between;
@@ -17,13 +17,13 @@
 
     > ul {
       display: flex;
-      flex: 1 1 50%;
       justify-content: space-between;
+      flex: 1 1 50%;
 
       @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
         flex-direction: column;
-        padding-bottom: 40px;
         flex: none;
+        padding-bottom: 40px;
       }
 
       @media (max-width: toPixels(map.get($breakpoints, "md"))) {
@@ -36,8 +36,8 @@
         justify-content: flex-end;
 
         > a {
-          color: $color_light;
           padding-bottom: 9px;
+          color: $color_light;
         }
 
         > a:hover {
@@ -74,9 +74,6 @@
     &:hover {
       color: $color_light;
     }
-  }
-
-  &__copyrights {
   }
 
   &__policy {

@@ -2,9 +2,9 @@
   background-color: $color_dark;
 
   &__content-container {
+    display: flex;
     padding-top: 42px;
     padding-bottom: 200px;
-    display: flex;
     color: $color_light;
 
     @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
