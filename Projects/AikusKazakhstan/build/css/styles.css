@@ -776,6 +776,11 @@ template {
   content: "\e903";
 }
 
+.aikus-img-arrow:before {
+  content: "\e904";
+  font-size: 10px;
+}
+
 .ws-not-display {
   display: none;
 }
@@ -812,7 +817,7 @@ template {
 }
 
 .ws-btn-write-us:hover::before {
-  right: 9px;
+  right: -1px;
   color: #ffffff;
 }
 
@@ -822,7 +827,7 @@ template {
 
 .ws-btn-write-us:target::before,
 .ws-btn-write-us:active::before {
-  right: 20px;
+  right: 12px;
   color: #ffffff;
 }
 
@@ -832,13 +837,12 @@ template {
 }
 
 .ws-btn-write-us::before {
-  content: "→";
   position: absolute;
   z-index: 10;
-  top: 16px;
-  right: 20px;
+  top: 32px;
+  right: 12px;
   display: inline-block;
-  font-size: 1.3333333333rem;
+  font-size: 9px;
   color: #9e6a57;
   -webkit-transition: all 0.35s linear;
   -o-transition: all 0.35s linear;
@@ -849,12 +853,12 @@ template {
   content: "";
   position: relative;
   top: 10px;
-  right: -14px;
+  right: -23px;
   display: inline-block;
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
   border: 1px solid #9e6a57;
-  border-radius: 15px;
+  border-radius: 16px;
   -webkit-transition: background-color 0.5s linear;
   -o-transition: background-color 0.5s linear;
   transition: background-color 0.5s linear;
@@ -1907,6 +1911,7 @@ a:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    padding-bottom: 40px;
     -webkit-box-flex: 0;
         -ms-flex: none;
             flex: none;

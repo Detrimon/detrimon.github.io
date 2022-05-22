@@ -22,6 +22,7 @@
 
       @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
         flex-direction: column;
+        padding-bottom: 40px;
         flex: none;
       }
 
