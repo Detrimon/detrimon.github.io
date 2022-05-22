@@ -2079,6 +2079,10 @@ a:hover {
 }
 
 @media (max-height: 600px) and (max-width: 679.98px) {
+  .header {
+    padding: 14px 0;
+  }
+
   .menu-substrate__contacts-container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;

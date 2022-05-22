@@ -19,6 +19,10 @@
   width: 100%;
   padding: 27px 0;
 
+  @media (max-height: 600px) and (max-width: toPixels(map.get($breakpoints, "md"))) {
+    padding: 14px 0;
+  }
+
   // transition: border-color $t_time linear;
 
   &__logo {
@@ -72,10 +76,6 @@
     top: 0;
 
     background-color: $color_light;
-    // background-image: url(../img/bgLogoForMenu_lg.webp);
-    // background-position: 35vw center;
-    // background-size: 60vmin auto;
-    // background-repeat: no-repeat;
 
     transition: left $t_time ease-in-out;
 
