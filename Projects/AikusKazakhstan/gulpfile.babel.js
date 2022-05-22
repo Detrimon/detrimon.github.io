@@ -158,7 +158,7 @@ function images() {
       imagemin(
         [
           gifsicle({ interlaced: true }),
-          mozjpeg({ quality: 70, progressive: true }),
+          mozjpeg({ quality: 85, progressive: true }),
           optipng({ optimizationLevel: 5 }),
           svgo({
             plugins: [
