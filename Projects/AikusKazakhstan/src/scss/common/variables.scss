@@ -3,6 +3,7 @@ $fontFamilyAdditional: "Russo One", sans-serif;
 
 $fontBaseSize: 18;
 
+$fontSizeRelBase_12: calc(12 / $fontBaseSize) + rem;
 $fontSizeRelBase_14: calc(14 / $fontBaseSize) + rem; // 0.77rem;
 $fontSizeRelBase_16: calc(16 / $fontBaseSize) + rem; // 0.89rem;
 $fontSizeRelBase_18: calc(18 / $fontBaseSize) + rem; // 1rem;

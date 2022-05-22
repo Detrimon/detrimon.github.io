@@ -4,21 +4,77 @@
     display: flex;
     padding-top: 42px;
     padding-bottom: 200px;
+
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      padding-top: 10px;
+      padding-bottom: 120px;
+      flex-direction: column;
+    }
+
+    // @media (max-width: toPixels(map.get($breakpoints, "md"))) {
+    //   flex-direction: column;
+    // }
   }
 
   &__contact-data {
     flex: 0 1 50%;
+    padding-right: 30px;
+
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      display: flex;
+    }
+
+    @media (max-width: toPixels(map.get($breakpoints, "md"))) {
+      flex-direction: column;
+      padding-right: 0;
+    }
   }
 
   &__write-us {
     flex: 0 1 50%;
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      display: flex;
+      padding-top: 40px;
+    }
+
+    @media (max-width: toPixels(map.get($breakpoints, "md"))) {
+      flex-direction: column;
+      padding-top: 100px;
+    }
   }
 }
 
 .contact-data {
   position: relative;
+
+  @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+    display: flex;
+  }
+
+  &__title {
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      flex: 1 1 50%;
+      padding-right: 50px;
+    }
+
+    @media (max-width: toPixels(map.get($breakpoints, "md"))) {
+      padding-right: 0;
+    }
+  }
+
   &__container {
     padding-top: 40px;
+
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      flex: 1 1 50%;
+      padding-top: 20px;
+      position: relative;
+      right: 22px;
+    }
+
+    @media (max-width: toPixels(map.get($breakpoints, "md"))) {
+      right: auto;
+    }
     a {
       color: $color_blue;
     }
@@ -47,12 +103,32 @@
 }
 
 .write-us {
+  @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+    display: flex;
+  }
   &__title {
     padding-bottom: 40px;
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      flex: 1 1 50%;
+      padding-right: 50px;
+    }
+
+    @media (max-width: toPixels(map.get($breakpoints, "md"))) {
+      padding-bottom: 0;
+      padding-right: 0;
+    }
   }
 
   &__text-container {
     padding-bottom: 40px;
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      flex: 1 1 50%;
+      padding-top: 13px;
+    }
+
+    @media (max-width: toPixels(map.get($breakpoints, "md"))) {
+      padding-top: 20px;
+    }
   }
 
   &__text {
@@ -74,6 +150,17 @@
     border: 1px solid $color_blue;
 
     transition: all $t_time linear;
+    text-align: center;
+
+    @media (max-width: toPixels(map.get($breakpoints, "md"))) {
+      display: block;
+      margin: 0 auto;
+      width: 80%;
+    }
+
+    @media (max-width: toPixels(map.get($breakpoints, "sm"))) {
+      width: 100%;
+    }
 
     &:hover {
       color: $color_blue;

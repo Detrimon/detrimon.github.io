@@ -1,26 +1,60 @@
 .requisites {
   &__title {
     padding-top: 42px;
+
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      padding-top: 10px;
+    }
   }
 
   &__content-container {
     padding-top: 75px;
     padding-bottom: 200px;
+
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      padding-top: 60px;
+      padding-bottom: 120px;
+    }
   }
 
   &__item-container {
     display: flex;
     justify-content: flex-end;
+
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      font-size: $fontSizeRelBase_16;
+      justify-content: flex-start;
+    }
+    @media (max-width: toPixels(map.get($breakpoints, "md"))) {
+      font-size: $fontSizeRelBase_14;
+    }
+
+    @media (max-width: toPixels(map.get($breakpoints, "sm"))) {
+      font-size: 12px;
+    }
   }
 
   &__item-title-container {
     flex: 0 1 25%;
     border-bottom: 1px solid $color_brown;
-    padding: 25px 0 20px;
+    padding: 25px 0 15px;
+
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      flex: 1 0 calc(50% - 20px);
+    }
+
     > h5 {
       text-transform: uppercase;
       color: $color_brown;
       font-weight: 700;
+
+      @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+        padding-right: 20px;
+      }
+
+      @media (max-width: toPixels(map.get($breakpoints, "sm"))) {
+        padding-right: 8px;
+      }
     }
 
     &.top-border {
@@ -31,10 +65,18 @@
   &__item-text-container {
     flex: 0 1 50%;
     border-bottom: 1px solid $color_brown;
-    padding: 25px 0 20px;
+    padding: 25px 0 5px;
+
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      flex: 1 0 50%;
+    }
     > p {
       padding-left: 20px;
       color: $color_blue;
+
+      @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+        padding-left: 0;
+      }
     }
 
     &.top-border {

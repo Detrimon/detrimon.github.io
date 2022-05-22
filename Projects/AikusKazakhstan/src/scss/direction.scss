@@ -1,30 +1,100 @@
 .direction {
   background-color: $color_light;
   &__content-container {
-    padding-top: 42px;
+    padding-top: 22px;
     padding-bottom: 200px;
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 800px;
+    align-items: space-between;
+    justify-content: space-between;
+
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      flex-direction: row;
+      max-height: initial;
+      padding-top: 10px;
+      padding-bottom: 120px;
+    }
   }
 
-  &__text-content {
-    position: relative;
-    top: -20px;
-    flex: 1 1 50%;
+  &__title {
+    width: calc(50% - 20px);
     padding-right: 30px;
-    > h2 {
-      padding-bottom: 90px;
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      width: auto;
+    }
+  }
+
+  &__texts {
+    width: calc(50% - 20px);
+    padding-right: 30px;
+    padding-top: 91px;
+    max-width: 452px;
+
+    @media (max-width: toPixels(map.get($breakpoints, "xl"))) {
+      padding-top: 60px;
     }
 
-    p {
-      padding-bottom: 18px;
-      &:last-child {
-        padding-bottom: 0;
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      // padding-top: 60px;
+      flex: 1 1 100%;
+      width: auto;
+      max-width: inherit;
+    }
+
+    @media (max-width: toPixels(map.get($breakpoints, "md"))) {
+      order: 2;
+    }
+    > p {
+      padding-top: 20px;
+
+      &:first-child {
+        padding-top: 0;
       }
     }
   }
 
+  &__write-us-container {
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      width: 100%;
+    }
+    @media (max-width: toPixels(map.get($breakpoints, "md"))) {
+      order: 2;
+    }
+  }
+
+  &__write-us {
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      width: auto;
+    }
+  }
+
+  &__image-container {
+    max-width: calc(50% + 20px);
+    padding-top: 20px;
+
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      width: 100%;
+      max-width: 100%;
+      // min-height: 269px;
+    }
+
+    @media (max-width: toPixels(map.get($breakpoints, "md"))) {
+      order: 1;
+    }
+  }
+
   &__image {
-    flex: 1 1 50%;
+    // flex: 1 1 50%;
+
+    height: 462px;
     object-fit: cover;
+
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      width: 100%;
+      height: auto;
+      min-height: 269px;
+    }
   }
 }
