@@ -19,6 +19,7 @@
     }
 
     @media (max-width: toPixels(map.get($breakpoints, "md"))) {
+      padding-top: 50px;
     }
   }
 
@@ -26,11 +27,18 @@
     max-height: 363px;
     overflow: hidden;
     flex: 0 1 calc(50% + 20px);
-    object-fit: cover;
+
     // width: 100%;
 
     @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
       flex: 1 1 100%;
+    }
+
+    > img {
+      object-fit: cover;
+      @media (max-width: toPixels(map.get($breakpoints, "md"))) {
+        min-height: 274px;
+      }
     }
   }
 
@@ -57,12 +65,19 @@
       max-width: 447px;
     }
 
-    @media (max-width: toPixels(map.get($breakpoints, "sm"))) {
+    @media (max-width: toPixels(map.get($breakpoints, "md"))) {
       flex: 1 1 100%;
     }
   }
 
   &__write-us {
     margin-top: 20px;
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      left: 4px;
+    }
+
+    @media (max-width: toPixels(map.get($breakpoints, "md"))) {
+      left: -10px;
+    }
   }
 }

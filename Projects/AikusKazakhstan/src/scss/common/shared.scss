@@ -54,14 +54,15 @@
   padding: 10px 19px 10px 10px;
   font-size: $fontSizeRelBase_14;
   text-transform: uppercase;
+  left: -10px;
 
-  @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
-    left: 0;
-  }
+  // @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+  //   left: 0;
+  // }
 
-  @media (max-width: toPixels(map.get($breakpoints, "sm"))) {
-    left: -10px;
-  }
+  // @media (max-width: toPixels(map.get($breakpoints, "md"))) {
+  //   left: -10px;
+  // }
 
   &:hover {
     color: $color_brown;

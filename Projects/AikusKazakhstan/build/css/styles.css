@@ -804,6 +804,7 @@ template {
   padding: 10px 19px 10px 10px;
   font-size: 0.7777777778rem;
   text-transform: uppercase;
+  left: -10px;
 }
 
 .ws-btn-write-us:hover {
@@ -1049,11 +1050,7 @@ template {
 }
 
 .menu-substrate__container > ul > li {
-  padding-top: 20px;
-}
-
-.menu-substrate__container > ul > li:first-child {
-  padding-top: 0;
+  padding-top: 40px;
 }
 
 .menu-substrate__icon-close {
@@ -1083,24 +1080,18 @@ template {
 
 .menu-substrate__image-container {
   padding-top: 20px;
-  border-bottom: 2px solid #0a3880;
-  font-size: 1.2222222222rem;
-  color: #0a3880;
 }
 
 .menu-substrate__contacts-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-column-gap: 60px;
-     -moz-column-gap: 60px;
-          column-gap: 60px;
+  padding-top: 40px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 53px;
+  border-bottom: 1px solid #9e6a57;
   font-size: 0.8888888889rem;
   color: #0a3880;
 }
@@ -1109,12 +1100,55 @@ template {
   color: #0a3880;
 }
 
-.menu-substrate__mailphone-container {
-  padding-top: 20px;
+.ms-contacts {
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
 }
 
-.menu-substrate__freephone-container {
-  padding-top: 20px;
+.ms-contacts a {
+  color: #9e6a57;
+}
+
+.ms-contacts a:hover {
+  color: #0a3880;
+}
+
+.ms-contacts__item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 15px;
+     -moz-column-gap: 15px;
+          column-gap: 15px;
+}
+
+.ms-contacts__icon {
+  top: 2px;
+  display: inline-block;
+  position: relative;
+  font-size: 1.1111111111rem;
+  color: #9e6a57;
+}
+
+.ms-contacts__item-mailphone {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+}
+
+.ms-contacts__item-mailphone > p {
+  padding-bottom: 20px;
+}
+
+.ms-contacts__item-address {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
 }
 
 .welcome {
@@ -1144,6 +1178,9 @@ template {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 calc(50% + 20px);
           flex: 0 1 calc(50% + 20px);
+}
+
+.welcome__image > img {
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -1396,7 +1433,7 @@ template {
 }
 
 .write-us__text {
-  padding-bottom: 20px;
+  padding-bottom: 30px;
 }
 
 .write-us__text:last-child {
@@ -1556,6 +1593,10 @@ a:hover {
     padding-right: 20px;
     padding-left: 20px;
   }
+
+  .ms-contacts__item-mailphone > p:last-child {
+    padding-bottom: 0;
+  }
 }
 
 @media (min-width: 960.98px) {
@@ -1616,10 +1657,6 @@ a:hover {
     font-size: 2rem;
   }
 
-  .ws-btn-write-us {
-    left: 0;
-  }
-
   .ws-section-top-indent {
     padding-top: 110px;
   }
@@ -1656,11 +1693,7 @@ a:hover {
     width: calc(100% + 6px);
     bottom: 0;
     top: 0;
-    background-color: #ffffff;
-    background-image: url(../img/bgLogoForMenu_lg.webp);
-    background-position: 35vw center;
-    background-size: 60vmin auto;
-    background-repeat: no-repeat;
+    background-color: #fcf9ef;
     -webkit-transition: left 0.25s ease-in-out;
     -o-transition: left 0.25s ease-in-out;
     transition: left 0.25s ease-in-out;
@@ -1694,6 +1727,10 @@ a:hover {
     padding-top: 32px;
     padding-right: 40px;
     max-width: 447px;
+  }
+
+  .welcome__write-us {
+    left: 4px;
   }
 
   .benefits__content-container {
@@ -1859,8 +1896,26 @@ a:hover {
     padding-top: 13px;
   }
 
+  .footer__top-part-container {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
   .footer__top-part-container > ul {
-    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+  }
+
+  .footer__logo {
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
   }
 
   a:hover {
@@ -1881,6 +1936,37 @@ a:hover {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 12%;
             flex: 0 1 12%;
+  }
+
+  .menu-substrate__contacts-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .ms-contacts__item-mailphone {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+
+  .welcome__container {
+    padding-top: 50px;
+  }
+
+  .welcome__image > img {
+    min-height: 274px;
+  }
+
+  .welcome__slogan {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+  }
+
+  .welcome__write-us {
+    left: -10px;
   }
 
   .b-items__item {
@@ -1906,6 +1992,10 @@ a:hover {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
+  }
+
+  .requisites__content-container {
+    padding-top: 40px;
   }
 
   .requisites__item-container {
@@ -1942,13 +2032,33 @@ a:hover {
   }
 
   .write-us__text-container {
-    padding-top: 20px;
+    padding-top: 40px;
+    padding-bottom: 0;
   }
 
   .write-us__send-message {
     display: block;
     margin: 0 auto;
     width: 80%;
+  }
+
+  .footer__top-part-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .footer__top-part-container > ul {
+    padding: 30px 0 60px;
+  }
+
+  .footer__bottom-part-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 5px;
   }
 }
 
@@ -1963,16 +2073,6 @@ a:hover {
 
   .ws-title-h2 {
     font-size: 1.7777777778rem;
-  }
-
-  .ws-btn-write-us {
-    left: -10px;
-  }
-
-  .welcome__slogan {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 100%;
-            flex: 1 1 100%;
   }
 
   .requisites__item-container {
