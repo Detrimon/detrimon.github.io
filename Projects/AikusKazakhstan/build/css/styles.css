@@ -834,7 +834,7 @@ template {
   content: "→";
   position: absolute;
   z-index: 10;
-  top: 15px;
+  top: 16px;
   right: 20px;
   display: inline-block;
   font-size: 1.3333333333rem;
@@ -1954,7 +1954,7 @@ a:hover {
 
 @media (max-width: 379.98px) {
   .ws-logo {
-    font-size: 0.8888888889rem;
+    font-size: 1rem;
   }
 
   .ws-title-h1 {
@@ -1962,7 +1962,7 @@ a:hover {
   }
 
   .ws-title-h2 {
-    font-size: 1.3333333333rem;
+    font-size: 1.7777777778rem;
   }
 
   .ws-btn-write-us {
