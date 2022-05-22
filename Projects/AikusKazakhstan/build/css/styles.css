@@ -1928,6 +1928,17 @@ a:hover {
   }
 }
 
+@media (max-height: 600px) and (max-width: 960.98px) {
+  .menu-substrate__contacts-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding-top: 15px;
+    padding-bottom: 20px;
+  }
+}
+
 @media (max-width: 679.96px) {
   .container {
     width: 100%;
@@ -2067,6 +2078,17 @@ a:hover {
   }
 }
 
+@media (max-height: 600px) and (max-width: 679.98px) {
+  .menu-substrate__contacts-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding-top: 15px;
+    padding-bottom: 20px;
+  }
+}
+
 @media (max-width: 379.98px) {
   .ws-logo {
     font-size: 1rem;
@@ -2078,6 +2100,14 @@ a:hover {
 
   .ws-title-h2 {
     font-size: 1.7777777778rem;
+  }
+
+  .menu-substrate__container > ul > li {
+    padding-top: 20px;
+  }
+
+  .menu-substrate__container > ul > li:first-child {
+    padding-top: 0;
   }
 
   .requisites__item-container {
@@ -2107,11 +2137,12 @@ a:hover {
     padding-top: 14px;
   }
 
-  .menu-substrate__contacts-container {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+  .menu-substrate__container > ul > li:first-child {
+    padding-top: 0;
+  }
+
+  .ms-contacts__item-mailphone > p:last-child {
+    padding-bottom: 0;
   }
 }
 @supports (appearance:none){
@@ -2174,6 +2205,14 @@ a:hover {
 
 }
 
+ @media (max-height: 600px) and (max-width: 960.98px){
+
+@supports (appearance:none){
+
+}
+
+}
+
  @media (max-width: 679.96px){
 
 @supports (appearance:none){
@@ -2183,6 +2222,14 @@ a:hover {
 }
 
  @media (max-width: 679.98px){
+
+@supports (appearance:none){
+
+}
+
+}
+
+ @media (max-height: 600px) and (max-width: 679.98px){
 
 @supports (appearance:none){
 
