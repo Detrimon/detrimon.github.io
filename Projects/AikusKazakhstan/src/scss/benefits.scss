@@ -12,6 +12,10 @@
       padding-top: 10px;
       padding-bottom: 120px;
     }
+
+    @media (max-width: toPixels(map.get($breakpoints, "sm"))) {
+      padding-bottom: 80px;
+    }
   }
 
   &__title-container {
