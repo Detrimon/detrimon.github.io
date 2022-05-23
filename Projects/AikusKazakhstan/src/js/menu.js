@@ -31,7 +31,7 @@ function closeMenuHandler(e) {
   popupMenuElement.classList.toggle("open");
 }
 
-window.addEventListener("resize", function () {
+window.addEventListener("orientationchange", function () {
   bodyElement.style.overflowY = "auto";
   popupMenuElement.classList.remove("open");
 });
