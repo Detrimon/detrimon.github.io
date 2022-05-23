@@ -19,7 +19,7 @@
   width: 100%;
   padding: 27px 0;
 
-  @media (max-height: 600px) and (max-width: toPixels(map.get($breakpoints, "md"))) {
+  @media (orientation: landscape) AND (max-height: 400px) {
     padding: 14px 0;
   }
 

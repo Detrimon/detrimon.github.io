@@ -914,6 +914,44 @@ template {
   font-size: 1.4444444444rem;
 }
 
+.fromBottomIn {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+  -webkit-transition: opacity 1.5s ease, -webkit-transform 1.5s ease;
+  transition: opacity 1.5s ease, -webkit-transform 1.5s ease;
+  -o-transition: transform 1.5s ease, opacity 1.5s ease;
+  transition: transform 1.5s ease, opacity 1.5s ease;
+  transition: transform 1.5s ease, opacity 1.5s ease, -webkit-transform 1.5s ease;
+}
+
+.fromBottomOut {
+  opacity: 0;
+  -webkit-transform: translate(0, 20px);
+      -ms-transform: translate(0, 20px);
+          transform: translate(0, 20px);
+  -webkit-transition: opacity 1.5s ease, -webkit-transform 1.5s ease;
+  transition: opacity 1.5s ease, -webkit-transform 1.5s ease;
+  -o-transition: transform 1.5s ease, opacity 1.5s ease;
+  transition: transform 1.5s ease, opacity 1.5s ease;
+  transition: transform 1.5s ease, opacity 1.5s ease, -webkit-transform 1.5s ease;
+}
+
+.visibilityIn {
+  opacity: 1;
+  -webkit-transition: opacity 1.5s ease;
+  -o-transition: opacity 1.5s ease;
+  transition: opacity 1.5s ease;
+}
+
+.visibilityOut {
+  opacity: 0;
+  -webkit-transition: opacity 1.5s ease;
+  -o-transition: opacity 1.5s ease;
+  transition: opacity 1.5s ease;
+}
+
 /* скрываем чекбокс */
 
 #menu__toggle {
@@ -2091,10 +2129,6 @@ a:hover {
 }
 
 @media (max-height: 600px) and (max-width: 679.98px) {
-  .header {
-    padding: 14px 0;
-  }
-
   .menu-substrate__contacts-container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -2136,6 +2170,12 @@ a:hover {
 
   .write-us__send-message {
     width: 100%;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 400px) {
+  .header {
+    padding: 14px 0;
   }
 }
 
@@ -2254,6 +2294,14 @@ a:hover {
 }
 
  @media (max-width: 379.98px){
+
+@supports (appearance:none){
+
+}
+
+}
+
+ @media (orientation: landscape) and (max-height: 400px){
 
 @supports (appearance:none){
 
