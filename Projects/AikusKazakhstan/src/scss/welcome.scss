@@ -6,6 +6,10 @@
   @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
     padding-bottom: 120px;
   }
+
+  @media (max-width: toPixels(map.get($breakpoints, "sm"))) {
+    padding-bottom: 80px;
+  }
   &__container {
     display: flex;
     flex-wrap: wrap;

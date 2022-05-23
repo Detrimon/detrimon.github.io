@@ -42,8 +42,8 @@
     flex: 1 1 40%;
 
     @media (max-width: toPixels(map.get($breakpoints, "md"))) {
-      flex: 1 1 100%;
-      max-width: 400px;
+      flex: 1 0 233px;
+      // max-width: 400px;
     }
     > h4 {
       padding-bottom: 13px;

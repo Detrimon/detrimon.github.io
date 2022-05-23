@@ -154,18 +154,19 @@
 
     font-size: $fontSizeRelBase_16;
     color: $color_blue;
+    gap: 20px;
 
     @media (max-width: toPixels(map.get($breakpoints, "md"))) {
       flex-direction: column;
     }
 
-    @media (max-height: 600px) and (max-width: toPixels(map.get($breakpoints, "lg"))) {
+    @media (orientation: landscape) {
       flex-direction: row;
       padding-top: 15px;
       padding-bottom: 20px;
     }
 
-    @media (max-height: 600px) and (max-width: toPixels(map.get($breakpoints, "md"))) {
+    @media (orientation: landscape) {
       flex-direction: row;
       padding-top: 15px;
       padding-bottom: 20px;
