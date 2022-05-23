@@ -805,11 +805,11 @@ template {
 .ws-btn-write-us {
   position: relative;
   left: -10px;
+  left: -10px;
   display: inline-block;
   padding: 10px 19px 10px 10px;
   font-size: 0.7777777778rem;
   text-transform: uppercase;
-  left: -10px;
 }
 
 .ws-btn-write-us:hover {
@@ -1595,6 +1595,52 @@ template {
   color: #9e6a57;
 }
 
+body {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.notFound {
+  position: relative;
+  padding-top: 19vh;
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  background-color: #fcf9ef;
+  scroll-behavior: smooth;
+}
+
+.notFound__title {
+  color: #333333;
+  padding-bottom: 5vh;
+}
+
+.notFound__text-container {
+  padding-top: 15px;
+}
+
+.notFound__text {
+  max-width: 580px;
+  padding-bottom: 3vh;
+}
+
+.notFound__text:last-child {
+  padding-bottom: 15px;
+}
+
+.notFound__title-container {
+  padding-bottom: 30px;
+}
+
 html:root {
   font-size: 18px;
 }
@@ -2220,6 +2266,24 @@ a:hover {
     padding-bottom: 20px;
   }
 }
+
+@media (orientation: landscape) and (max-height: 620px) {
+  .notFound__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 40px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .notFound__text-container {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+  }
+}
 @supports (appearance:none){
 
 }
@@ -2321,6 +2385,14 @@ a:hover {
 }
 
  @media (orientation: landscape){
+
+@supports (appearance:none){
+
+}
+
+}
+
+ @media (orientation: landscape) and (max-height: 620px){
 
 @supports (appearance:none){
 

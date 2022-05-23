@@ -13,18 +13,38 @@
     <!-- VIEWPORT configuration -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1" />
     <!-- Подключение шрифтов -->
-    <!-- <link rel="preload" href="fonts/xn7gYHE41ni1AdIRggOxSvfedN62Zw.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="fonts/xn7gYHE41ni1AdIRggOxSvfedN62Zw.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="fonts/xn7gYHE41ni1AdIRggexSvfedN4.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="fonts/Z9XUDmZRWg6M1LvRYsHOy8mJvLuL9BLT.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="fonts/Z9XUDmZRWg6M1LvRYsHOz8mJvLuL9A.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="fonts/rconsult.woff" as="font" type="font/woff" crossorigin /> -->
+    <link rel="preload" href="fonts/aikus_kz.woff" as="font" type="font/woff" crossorigin />
     <!-- Подключение стилей -->
     <link rel="stylesheet" href="css/styles.min.css" />
-    <link rel="icon" href="favicon.ico" />
+    <!-- <link rel="icon" href="favicon.ico" /> -->
 
     <!-- <script defer type="text/javascript" src="js/app.min.js"></script> -->
 
     <title>Aikus Kazakhstan / Page Not Found</title>
   </head>
-  <body></body>
+  <body>
+    @@include("./html/_header.html")
+    <div class="notFound">
+      <div class="notFound__container container min-container">
+        <h2 class="ws-title-h2 notFound__title">Страница не найдена<br />Ошибка 404</h2>
+        <div class="notFound__text-container">
+          <p class="notFound__text">
+            Вы можете вернуться на <a href="index.html" class="ws-accent">главную страницу</a> или, если у вас есть вопросы, написать нам на
+            e-mail:
+            <a class="ws-accent" href="">info@aikus.kz</a>
+          </p>
+          <p class="notFound__text">
+            В письме просьба указать свои контактные данные: <span class="ws-accent">ФИО, телефон и адрес проживания,</span> чтобы мы могли
+            оперативно связаться с вами и ответить на интересующие вас вопросы.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    @@include("./html/_footer.html")
+  </body>
 </html>

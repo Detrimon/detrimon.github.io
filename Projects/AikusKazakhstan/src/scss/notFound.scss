@@ -1,0 +1,55 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.notFound {
+  position: relative;
+
+  padding-top: 19vh;
+  // padding-bottom: 120px;
+  flex: auto;
+
+  background-color: $color_light;
+
+  scroll-behavior: smooth;
+
+  // @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+  //   padding-top: 5vh;
+  // }
+
+  &__container {
+    @media (orientation: landscape) and (max-height: 620px) {
+      display: flex;
+      gap: 40px;
+      justify-content: space-between;
+    }
+  }
+
+  &__title {
+    color: $color_dark;
+    padding-bottom: 5vh;
+  }
+
+  &__text-container {
+    padding-top: 15px;
+    @media (orientation: landscape) and (max-height: 620px) {
+      flex: 0 0 50%;
+    }
+  }
+
+  &__text {
+    max-width: 580px;
+    padding-bottom: 3vh;
+
+    &:last-child {
+      padding-bottom: 15px;
+    }
+  }
+
+  &__title-container {
+    padding-bottom: 30px;
+  }
+}
