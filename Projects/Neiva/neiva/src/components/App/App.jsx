@@ -3,7 +3,8 @@ import "../../scss/styles.scss";
 import {
   BrowserRouter as Router,
   Routes,
-  Route /*Link*/,
+  Route,
+  Navigate,
 } from "react-router-dom";
 
 import MainPage from "../_MainPage";
@@ -28,6 +29,7 @@ function App() {
             {/* <Route path="/*" element={<Header />} /> */}
             <Route path="/MainPage" element={<MainPage />} />
             <Route path="/About" element={<AboutPage />} />
+            <Route path="/" element={<Navigate to="/MainPage" replace />} />
           </Routes>
           <WriteUs></WriteUs>
           <Footer></Footer>
