@@ -1,0 +1,84 @@
+.logo-bg-growth-left {
+  position: absolute;
+  top: -40px;
+  left: -470px;
+
+  @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+    display: none;
+  }
+}
+
+.logo-bg-growth-right {
+  position: absolute;
+  right: -420px;
+  bottom: -350px;
+
+  @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+    display: none;
+  }
+}
+
+.growth {
+  padding-bottom: 240px;
+  scroll-behavior: smooth;
+
+  @media (max-width: toPixels(map.get($breakpoints, "xl"))) {
+    padding-bottom: 120px;
+  }
+
+  &__slogan {
+    max-width: 310px;
+  }
+}
+
+.evo-years-container {
+  display: flex;
+
+  &_empty {
+    flex: 1 1 20%;
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      display: none;
+    }
+  }
+}
+
+.evo-years {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex: 0 0 80%;
+
+  @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+    flex: 1 0 80%;
+  }
+
+  &__item-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 40%;
+    padding-right: 52px;
+    border-bottom: 2px solid $color_blue;
+
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      padding-right: 40px;
+    }
+  }
+
+  &__item-title {
+    padding-top: 80px;
+    font-size: $fontSizeRelBase_61;
+    font-weight: 300;
+    line-height: 83px;
+    color: $color_blue;
+
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      padding-top: 40px;
+    }
+  }
+
+  &__item-text {
+    flex: 1 1 auto;
+    padding: 5px 5px 10px 5px;
+  }
+}

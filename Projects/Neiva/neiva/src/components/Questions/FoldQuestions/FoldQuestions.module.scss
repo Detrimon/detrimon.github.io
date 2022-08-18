@@ -1,0 +1,20 @@
+@use "sass:map";
+@import "../../../scss/common/variables.scss";
+@import "../../../scss/common/functions.scss";
+@import "../../../scss/common/layout.scss";
+
+.foldQuestions {
+  &__contentBlock {
+    color: $color_blue;
+    > p {
+      padding-top: 15px;
+    }
+
+    ul {
+      list-style: disc;
+      padding-left: 30px;
+      > li {
+      }
+    }
+  }
+}

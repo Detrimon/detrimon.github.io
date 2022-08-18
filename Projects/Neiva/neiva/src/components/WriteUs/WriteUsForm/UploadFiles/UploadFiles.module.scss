@@ -1,0 +1,52 @@
+@use "sass:map";
+@import "../../../../scss/common/variables.scss";
+@import "../../../../scss/common/functions.scss";
+@import "../../../../scss/common/layout.scss";
+
+.uploadFiles {
+  font-size: 14px;
+
+  > div {
+    padding-top: 20px;
+
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+}
+
+.uploadInput {
+  > label {
+    cursor: pointer;
+    font-weight: 400;
+    color: $color_orange;
+    text-transform: uppercase;
+  }
+  > input {
+    opacity: 0;
+  }
+
+  > p {
+    color: $color_darkgray;
+  }
+}
+
+.uploadPreview {
+  > ul {
+  }
+
+  li {
+    line-height: 25px;
+    > span {
+      padding-right: 10px;
+    }
+  }
+}
+
+.uploadErrors {
+  color: $color_error;
+  > ul {
+    padding-left: 24px;
+    // list-style: "-  ";
+  }
+}

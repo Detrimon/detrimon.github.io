@@ -1,0 +1,152 @@
+@use "sass:map";
+@import "../../scss/common/variables.scss";
+@import "../../scss/common/functions.scss";
+@import "../../scss/common/layout.scss";
+
+@mixin any-debtor-block {
+  align-items: center;
+
+  @media (max-width: toPixels(map.get($breakpoints, "md"))) {
+    padding-top: 40px;
+    align-items: inherit;
+  }
+}
+
+@mixin text-container($order: 0) {
+  @media (max-width: toPixels(map.get($breakpoints, "md"))) {
+    order: $order;
+  }
+}
+
+@mixin image-container {
+  // flex: 1 1 26%;
+  > img {
+    height: 345px;
+    object-fit: cover;
+  }
+
+  @media (max-width: toPixels(map.get($breakpoints, "xl"))) {
+    // flex: 1 1 40%;
+  }
+
+  @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+    // flex: 1 1 47%;
+
+    > img {
+      height: 255px;
+    }
+  }
+}
+
+@mixin title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  transition: color $t_time ease;
+
+  h3 {
+    transition: color $t_time ease;
+    max-width: 80%;
+  }
+
+  &:hover {
+    color: $color_orange;
+
+    h3 {
+      color: $color_orange;
+    }
+  }
+
+  > span {
+    font-size: 36px;
+    font-weight: 400;
+  }
+}
+
+@mixin list-items {
+  list-style: disc;
+  padding-left: 30px;
+  padding-top: 100px;
+
+  @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+    padding-top: 40px;
+  }
+  > li {
+  }
+}
+
+.debtors {
+  background: $color_lightgrey;
+}
+
+.titleBlock {
+  // display: flex;
+  // gap: 15%;
+  // justify-content: space-between;
+
+  @media (max-width: toPixels(map.get($breakpoints, "md"))) {
+    // flex-direction: column;
+    // gap: 40px;
+  }
+
+  &__title {
+    // flex: 1 1 30%;
+  }
+
+  &__text {
+    // flex: 1 1 35%;
+    > p {
+      @media (max-width: toPixels(map.get($breakpoints, "md"))) {
+        max-width: 400px;
+      }
+    }
+  }
+}
+
+.payBlock {
+  padding-top: 100px;
+  @include any-debtor-block;
+
+  &__imageContainer {
+    @include image-container;
+  }
+
+  &__textContainer {
+    @include text-container;
+  }
+
+  &__titleContainer {
+    @include title-container;
+  }
+
+  &__title {
+  }
+
+  &__list {
+    @include list-items;
+  }
+}
+
+.docmentsBlock {
+  @include any-debtor-block;
+
+  &__imageContainer {
+    @include image-container;
+  }
+
+  &__textContainer {
+    @include text-container(2);
+  }
+
+  &__titleContainer {
+    @include title-container;
+  }
+
+  &__title {
+  }
+
+  &__list {
+    @include list-items;
+  }
+}

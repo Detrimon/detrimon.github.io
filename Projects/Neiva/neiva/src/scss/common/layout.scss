@@ -1,0 +1,221 @@
+@use "sass:map";
+
+// Variables
+
+$minWidth: 300;
+$maxWidthContainer: 1200;
+$baseContentIndent: 20; // зазор справа и слева от контента до края экрана, чтобы содержимое не прилипало к краю viewport
+
+$breakpoints: (
+  "top": $maxWidthContainer + 2 * 100,
+  "xl": 999.98 + 2 * 100,
+  "lg": 920.98 + 2 * $baseContentIndent,
+  "md": 639.98 + 2 * $baseContentIndent,
+  "sm": 339.98 + 2 * $baseContentIndent,
+);
+
+// Classes
+
+.min-container {
+  min-width: toPixels($minWidth);
+}
+
+.container {
+  margin: 0 auto;
+
+  @media (min-width: toPixels(
+    map.get($breakpoints, "md")
+  )) {
+    max-width: 680px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  @media (min-width: toPixels(
+    map.get($breakpoints, "lg")
+  )) {
+    max-width: 1040px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  @media (min-width: toPixels(
+    map.get($breakpoints, "xl")
+  )) {
+    width: 100%;
+    max-width: none;
+    padding-right: 100px;
+    padding-left: 100px;
+  }
+
+  @media (min-width: toPixels(
+    map.get($breakpoints, "top")
+  )) {
+    max-width: 1400px;
+    padding-right: 100px;
+    padding-left: 100px;
+  }
+
+  @media (max-width: toPixels(
+    map.get($breakpoints, "md") - 0.02
+  )) {
+    width: 100%;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
+.flex-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  row-gap: 40px;
+
+  > div {
+    // padding-right: 15px;
+  }
+}
+
+// 6.25
+// 2.2727
+// 8.5227 / 8.9227
+// 1200 - 100%
+// 107 * 9 = 954 - 79.5% - 8.833333% на одну
+// 30 * 8 = 240 - 20.5% - 2.5625%
+// ++ 11.3958
+@media (min-width: toPixels(
+  map.get($breakpoints, "lg")
+)) {
+  .col-1 {
+    width: 8.83%;
+  }
+  .col-2 {
+    width: 20.22%;
+  }
+  .col-3 {
+    width: 31.62%;
+  }
+  .col-4 {
+    width: 43.01%;
+  }
+  .col-5 {
+    width: 54.41%;
+  }
+  .col-6 {
+    width: 65.8%;
+  }
+  .col-7 {
+    width: 77.2%;
+  }
+  .col-8 {
+    width: 88.6%;
+  }
+  .col-9,
+  .col-full {
+    width: 100%;
+  }
+}
+
+// half - 93.75%
+// gap - 6.25%
+
+// 220 - line /
+// 40 gap
+// 1000 - 100%
+// 880 - x - 88% / 4 = 22   /// 20.2
+// 120 - y - 12% / 3 = 4rr  /// 6.4
+
+@media only screen and (max-width: toPixels(
+  map.get($breakpoints, "xl")-0.02
+)) {
+  .flex-grid {
+    flex-flow: row wrap;
+  }
+
+  .col-xl-1 {
+    width: 20.2%;
+  }
+  .col-xl-2,
+  .col-xl-half {
+    width: 46.8%;
+  }
+
+  .col-xl-3 {
+    width: 73.4%;
+  }
+
+  .col-xl-4,
+  .col-xl-full {
+    width: 100%;
+  }
+
+  .col-xl-hide {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: toPixels(
+  map.get($breakpoints, "lg")-0.02
+)) {
+  .flex-grid {
+    flex-flow: row wrap;
+  }
+
+  .col-lg-1 {
+    width: 20.2%;
+  }
+
+  .col-lg-2,
+  .col-lg-half {
+    width: 46.8%;
+  }
+
+  .col-lg-3 {
+    width: 73.4%;
+  }
+
+  .col-lg-4,
+  .col-lg-full {
+    width: 100%;
+  }
+
+  .col-lg-hide {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: toPixels(
+  map.get($breakpoints, "md")
+)) {
+  .flex-grid {
+    flex-flow: row wrap;
+  }
+
+  .col-md-half {
+    width: 46.8%;
+  }
+  .col-md-full {
+    width: 100%;
+  }
+
+  .col-md-hide {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: toPixels(
+  map.get($breakpoints, "sm"))) {
+  .flex-grid {
+    flex-flow: row wrap;
+  }
+
+  .col-sm-full {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .col-sm-hide {
+    display: none;
+  }
+}

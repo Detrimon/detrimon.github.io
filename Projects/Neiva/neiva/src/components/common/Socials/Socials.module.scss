@@ -1,0 +1,21 @@
+.iconItem {
+  padding-right: 20px;
+
+  > span {
+    // font-size: 37px;
+  }
+
+  &:last-child {
+    padding-right: 0;
+  }
+}
+
+.socials {
+  &__title {
+    > span {
+    }
+  }
+  &__delimiter {
+    height: 8px;
+  }
+}

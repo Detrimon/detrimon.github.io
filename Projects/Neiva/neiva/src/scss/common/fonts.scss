@@ -1,0 +1,112 @@
+@import "./googlefonts";
+
+@font-face {
+  font-family: "neiva";
+  src: url("../../fonts/neiva.woff") format("woff"),
+    url("../../fonts/neiva.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "neiva" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-attach:before {
+  content: "\e913";
+}
+.icon-wide-arrow-right:before {
+  content: "\e914";
+}
+.icon-close:before {
+  content: "\e912";
+}
+.icon-viber .path1:before {
+  content: "\e910";
+  color: rgb(31, 60, 127);
+}
+.icon-viber .path2:before {
+  content: "\e911";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-soc-telegram .path1:before {
+  content: "\e904";
+  color: rgb(33, 151, 212);
+}
+.icon-soc-telegram .path2:before {
+  content: "\e905";
+  margin-left: -1em;
+  color: rgb(200, 218, 234);
+}
+.icon-soc-telegram .path3:before {
+  content: "\e906";
+  margin-left: -1em;
+  color: rgb(169, 198, 216);
+}
+.icon-soc-telegram .path4:before {
+  content: "\e907";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-soc-viber .path1:before {
+  content: "\e908";
+  color: rgb(133, 76, 159);
+}
+.icon-soc-viber .path2:before {
+  content: "\e909";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-soc-viber .path3:before {
+  content: "\e90a";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-soc-viber .path4:before {
+  content: "\e90b";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-soc-viber .path5:before {
+  content: "\e90c";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-soc-whatsup .path1:before {
+  content: "\e90d";
+  color: rgb(22, 178, 96);
+}
+.icon-soc-whatsup .path2:before {
+  content: "\e90e";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-card-check:before {
+  content: "\e90f";
+}
+.icon-arrow-down:before {
+  content: "\e900";
+}
+.icon-arrow-right:before {
+  content: "\e901";
+}
+.icon-document-check:before {
+  content: "\e902";
+}
+.icon-qrcode-check:before {
+  content: "\e903";
+}

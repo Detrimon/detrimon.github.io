@@ -1,0 +1,36 @@
+@use "sass:map";
+@import "../../../scss/common/variables.scss";
+@import "../../../scss/common/functions.scss";
+@import "../../../scss/common/layout.scss";
+
+.fold {
+  &__mainBlock {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid $color_black;
+    padding-top: 30px;
+    padding-bottom: 12px;
+    gap: 0 20px;
+    > span {
+      transition: transform $t_time ease;
+      font-size: 43px;
+    }
+
+    &:hover {
+      > h3 {
+        color: $color_blue;
+      }
+    }
+
+    &.active {
+      > h3 {
+        color: $color_blue;
+      }
+      > span {
+        transform: rotateZ(90deg);
+      }
+    }
+  }
+}

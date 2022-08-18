@@ -1,0 +1,47 @@
+@use "sass:map";
+@import "../../scss/common/variables.scss";
+@import "../../scss/common/functions.scss";
+@import "../../scss/common/layout.scss";
+
+.appeal {
+  background: $color_blue;
+  color: $color_lightgrey;
+
+  &__contentBlock {
+    padding-top: 60px;
+
+    @media (max-width: toPixels(map.get($breakpoints, "xl"))) {
+    }
+
+    @media (max-width: toPixels(map.get($breakpoints, "md"))) {
+      padding-top: 40px;
+    }
+  }
+
+  a {
+    color: $color_lightgrey;
+    // font-size: $fontSizeRelBase_32;
+  }
+
+  &__title {
+    color: $color_lightgrey;
+  }
+
+  &__textItem {
+    @media (max-width: toPixels(map.get($breakpoints, "xl"))) {
+      max-width: 436px;
+    }
+
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      max-width: 385px;
+      font-size: 16px;
+    }
+  }
+
+  &__contactsItem {
+    @media (max-width: toPixels(map.get($breakpoints, "xl"))) {
+      max-width: 690px;
+      padding-top: 40px;
+    }
+  }
+}

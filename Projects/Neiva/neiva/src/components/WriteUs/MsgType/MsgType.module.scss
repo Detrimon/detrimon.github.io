@@ -1,0 +1,22 @@
+// @use "sass:map";
+@import "../../../scss/common/variables.scss";
+// @import "../../scss/common/functions.scss";
+// @import "../../scss/common/layout.scss";
+
+.msgType {
+  display: flex;
+  flex-wrap: wrap;
+  // justify-content: space-between;
+  gap: 20px;
+
+  > li {
+    color: $color_blue;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1;
+    font-size: 14px;
+    border: 1px solid $color_lightblue;
+    padding: 20px 24px;
+    border-radius: 40px;
+  }
+}

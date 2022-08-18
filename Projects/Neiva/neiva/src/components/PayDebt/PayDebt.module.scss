@@ -1,0 +1,28 @@
+.payDebt {
+  &__headerBlock {
+    // display: flex;
+    // gap: 40px;
+  }
+
+  &__title {
+    // flex: 1 1 40%;
+  }
+
+  &__titleTextBlock {
+    padding-top: 20px;
+  }
+
+  &__titleText {
+    // flex: 1 1 40%;
+    padding-bottom: 18px;
+    // padding-left: 70px;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+}
+
+.payDebtForm {
+  display: flex;
+}

@@ -1,0 +1,36 @@
+@use "sass:map";
+@import "../../../scss/common/variables.scss";
+@import "../../../scss/common/functions.scss";
+@import "../../../scss/common/layout.scss";
+
+.foldContent {
+  // display: flex;
+  // gap: 6%;
+  // justify-content: space-between;
+  &__descriptionBlock {
+    // flex: 1 1 26%;
+  }
+
+  &__formBlock {
+    // flex: 1 1 47%;
+  }
+
+  &__description {
+    padding-top: 20px;
+  }
+
+  &__example {
+  }
+
+  &__figure {
+    padding-top: 50px;
+    > img {
+      width: 200px;
+      height: 253px;
+      border: 1px solid $color_lightgrey;
+    }
+
+    > figcaption {
+    }
+  }
+}

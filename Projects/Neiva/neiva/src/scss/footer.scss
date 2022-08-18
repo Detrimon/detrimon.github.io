@@ -1,0 +1,265 @@
+@use "sass:map";
+
+.footer-container {
+  position: relative;
+  z-index: 3;
+  background-color: $color_blue;
+  scroll-behavior: smooth;
+
+  a {
+    color: $color_white;
+  }
+
+  a:hover {
+    opacity: 0.76;
+    color: $color_lightgrey;
+  }
+
+  > a:target,
+  > a:focus {
+    color: $color_white;
+  }
+}
+
+.documents {
+  max-width: 470px;
+  padding-top: 80px;
+  padding-bottom: 40px;
+
+  @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+    max-width: 100%;
+  }
+
+  @media (max-width: toPixels(map.get($breakpoints, "sm"))) {
+    font-size: 12px;
+  }
+
+  &__link {
+    display: block;
+    margin-bottom: 20px;
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__icon {
+    font-size: 47px;
+    color: $color_white;
+
+    @media (max-width: toPixels(map.get($breakpoints, "sm"))) {
+      font-size: 40px;
+    }
+  }
+
+  &__text {
+    padding-left: 20px;
+    font-size: $fontSizeRelBase_14;
+    color: $color_white;
+  }
+}
+
+.bottomsign {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 10px;
+  padding-top: 10px;
+  padding-bottom: 120px;
+  border-top: 2px solid $color_white;
+  color: $color_white;
+
+  @media (max-width: toPixels(map.get($breakpoints, "md"))) {
+    font-size: $fontSizeRelBase_16;
+  }
+}
+
+.footer-menu {
+  &__container {
+    display: grid;
+    grid-template-columns: auto max-content max-content;
+    padding-top: 116px;
+
+    color: $color_white;
+
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media (max-width: "500px") {
+      display: block;
+    }
+
+    &.nowrap {
+      white-space: nowrap;
+    }
+  }
+
+  &__item {
+    @media (max-width: "500px") {
+      display: block;
+    }
+  }
+
+  &__item-logo {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    border-bottom: 2px solid $color_white;
+
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+  }
+
+  &__item-menu {
+    grid-column-start: 2;
+    grid-column-end: 4;
+
+    border-bottom: 2px solid $color_white;
+
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      display: flex;
+
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 2;
+      grid-row-end: 5;
+      padding-top: 20px;
+      border-bottom: none;
+    }
+
+    > ul {
+      display: flex;
+      height: 100%;
+      padding-top: 8px;
+
+      @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+        flex-direction: column;
+
+        padding-top: 0;
+      }
+
+      @media (max-width: toPixels(map.get($breakpoints, "md"))) {
+        flex: 1 1 50%;
+      }
+
+      @media (max-width: "500px") {
+        padding-bottom: 50px;
+      }
+    }
+
+    li {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+
+      padding-right: 77px;
+
+      @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+        padding-right: 0;
+        padding-bottom: 12px;
+        font-size: $fontSizeRelBase_20;
+
+        @media (max-width: toPixels(map.get($breakpoints, "sm"))) {
+          font-size: $fontSizeRelBase_18;
+        }
+
+        &:last-child {
+          padding-bottom: 0;
+        }
+      }
+
+      &:last-child {
+        padding-right: 0px;
+      }
+    }
+  }
+
+  &__item-contacts-1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 2;
+      grid-row-end: 3;
+    }
+  }
+
+  &__item-contacts-2 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 3;
+      grid-row-end: 4;
+    }
+  }
+
+  &__item-contacts-3 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 4;
+      grid-row-end: 5;
+    }
+  }
+
+  &__address-container {
+    max-width: 280px;
+  }
+
+  &__logo {
+    font-size: 42px;
+    color: $color_white;
+
+    @media (max-width: toPixels(map.get($breakpoints, "sm"))) {
+      font-size: 36px;
+    }
+
+    > a,
+    a:hover,
+    a:target,
+    a:focus {
+      color: $color_white;
+    }
+  }
+
+  &__contacts {
+    padding-top: 40px;
+    font-size: $fontSizeRelBase_16;
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      padding-top: 20px;
+      padding-left: 20px;
+    }
+
+    @media (max-width: "500px") {
+      padding-top: 25px;
+      padding-left: 0;
+    }
+
+    @media (max-width: toPixels(map.get($breakpoints, "sm"))) {
+      font-size: $fontSizeRelBase_14;
+    }
+  }
+
+  &__undermenustrokes {
+    margin-top: 9px;
+    border-left: 2px solid $color_white;
+
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      display: none;
+    }
+  }
+}

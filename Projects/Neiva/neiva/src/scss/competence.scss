@@ -1,0 +1,190 @@
+@use "sass:map";
+
+.competence {
+  position: relative;
+  background-color: $color_lightgrey;
+  scroll-behavior: smooth;
+  &__title-container {
+    display: flex;
+    row-gap: 25px;
+    padding-bottom: 227px;
+
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      padding-bottom: 120px;
+    }
+
+    @media (max-width: toPixels(map.get($breakpoints, "md"))) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__title {
+    flex: 0 0 50%;
+  }
+
+  &__slogan {
+    padding-left: 20px;
+    font-size: $fontSizeRelBase_26;
+
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      max-width: 450px;
+      font-size: $fontSizeRelBase_20;
+    }
+
+    @media (max-width: toPixels(map.get($breakpoints, "md"))) {
+      padding-left: 0;
+    }
+
+    @media (max-width: toPixels(map.get($breakpoints, "sm"))) {
+      font-size: $fontSizeRelBase_18;
+    }
+  }
+
+  &__fold {
+    &_container {
+      display: flex;
+    }
+
+    &_empty {
+      flex: 0 1 25%;
+
+      @media (max-width: toPixels(map.get($breakpoints, "md"))) {
+        display: none;
+      }
+    }
+
+    &_main {
+      flex: 1 0 75%;
+
+      border-top: 2px solid $color_blue;
+      border-bottom: 2px solid $color_blue;
+    }
+
+    &_section {
+      border-top: 2px solid $color_blue;
+
+      &:first-child {
+        border-top: none;
+      }
+    }
+
+    &_title-container {
+      display: flex;
+      justify-content: space-between;
+
+      padding-top: 20px;
+      padding-bottom: 3px;
+      margin-top: 30px;
+      cursor: pointer;
+
+      transition: color $t_time linear;
+
+      @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+        padding-top: 0px;
+        margin-top: 28px;
+
+        &:hover {
+          color: $color_black;
+        }
+      }
+
+      &:hover {
+        color: $color_blue;
+      }
+
+      &:focus,
+      &:active {
+        color: $color_black;
+      }
+    }
+
+    &_title-text {
+      font-size: $fontSizeRelBase_41;
+
+      @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+        font-size: $fontSizeRelBase_32;
+      }
+
+      @media (max-width: toPixels(map.get($breakpoints, "md"))) {
+        font-size: $fontSizeRelBase_30;
+      }
+
+      @media (max-width: toPixels(map.get($breakpoints, "sm"))) {
+        font-size: $fontSizeRelBase_26;
+      }
+    }
+
+    &_title-arrow {
+      position: relative;
+      bottom: 12px;
+      align-self: flex-end;
+
+      font-size: $fontSizeRelBase_48;
+      color: $color_blue;
+
+      transform: rotate(0deg);
+      transform-origin: 18px 12px;
+      transition: transform 0.25s linear;
+
+      @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+        font-size: $fontSizeRelBase_24;
+        transform-origin: 9px 6px;
+      }
+
+      &.open {
+        transform: rotate(45deg);
+      }
+    }
+
+    &_content-container {
+      height: auto;
+      max-height: 0;
+
+      padding-left: 35%;
+      overflow: hidden;
+
+      transition: max-height 0.25s ease-in-out;
+
+      @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+        padding-left: 14%;
+      }
+
+      @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+        font-size: $fontSizeRelBase_20;
+      }
+
+      > li {
+        padding-bottom: 14px;
+        padding-left: 22px;
+        font-size: $fontSizeRelBase_26;
+        list-style-type: "—";
+
+        @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+          padding-left: 9px;
+          font-size: $fontSizeRelBase_20;
+        }
+
+        @media (max-width: toPixels(map.get($breakpoints, "sm"))) {
+          padding-left: 7px;
+          font-size: $fontSizeRelBase_18;
+        }
+
+        &::marker {
+          color: $color_blue;
+        }
+
+        &:first-child {
+          padding-top: 32px;
+
+          @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+            padding-top: 27px;
+          }
+        }
+      }
+
+      &.open {
+        max-height: 750px;
+      }
+    }
+  }
+}

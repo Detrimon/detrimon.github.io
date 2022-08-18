@@ -1,0 +1,194 @@
+.logo-bg-career-left {
+  position: absolute;
+  top: -150px;
+  left: -350px;
+
+  @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+    display: none;
+  }
+}
+
+.logo-bg-career-right {
+  position: absolute;
+  right: -420px;
+  bottom: -300px;
+
+  @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+    display: none;
+  }
+}
+
+.career {
+  background-color: $color_lightgrey;
+  scroll-behavior: smooth;
+}
+
+.team {
+  position: relative;
+  display: flex;
+  row-gap: 35px;
+  padding-top: 80px;
+
+  @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+    padding-top: 40px;
+  }
+
+  @media (max-width: toPixels(map.get($breakpoints, "md"))) {
+    flex-wrap: wrap;
+  }
+
+  &__text-container {
+    flex: 1 1 50%;
+    padding-right: 15px;
+  }
+
+  &__title {
+    max-width: 487px;
+  }
+
+  &__text {
+    max-width: 496px;
+    padding-top: 80px;
+
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      padding-top: 20px;
+    }
+
+    @media (max-width: toPixels(map.get($breakpoints, "md"))) {
+      max-width: none;
+    }
+  }
+
+  &__image-container {
+    flex: 1 1 50%;
+    padding-top: 22px;
+    margin: 0 auto;
+
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      padding-top: 0px;
+    }
+
+    @media (max-width: toPixels(map.get($breakpoints, "md"))) {
+      flex: 1 1 100%;
+    }
+
+    > img {
+      width: 100%;
+      height: 480px;
+      object-position: 50% 0;
+      object-fit: cover;
+
+      @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+        height: 275px;
+      }
+
+      @media (max-width: toPixels(map.get($breakpoints, "md"))) {
+        max-width: 450px;
+        height: 70vmin;
+      }
+    }
+  }
+
+  &__sign {
+    padding-top: 20px;
+    line-height: 25px;
+
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      padding-top: 13px;
+      line-height: 20px;
+    }
+  }
+}
+
+.vacancy {
+  &__slogan {
+    max-width: 821px;
+    padding-top: 80px;
+
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      max-width: 360px;
+      padding-top: 42px;
+    }
+  }
+
+  &__text {
+    position: relative;
+    padding-top: 30px;
+
+    a {
+      position: relative;
+      display: inline-block;
+      color: $color_blue;
+    }
+
+    a::after {
+      content: "";
+      position: relative;
+      bottom: 3px;
+      display: block;
+      opacity: 0;
+      height: 1px;
+      background: $color_blue;
+      transition: opacity $t_time ease;
+    }
+
+    a:hover::after {
+      opacity: 1;
+    }
+
+    a:target,
+    a:focus {
+      color: $color_blue;
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    max-width: 740px;
+    padding-top: 80px;
+    padding-bottom: 220px;
+    margin-left: auto;
+
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      row-gap: 10px;
+      padding-top: 38px;
+      padding-bottom: 120px;
+    }
+
+    a {
+      display: inline-block;
+      padding: 18px 22px;
+      margin-right: 9px;
+      border: 2px solid $color_blue;
+      border-radius: 68px;
+      cursor: pointer;
+
+      transition: all $t_time linear;
+
+      @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+        padding: 18px;
+        font-size: $fontSizeRelBase_14;
+        &:hover {
+          color: $color_black;
+        }
+      }
+
+      @media (max-width: toPixels(map.get($breakpoints, "sm"))) {
+        padding: 12px 12px;
+      }
+
+      &:hover {
+        color: $color_blue;
+      }
+
+      &:active,
+      &:focus,
+      &:target {
+        background-color: $color_blue;
+        color: $color_white;
+      }
+    }
+  }
+}

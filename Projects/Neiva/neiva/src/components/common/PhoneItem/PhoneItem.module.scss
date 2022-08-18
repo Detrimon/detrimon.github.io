@@ -1,0 +1,46 @@
+@import "../../../scss/common/variables.scss";
+
+.phoneBlock {
+  &__title {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    font-size: inherit;
+
+    > a {
+      display: flex;
+      align-items: center;
+      font-size: inherit;
+      transition: color $t_time ease;
+    }
+  }
+
+  &__iconItem {
+  }
+
+  &__icon {
+    // font-size: 37px;
+  }
+
+  &__telWithIcon {
+    padding-left: 15px;
+    font-size: 1em;
+  }
+
+  &__telWithoutIcon {
+    padding-left: 0;
+    font-size: 1.78em;
+  }
+
+  &__delimiterWithIcon {
+    height: 8px;
+  }
+
+  &__delimiterWithoutIcon {
+    height: 8px;
+  }
+
+  &__text {
+    // padding-top: 6px;
+  }
+}

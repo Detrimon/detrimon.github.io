@@ -1,0 +1,32 @@
+$fontFamily: "Manrope", sans-serif;
+$fontFamilyAdditional: "Russo One", sans-serif;
+
+$fontBaseSize: 18;
+
+$fontSizeRelBase_14: calc(14 / $fontBaseSize) + rem; // 0.77rem;
+$fontSizeRelBase_16: calc(16 / $fontBaseSize) + rem; // 0.89rem;
+$fontSizeRelBase_18: calc(18 / $fontBaseSize) + rem; // 1rem;
+$fontSizeRelBase_20: calc(20 / $fontBaseSize) + rem; // 1.11rem;
+$fontSizeRelBase_22: calc(22 / $fontBaseSize) + rem; // 1.22rem;
+$fontSizeRelBase_24: calc(24 / $fontBaseSize) + rem; // 1.33rem;
+$fontSizeRelBase_26: calc(26 / $fontBaseSize) + rem; // 1.44rem;
+$fontSizeRelBase_30: calc(30 / $fontBaseSize) + rem; // 1.67rem
+$fontSizeRelBase_32: calc(32 / $fontBaseSize) + rem; // 1.78rem;
+$fontSizeRelBase_36: calc(36 / $fontBaseSize) + rem; // 2rem;
+$fontSizeRelBase_41: calc(41 / $fontBaseSize) + rem; // 2.28rem;
+$fontSizeRelBase_42: calc(42 / $fontBaseSize) + rem; // 2.28rem;
+$fontSizeRelBase_48: calc(48 / $fontBaseSize) + rem; // 2.67rem;
+$fontSizeRelBase_61: calc(61 / $fontBaseSize) + rem; // 3.39rem;
+$fontSizeRelBase_64: calc(64 / $fontBaseSize) + rem;
+
+$t_time: 0.25s;
+
+$color_blue: #1f3c7f;
+$color_orange: #ef5c2e;
+$color_black: #000000;
+$color_gray: #bdbdbd;
+$color_darkgray: #828282;
+$color_white: #ffffff;
+$color_lightgrey: #f2f2f2;
+$color_lightblue: #afcada;
+$color_error: #ff1e1e;

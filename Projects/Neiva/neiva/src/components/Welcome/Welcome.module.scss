@@ -1,0 +1,183 @@
+@use "sass:map";
+@import "../../scss/common/variables.scss";
+@import "../../scss/common/functions.scss";
+@import "../../scss/common/layout.scss";
+
+.about {
+  &__title {
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      padding-top: 85px;
+    }
+  }
+
+  &__mainImage {
+    text-align: center;
+    padding-top: 60px;
+
+    > img {
+      height: 600px;
+      object-fit: cover;
+
+      @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+        height: 330px;
+      }
+    }
+  }
+
+  &__mainContainer {
+    // padding-top: 200px;
+    // padding-bottom: 200px;
+
+    // @media (max-width: toPixels(map.get($breakpoints, "md"))) {
+    //   padding-top: 80px;
+    // }
+  }
+}
+
+.mainContainer {
+  &__title {
+    max-width: 85%;
+
+    @media (max-width: toPixels(map.get($breakpoints, "xl"))) {
+      max-width: 100%;
+    }
+  }
+
+  &__descriptionBlock {
+    padding-top: 60px;
+    display: flex;
+
+    @media (max-width: toPixels(map.get($breakpoints, "md"))) {
+      flex-direction: column;
+    }
+  }
+
+  &__contentBlock {
+    padding-top: 200px;
+    align-items: flex-end;
+
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      padding-top: 160px;
+      align-items: flex-start;
+    }
+
+    @media (max-width: toPixels(map.get($breakpoints, "md"))) {
+      padding-top: 80px;
+    }
+  }
+}
+
+.descriptionBlock {
+  &__payDebtLink {
+    padding-top: 20px;
+    display: block;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 15px;
+
+    > span {
+      padding-top: 20px;
+    }
+
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+
+    @media (max-width: toPixels(map.get($breakpoints, "md"))) {
+      padding-bottom: 20px;
+      max-width: 450px;
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+  }
+}
+
+.contentBlock {
+  &__textContainer {
+    @media (max-width: toPixels(map.get($breakpoints, "md"))) {
+      order: 2;
+    }
+  }
+
+  &__socials {
+    padding-top: 80px;
+    padding-left: 28px;
+  }
+
+  &__imageContainer {
+    > img {
+      height: 823px;
+      width: 100%;
+      object-fit: cover;
+
+      @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+        height: 411px;
+      }
+    }
+
+    @media (max-width: toPixels(map.get($breakpoints, "xl"))) {
+    }
+
+    @media (max-width: toPixels(map.get($breakpoints, "md"))) {
+      > img {
+        height: 300px;
+        width: 100%;
+      }
+    }
+  }
+
+  &__slogans {
+  }
+
+  &__sloganItem {
+    display: flex;
+    gap: 10px;
+    padding-bottom: 40px;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+
+    > span {
+      font-size: $fontSizeRelBase_14;
+      line-height: 1.7;
+    }
+
+    > p {
+      font-size: $fontSizeRelBase_32;
+      line-height: 1.2;
+
+      @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+        font-size: $fontSizeRelBase_26;
+      }
+    }
+  }
+
+  // &__socials {
+  //   font-size: 37px;
+  //   padding-top: 80px;
+  //   padding-left: 28px;
+  // }
+
+  // &__iconItem {
+  //   padding-right: 50px;
+
+  //   &:last-child {
+  //     padding-right: 0;
+  //   }
+  // }
+
+  &__actionText {
+    padding-left: 28px;
+    max-width: 270px;
+    padding-top: 20px;
+  }
+}

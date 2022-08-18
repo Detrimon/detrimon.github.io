@@ -1,0 +1,55 @@
+@use "sass:map";
+@import "../../scss/common/variables.scss";
+@import "../../scss/common/functions.scss";
+@import "../../scss/common/layout.scss";
+
+.getDocuments {
+  &__headerBlock {
+    // display: flex;
+    // gap: 50px;
+    align-items: flex-end;
+  }
+
+  &__headerBlockItem {
+    // flex: 1 1 40%;
+  }
+
+  &__title {
+  }
+
+  &__titleText {
+    // padding-left: 70px;
+    padding-bottom: 15px;
+  }
+
+  &__foldsBlock {
+    padding-top: 100px;
+  }
+}
+
+.writeUs {
+  padding-top: 60px;
+
+  &__titleText {
+    max-width: 470px;
+  }
+  &__contacts {
+    padding-top: 60px;
+    display: flex;
+    align-items: stretch;
+
+    gap: 45px 25px;
+    justify-content: space-between;
+
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      flex-wrap: wrap;
+      > div {
+        flex: 1 1 90%;
+      }
+    }
+  }
+
+  &__styledLink {
+    align-self: flex-end;
+  }
+}

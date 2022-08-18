@@ -1,0 +1,28 @@
+@use "sass:map";
+@import "../../../scss/common/variables.scss";
+@import "../../../scss/common/functions.scss";
+@import "../../../scss/common/layout.scss";
+
+.contacts {
+  display: flex;
+  @media (max-width: toPixels(map.get($breakpoints, "md"))) {
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    border-bottom: 2px solid $color_gray;
+    border-left: 2px solid $color_gray;
+    padding: 0 40px 40px;
+    // flex: 0 1 10%;
+
+    @media (max-width: toPixels(map.get($breakpoints, "md"))) {
+      flex: 1 1 100%;
+      border: 0;
+      padding: 0 30px 40px 0;
+
+      &:last-child {
+        padding: 0 30px 0 0;
+      }
+    }
+  }
+}

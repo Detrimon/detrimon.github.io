@@ -1,0 +1,17 @@
+@use "sass:map";
+@import "../../../scss/common/variables.scss";
+@import "../../../scss/common/functions.scss";
+@import "../../../scss/common/layout.scss";
+
+.writeUsForm {
+  &__btn {
+    padding-top: 20px;
+  }
+
+  &__policy {
+    padding-top: 20px;
+    > a {
+      color: $color_orange;
+    }
+  }
+}

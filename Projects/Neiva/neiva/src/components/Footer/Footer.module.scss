@@ -1,0 +1,26 @@
+@use "sass:map";
+@import "../../scss/common/variables.scss";
+@import "../../scss/common/functions.scss";
+@import "../../scss/common/layout.scss";
+
+.footer {
+  background: $color_lightgrey;
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  &__titleContainer {
+  }
+
+  &__logo {
+  }
+
+  &__address {
+    > p {
+      padding-top: 40px;
+
+      &:first-child {
+        padding-top: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+// @use "sass:map";
+@import "../../../scss/common/variables.scss";
+// @import "../../scss/common/functions.scss";
+// @import "../../scss/common/layout.scss";
+
+.container {
+  a {
+    font-size: $fontSizeRelBase_14;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $color_orange;
+    border-bottom: 2px solid $color_orange;
+    transition: all $t_time ease;
+    cursor: pointer;
+  }
+
+  a:hover {
+    color: $color_blue;
+    border-bottom: 2px solid $color_blue;
+  }
+}

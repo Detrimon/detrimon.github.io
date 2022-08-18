@@ -1,0 +1,99 @@
+@use "sass:map";
+@import "../../scss/common/variables.scss";
+@import "../../scss/common/functions.scss";
+@import "../../scss/common/layout.scss";
+
+.header {
+  position: fixed;
+  width: 100%;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.05);
+  z-index: 100;
+  overflow: hidden;
+  background: $color_white;
+}
+
+.topContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 21px 0;
+  // padding-top: 20px;
+
+  &__item {
+    flex: 1 1 20px;
+  }
+}
+.menu {
+  &__btn {
+  }
+  // align-self: center;
+}
+.logo {
+  text-align: center;
+  > img {
+    width: 59px;
+    height: 68px;
+  }
+}
+.logoText {
+}
+
+.contacts {
+  display: flex;
+  justify-content: flex-end;
+  // text-align: right;
+
+  &__container {
+    width: fit-content;
+  }
+}
+.phones {
+  color: $color_blue;
+  > a {
+    color: $color_blue;
+  }
+}
+.phoneText {
+  font-size: $fontSizeRelBase_14;
+}
+
+.topPadding {
+  padding-top: 10px;
+}
+
+.popupContainer {
+  height: 0px;
+  transition: height 0.25s linear;
+
+  &.open {
+    height: 90px;
+  }
+
+  &__text_menu {
+    a:hover {
+      color: $color_orange;
+    }
+    // ul {
+    //   padding: 40px 0;
+    // }
+
+    // li {
+    //   display: inline-block;
+    //   padding-right: 40px;
+
+    //   @media (max-width: toPixels(map.get($breakpoints, "xl"))) {
+    //     padding-right: 30px;
+    //   }
+
+    //   &:last-child {
+    //     padding-right: 0;
+    //   }
+    // }
+  }
+}
+
+.text_menu {
+}
+
+.popup {
+}

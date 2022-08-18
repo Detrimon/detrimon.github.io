@@ -1,0 +1,93 @@
+@use "sass:map";
+@import "../../scss/common/variables.scss";
+@import "../../scss/common/functions.scss";
+@import "../../scss/common/layout.scss";
+
+.contactUs {
+  background: $color_lightgrey;
+
+  a {
+    color: $color_blue;
+    // font-size: $fontSizeRelBase_32;
+  }
+
+  a:hover {
+    color: $color_orange;
+  }
+
+  &__headerBlock {
+    // display: flex;
+    // flex-direction: column;
+    // flex-wrap: wrap;
+    // gap: 60px;
+
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      // flex-direction: row;
+    }
+  }
+
+  &__headerTitle {
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      // flex: 1 1 40%;
+    }
+  }
+
+  &__headerText {
+    max-width: 690px;
+
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      // flex: 1 1 40%;
+    }
+  }
+
+  &__contentBlock {
+    padding-top: 75px;
+    // display: flex;
+    align-items: flex-end;
+    // flex-wrap: wrap;
+    // gap: 75px;
+
+    @media (max-width: toPixels(map.get($breakpoints, "xl"))) {
+      // gap: 40px;
+    }
+
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      // padding-top: 40px;
+    }
+  }
+
+  &__contacts {
+    // flex: 1 1 30%;
+
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      order: 2;
+      // flex: 1 1 100%;
+    }
+  }
+
+  &__image {
+    // padding-left: 20px;
+    // flex: 1 0 10%;
+
+    @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+      // flex: 1 0 100%;
+    }
+    > img {
+      object-fit: cover;
+      width: 100%;
+      // height: auto;
+      // width: 435px;
+      height: 319px;
+
+      @media (max-width: toPixels(map.get($breakpoints, "xl"))) {
+        // width: 334px;
+        height: 245px;
+      }
+
+      @media (max-width: toPixels(map.get($breakpoints, "lg"))) {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

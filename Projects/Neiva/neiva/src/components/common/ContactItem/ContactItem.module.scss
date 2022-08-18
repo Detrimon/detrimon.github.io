@@ -1,0 +1,18 @@
+.container {
+  // height: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+}
+
+.titleBlock {
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+
+.contentBlock {
+  padding: 15px 0 0;
+  max-width: 240px;
+  min-width: 180px;
+}

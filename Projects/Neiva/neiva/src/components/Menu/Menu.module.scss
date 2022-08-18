@@ -1,0 +1,50 @@
+@use "sass:map";
+@import "../../scss/common/variables.scss";
+@import "../../scss/common/functions.scss";
+@import "../../scss/common/layout.scss";
+
+.headerMenu {
+  height: 100%;
+
+  ul {
+    display: flex;
+    height: 90%;
+    align-items: center;
+    flex-flow: row wrap;
+  }
+}
+
+.headerMenu,
+.footerMenu {
+  a:hover {
+    color: $color_orange;
+  }
+
+  li {
+    display: inline-block;
+    padding-right: 40px;
+
+    @media (max-width: toPixels(map.get($breakpoints, "xl"))) {
+      padding-right: 30px;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+}
+
+.footerMenu {
+}
+
+.popupMenu {
+  > ul {
+    > li {
+      padding-bottom: 20px;
+    }
+  }
+
+  a:hover {
+    color: $color_orange;
+  }
+}
